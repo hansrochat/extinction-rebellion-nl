@@ -40,6 +40,87 @@
     {
       "type": "vcs",
       "url": "https://github.com/ggamel/wp-sync-db"
+    },
+    {
+      "type": "package",
+      "package": {
+          "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.9.5",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%PLUGIN_ACF_KEY}&t={%VERSION}"
+        },
+        "require": {
+          "composer/installers": "^1.4",
+          "ffraenz/private-composer-installer": "^5.0"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wpml/wpml-multilingual-cms",
+        "version": "4.4.9",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://wpml.org/?download=6088&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&version={%VERSION}"
+        },
+        "require": {
+          "composer/installers": "^1.4",
+          "ffraenz/private-composer-installer": "^5.0"
+        }
+      }
+    },
+
+    {
+      "type": "package",
+      "package": {
+        "name": "wpml/wpml-string-translation",
+        "version": "3.1.7",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://wpml.org/?download=6092&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1613150029&version={%VERSION}"
+        },
+        "require": {
+          "composer/installers": "^1.4",
+          "ffraenz/private-composer-installer": "^5.0"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wpml/wpml-acf-multilingual",
+        "version": "1.7.5",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://wpml.org/?download=1097589&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1613150029&version={%VERSION}"
+        },
+        "require": {
+          "composer/installers": "^1.4",
+          "ffraenz/private-composer-installer": "^5.0"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wpml/wpml-yoast-seo-multilingual",
+        "version": "1.2.4",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://wpml.org/?download=3566177&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1613150029&version={%VERSION}"
+        },
+        "require": {
+          "composer/installers": "^1.4",
+          "ffraenz/private-composer-installer": "^5.0"
+        }
+      }
     }
   ],
   "require": {
@@ -60,7 +141,12 @@
     "wpackagist-plugin/events-manager-wpml": "1.2",
     "wpackagist-plugin/wordpress-seo": "^12.0",
     "wpackagist-plugin/import-meetup-events": "^1.4",
-    "wpackagist-plugin/wp-super-cache": "^1.7"
+    "wpackagist-plugin/wp-super-cache": "^1.7",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "wpml/wpml-multilingual-cms": "*",
+    "wpml/wpml-string-translation": "*",
+    "wpml/wpml-acf-multilingual": "*",
+    "wpml/wpml-yoast-seo-multilingual": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.8",
