@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d405c4333a85679ca1b92a3afcc27be3",
+    "content-hash": "e140b0def1cf75c0cbb1adcb6fc62053",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -1128,42 +1128,6 @@
             "homepage": "https://wordpress.org/plugins/events-manager/"
         },
         {
-            "name": "wpackagist-plugin/events-manager-wpml",
-            "version": "2.0.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/events-manager-wpml/",
-                "reference": "tags/2.0.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/events-manager-wpml.2.0.1.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/events-manager-wpml/"
-        },
-        {
-            "name": "wpackagist-plugin/flickr-viewer",
-            "version": "1.1.8",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/flickr-viewer/",
-                "reference": "tags/1.1.8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/flickr-viewer.1.1.8.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/flickr-viewer/"
-        },
-        {
             "name": "wpackagist-plugin/import-meetup-events",
             "version": "1.4.3",
             "source": {
@@ -1385,12 +1349,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "616131e531dedfc378ffd6060e1cfdcce48ff3a2"
+                "reference": "a6bfc5a1416f0dde1f53b7737b2cf983352737b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/616131e531dedfc378ffd6060e1cfdcce48ff3a2",
-                "reference": "616131e531dedfc378ffd6060e1cfdcce48ff3a2",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/a6bfc5a1416f0dde1f53b7737b2cf983352737b8",
+                "reference": "a6bfc5a1416f0dde1f53b7737b2cf983352737b8",
                 "shasum": ""
             },
             "conflict": {
@@ -1572,7 +1536,7 @@
                 "simplesamlphp/simplesamlphp-module-infocard": "<1.0.1",
                 "simplito/elliptic-php": "<1.0.6",
                 "slim/slim": "<2.6",
-                "smarty/smarty": "<3.1.33",
+                "smarty/smarty": "<3.1.39",
                 "socalnick/scn-social-auth": "<1.15.2",
                 "socialiteproviders/steam": "<1.1",
                 "spoonity/tcpdf": "<6.2.22",
@@ -1700,7 +1664,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-25T17:25:28+00:00"
+            "time": "2021-02-26T20:02:39+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
