@@ -4,14 +4,15 @@
 - [Node.js](https://nodejs.org/en/)
 
 ## Install
+[Contact](/SUPPORT.md) one of the website admins to obtain the license keys for some commercial plugins we use on the website. The keys then need to be added to the `.env` file.
 
 ```sh
-# create environment variables with required configuraitons
+# create environment variables with required configurations
 cp .env.example .env
-# add wordpress plugins
-curl -SL0 https://cloud.extinctionrebellion.nl/index.php/s/QCENwJwpbCoqoNB/download -o plugins.tar.gz && tar -xvf plugins.tar.gz -C web/app/plugins/ && rm plugins.tar.gz
-cd web/app/themes/xrnl
+# now open the .env file in a text editor and paste in the license keys
+
 # install npm packages
+cd web/app/themes/xrnl
 npm install
 ```
 
