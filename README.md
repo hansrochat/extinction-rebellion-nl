@@ -90,10 +90,10 @@ directly quitting Docker.
 
 If you want to install a new plugin
 ```sh
-docker-compose exec composer require wpackagist-plugin/{{PLUGIN_NAME}}
+docker-compose exec composer-tool composer require wpackagist-plugin/{{PLUGIN_NAME}}
 ```
 
 If you want to update a plugin
 ```sh
-docker-compose exec composer update wpackagist-plugin/{{PLUGIN_NAME}}
+docker-compose exec composer-tool composer update wpackagist-plugin/{{PLUGIN_NAME}}
 ```
