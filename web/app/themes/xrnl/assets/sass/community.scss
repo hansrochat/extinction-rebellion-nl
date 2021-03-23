@@ -26,18 +26,13 @@
 
 .community-group {
   .hero-container {
-    position: relative;
+    text-align: center;
   }
   .group-cover-image {
-    min-height: 80vh;
-    background-size: cover !important;
-    background-position: center !important;
+    max-height: 55vh;
   }
   .hero-caption {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    text-align: right;
+    font-size: .9rem;
   }
   .group-slogan {
     margin-top: 3rem;
