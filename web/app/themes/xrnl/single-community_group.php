@@ -27,6 +27,10 @@ get_header(); ?>
             <p class="text-justify"><?php the_content(); ?></p>
             <h2 class="group-slogan"><?php the_field('group_slogan'); ?></h2>
             <span class="group-social-icons">
+            <?php if(get_field('group_twitter_url')): ?>
+              <a href="<?php the_field('group_twitter_url'); ?>"  target="_blank" rel="noreferrer noopener" class="btn twitter" aria-label="twitter"><i class="fab  fa-2x fa-twitter"></i></a>
+            <?php endif; ?>
+
             <?php if(get_field('group_facebook_url')): ?>
               <a href="<?php the_field('group_facebook_url'); ?>"  target="_blank" rel="noreferrer noopener" class="btn facebook" aria-label="facebook"><i class="fab  fa-2x fa-facebook-f"></i></a>
             <?php endif; ?>
