@@ -42,11 +42,12 @@ get_header(); ?>
             <?php if(get_field('group_youtube_url')): ?>
               <a href="<?php the_field('group_youtube_url'); ?>"  target="_blank" rel="noreferrer noopener" class="btn youtube" aria-label="youtube"><i class="fab fa-2x fa-youtube"></i></a>
             <?php endif; ?>
-
-            <?php if(get_field('group_contact_email')): ?>
-              <a href="mailto:<?php the_field('group_contact_email'); ?>"  target="_blank" rel="noreferrer noopener" class="btn email" aria-label="email"><i class="fas fa-2x fa-envelope"></i></a>
-            <?php endif; ?>
             </span>
+        </div>
+        <div class="col-12 col-lg-8 mx-auto">
+          <?php if(get_field('group_contact_email')): ?>
+            <a href="mailto:<?php the_field('group_contact_email'); ?>"  target="_blank" rel="noreferrer noopener" class="btn email" aria-label="email"><?php the_field('group_contact_email'); ?></a>
+          <?php endif; ?>
         </div>
       </div>
     </div>
