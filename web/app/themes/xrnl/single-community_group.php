@@ -38,6 +38,54 @@ get_header(); ?>
     </div>
   </div>
 
+  <div class="container py-5 mt-3 text-center">
+    <div class="row">
+      <div class="col-12 col-lg-8 mx-auto picture-gallery">
+        <?php $gallery = get_field('group_picture_gallery'); ?>
+        <?php if (!empty($gallery)) : ?>
+          <?php if(!empty($gallery['heading'])): ?>
+            <h2><?php echo $gallery['heading']; ?></h2>
+          <?php endif; ?>
+          <?php if(!empty($gallery['description'])): ?>
+            <p><?php echo $gallery['description']; ?><p>
+          <?php endif; ?>
+
+          <?php if(is_array($gallery['pictures'])): ?>
+            <div id="cg-carousel" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators my-4">
+                <?php for ($i = 0; $i <= count($gallery['pictures'])-1; $i++) : ?>
+                  <li data-target="#cg-carousel" data-slide-to="<?php echo $i ?>"></li>
+                <?php endfor; ?>
+              </ol>
+
+              <div class="carousel-inner">
+                <?php foreach ($gallery['pictures'] as $picture) : ?>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="<?php echo $picture['picture'] ?>" alt="<?php the_field('title'); ?>">
+                    <?php if(!empty($picture['caption'])): ?>
+                      <div class="carousel-caption bg-xr-black mb-4">
+                        <?php echo $picture['caption']; ?>
+                      </div>
+                    <?php endif; ?>
+                  </div>
+                <?php endforeach; ?>
+              </div>
+
+              <a class="carousel-control-prev d-none d-md-flex" href="#cg-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only"><?php _e('Previous', 'theme-xrnl'); ?></span>
+              </a>
+              <a class="carousel-control-next d-none d-md-flex" href="#cg-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only"><?php _e('Next', 'theme-xrnl'); ?></span>
+              </a>
+            </div>
+          <?php endif; ?>
+        <?php endif; ?>
+      </div>
+    </div>
+  </div>
+
   <div class="container pt-3 pb-5 text-center">
     <div class="row">
       <div class="col-12 col-lg-8 mx-auto">
@@ -69,8 +117,18 @@ get_header(); ?>
       </div>
     </div>
   </div>
-  
+
   <a href="<?php echo $communityPageURL ?>" class="btn btn-blue my-4"><i class="fas fa-arrow-left"></i> <?php _e('View all community groups', 'theme-xrnl'); ?></a>
 </div>
+
+<script type="text/javascript">
+  // Initiate the carousel
+  jQuery(document).ready(function($){
+    if ($('.picture-gallery').length) {
+      $('.carousel-item:first').addClass('active');
+      $('.carousel-indicators > li:first').addClass('active');
+    };
+  });
+</script>
 
 <?php get_footer(); ?>
