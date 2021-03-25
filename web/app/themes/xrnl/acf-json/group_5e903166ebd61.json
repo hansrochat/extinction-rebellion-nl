@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_5e903237e1f61",
-            "label": "Group",
+            "label": "Community group",
             "name": "group",
             "type": "group",
             "instructions": "",
@@ -34,26 +34,6 @@
                     "wpml_cf_preferences": 0,
                     "default_value": "https:\/\/extinctionrebellion.nl\/app\/uploads\/2020\/04\/community-group.png",
                     "placeholder": ""
-                },
-                {
-                    "key": "field_5e9cb0c1b32fa",
-                    "label": "Darkened cover image",
-                    "name": "cover_image_darkened",
-                    "type": "true_false",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 0,
-                    "message": "Dark gradient overlay and white text on the cover image",
-                    "default_value": 1,
-                    "ui": 0,
-                    "ui_on_text": "",
-                    "ui_off_text": ""
                 },
                 {
                     "key": "field_5e94830a5e544",
@@ -96,8 +76,25 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_6059c9c603240",
+                    "label": "Twitter",
+                    "name": "twitter_url",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "wpml_cf_preferences": 0
+                },
+                {
                     "key": "field_5e903237e1f68",
-                    "label": "Facebook page",
+                    "label": "Facebook",
                     "name": "facebook_url",
                     "type": "url",
                     "instructions": "",
@@ -114,7 +111,7 @@
                 },
                 {
                     "key": "field_5e903237e1f69",
-                    "label": "Instagram page",
+                    "label": "Instagram",
                     "name": "instagram_url",
                     "type": "url",
                     "instructions": "",
@@ -131,7 +128,7 @@
                 },
                 {
                     "key": "field_5e942bd1a676a",
-                    "label": "YouTube channel",
+                    "label": "YouTube",
                     "name": "youtube_url",
                     "type": "url",
                     "instructions": "",
@@ -142,9 +139,9 @@
                         "class": "",
                         "id": ""
                     },
+                    "wpml_cf_preferences": 0,
                     "default_value": "",
-                    "placeholder": "",
-                    "wpml_cf_preferences": 0
+                    "placeholder": ""
                 },
                 {
                     "key": "field_5e903237e1f6a",
@@ -164,6 +161,216 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": ""
+                },
+                {
+                    "key": "field_605a5aec66254",
+                    "label": "Link buttons",
+                    "name": "link_buttons",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "Add button",
+                    "wpml_cf_preferences": 0,
+                    "sub_fields": [
+                        {
+                            "key": "field_605a5b1e66255",
+                            "label": "Label",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "The text label for the button",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_605a5b2966256",
+                            "label": "Target URL",
+                            "name": "target_url",
+                            "type": "url",
+                            "instructions": "The target URL for the button",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "wpml_cf_preferences": 0
+                        },
+                        {
+                            "key": "field_605a5ba766257",
+                            "label": "Colour",
+                            "name": "colour",
+                            "type": "select",
+                            "instructions": "The background color of the button",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "black": "Black",
+                                "green": "Green"
+                            },
+                            "default_value": "black",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "wpml_cf_preferences": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_605a291c545f2",
+                    "label": "Picture gallery",
+                    "name": "picture_gallery",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "wpml_cf_preferences": 0,
+                    "sub_fields": [
+                        {
+                            "key": "field_605a295b545f3",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "This is optional",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_605a2979545f4",
+                            "label": "Description",
+                            "name": "description",
+                            "type": "textarea",
+                            "instructions": "This is optional",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": "wpautop"
+                        },
+                        {
+                            "key": "field_605a562ddd5fb",
+                            "label": "Pictures",
+                            "name": "pictures",
+                            "type": "repeater",
+                            "instructions": "Select images from the media library in order to add up to 35 pictures. The maximum size for one picture is 1.5MB.\r\nCaptions are optional.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 0,
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 35,
+                            "layout": "row",
+                            "button_label": "Add picture",
+                            "sub_fields": [
+                                {
+                                    "key": "field_605a56b6dd5fc",
+                                    "label": "Picture",
+                                    "name": "picture",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 0,
+                                    "return_format": "url",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "1.5",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_605a570add5fd",
+                                    "label": "Caption",
+                                    "name": "caption",
+                                    "type": "text",
+                                    "instructions": "140 characters max.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "wpml_cf_preferences": 0,
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": 140
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }
@@ -183,7 +390,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1587328727
+    "modified": 1616664604
 }
