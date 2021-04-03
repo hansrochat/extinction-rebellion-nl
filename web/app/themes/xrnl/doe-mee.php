@@ -38,16 +38,16 @@ get_header(); ?>
 
   <?php $section = getSection('actions_section'); ?>
   <?php if ($section->enabled) : ?>
-    <section class="join-section bg-blue text-white join-cover-image" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45)), url('<?php echo ($section->cover_image); ?>') no-repeat;">
+    <section class="join-section bg-blue text-white join-cover-image" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45)), url('<?php echo($section->cover_image); ?>') no-repeat;">
       <div class="row">
         <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-6 mx-auto">
-          <h2><?php echo ($section->heading); ?></h2>
-          <p><?php echo ($section->description); ?></p>
+          <h2><?php echo($section->heading); ?></h2>
+          <p><?php echo($section->description); ?></p>
           <div class="join-action-btns">
             <?php if (is_array($section->broadcasts)) : ?>
               <?php foreach ($section->broadcasts as $broadcast) : ?>
-                <a class="btn btn-pink my-2" href="<?php echo ($broadcast['link']); ?>" 
-onclick="<?php register_button_click($broadcast['label'] . ' (broadcast)'); ?>"><?php echo ($broadcast['label']); ?></a>
+                <a class="btn btn-pink my-2" href="<?php echo($broadcast['link']); ?>"
+onclick="<?php register_button_click($broadcast['label'] . ' (broadcast)'); ?>"><?php echo($broadcast['label']); ?></a>
               <?php endforeach; ?>
             <?php endif; ?>
           </div>
@@ -61,13 +61,13 @@ onclick="<?php register_button_click($broadcast['label'] . ' (broadcast)'); ?>">
     <section class="join-section bg-white">
       <div class="row">
         <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-6 mx-auto">
-          <h2><?php echo ($section->heading); ?></h2>
-          <p><?php echo ($section->description); ?></p>
+          <h2><?php echo($section->heading); ?></h2>
+          <p><?php echo($section->description); ?></p>
           <div class="join-action-btns">
-            <?php if (is_array($section->groups)) : ?>
+            <?php if(is_array($section->groups)) : ?>
               <?php foreach ($section->groups as $group) : ?>
-                <a class="btn btn-yellow my-2" href="<?php echo ($group['button_link']); ?>" 
-onclick="<?php register_button_click($group['button_label']); ?>"><?php echo ($group['button_label']); ?></a>
+                <a class="btn btn-yellow my-2" href="<?php echo($group['button_link']); ?>"
+onclick="<?php register_button_click($group['button_label']); ?>"><?php echo($group['button_label']); ?></a>
               <?php endforeach; ?>
             <?php endif; ?>
           </div>
@@ -81,11 +81,11 @@ onclick="<?php register_button_click($group['button_label']); ?>"><?php echo ($g
     <section class="join-section container-fluid bg-yellow">
       <div class="row">
         <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-6 mx-auto">
-          <h2><?php echo ($section->heading); ?></h2>
-          <p><?php echo ($section->description); ?></p>
-          <?php if (!empty($section->button_label)) : ?>
-            <a class="btn btn-black" href="<?php insertURL(7221) ?>" 
-onclick="<?php register_button_click($section->button_label); ?>"><?php echo ($section->button_label); ?></a>
+          <h2><?php echo($section->heading); ?></h2>
+          <p><?php echo($section->description); ?></p>
+          <?php if(!empty($section->button_label)) : ?>
+            <a class="btn btn-black" href="<?php insertURL(7221) ?>"
+onclick="<?php register_button_click($section->button_label); ?>"><?php echo($section->button_label); ?></a>
           <?php endif; ?>
         </div>
       </div>
@@ -94,14 +94,14 @@ onclick="<?php register_button_click($section->button_label); ?>"><?php echo ($s
 
   <?php $section = getSection('events_section'); ?>
   <?php if ($section->enabled) : ?>
-    <section class="join-section bg-blue text-white join-cover-image" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45)), url('<?php echo ($section->cover_image); ?>') no-repeat;">
+    <section class="join-section bg-blue text-white join-cover-image" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45)), url('<?php echo($section->cover_image); ?>') no-repeat;">
       <div class="row">
         <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-6 mx-auto">
-          <h2><?php echo ($section->heading); ?></h2>
-          <p><?php echo ($section->description); ?></p>
-          <?php if (!empty($section->button_label)) : ?>
-            <a class="btn btn-blue" href="<?php insertURL(548) ?>" 
-onclick="<?php register_button_click($section->button_label); ?>"><?php echo ($section->button_label); ?></a>
+          <h2><?php echo($section->heading); ?></h2>
+          <p><?php echo($section->description); ?></p>
+          <?php if(!empty($section->button_label)) : ?>
+            <a class="btn btn-blue" href="<?php insertURL(548) ?>"
+onclick="<?php register_button_click($section->button_label); ?>"><?php echo($section->button_label); ?></a>
           <?php endif; ?>
         </div>
       </div>
@@ -113,19 +113,19 @@ onclick="<?php register_button_click($section->button_label); ?>"><?php echo ($s
     <section class="join-section container-fluid bg-blue">
       <div class="row">
         <div class="col-12 col-sm-10 col-md-9 col-lg-8 col-xl-8 mx-auto">
-          <h2><?php echo ($section->heading); ?></h2>
-          <p><?php echo ($section->description); ?></p>
+          <h2><?php echo($section->heading); ?></h2>
+          <p><?php echo($section->description); ?></p>
           <div class="row do-more-actions">
-            <?php if (is_array($section->actions)) : ?>
+            <?php if(is_array($section->actions)) : ?>
               <?php foreach ($section->actions as $action) : ?>
                 <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-6 mx-auto mb-5">
-                  <h3><?php echo ($action['title']) ?></h3>
-                  <p><?php echo ($action['description']) ?></p>
-                  <?php if (is_array($action['buttons'])) : ?>
+                  <h3><?php echo($action['title']) ?></h3>
+                  <p><?php echo($action['description']) ?></p>
+                  <?php if(is_array($action['buttons'])) : ?>
                     <?php foreach ($action['buttons'] as $button) : ?>
-                      <?php if ($button['button_label']) : ?>
-                        <a class="btn btn-black my-2 mx-2" href="<?php echo ($button['button_link']); ?>" target="_blank" 
-onclick="<?php register_button_click($button['button_label']); ?>"><?php echo ($button['button_label']); ?></a>
+                      <?php if ($button['button_label']): ?>
+                        <a class="btn btn-black my-2 mx-2" href="<?php echo($button['button_link']); ?>" target="_blank"
+onclick="<?php register_button_click($button['button_label']); ?>"><?php echo($button['button_label']); ?></a>
                       <?php endif; ?>
                     <?php endforeach; ?>
                   <?php endif; ?>
