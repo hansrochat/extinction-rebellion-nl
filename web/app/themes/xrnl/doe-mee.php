@@ -49,7 +49,8 @@ get_header(); ?>
           <div class="join-action-btns">
             <?php if (is_array($section->broadcasts)) : ?>
               <?php foreach ($section->broadcasts as $broadcast) : ?>
-                <a class="btn btn-pink my-2" href="<?php echo ($broadcast['link']); ?>" onclick="<?php register_button_click($broadcast['label'] . ' (broadcast)'); ?>"><?php echo ($broadcast['label']); ?></a>
+                <a class="btn btn-pink my-2" href="<?php echo ($broadcast['link']); ?>" 
+onclick="<?php register_button_click($broadcast['label'] . ' (broadcast)'); ?>"><?php echo ($broadcast['label']); ?></a>
               <?php endforeach; ?>
             <?php endif; ?>
           </div>
@@ -68,7 +69,8 @@ get_header(); ?>
           <div class="join-action-btns">
             <?php if (is_array($section->groups)) : ?>
               <?php foreach ($section->groups as $group) : ?>
-                <a class="btn btn-yellow my-2" href="<?php echo ($group['button_link']); ?>"><?php echo ($group['button_label']); ?></a>
+                <a class="btn btn-yellow my-2" href="<?php echo ($group['button_link']); ?>" 
+onclick="<?php register_button_click($group['button_label']); ?>"><?php echo ($group['button_label']); ?></a>
               <?php endforeach; ?>
             <?php endif; ?>
           </div>
@@ -85,7 +87,8 @@ get_header(); ?>
           <h2><?php echo ($section->heading); ?></h2>
           <p><?php echo ($section->description); ?></p>
           <?php if (!empty($section->button_label)) : ?>
-            <a class="btn btn-black" href="<?php insertURL(7221) ?>"><?php echo ($section->button_label); ?></a>
+            <a class="btn btn-black" href="<?php insertURL(7221) ?>" 
+onclick="<?php register_button_click($section->button_label); ?>"><?php echo ($section->button_label); ?></a>
           <?php endif; ?>
         </div>
       </div>
@@ -100,7 +103,8 @@ get_header(); ?>
           <h2><?php echo ($section->heading); ?></h2>
           <p><?php echo ($section->description); ?></p>
           <?php if (!empty($section->button_label)) : ?>
-            <a class="btn btn-blue" href="<?php insertURL(548) ?>"><?php echo ($section->button_label); ?></a>
+            <a class="btn btn-blue" href="<?php insertURL(548) ?>" 
+onclick="<?php register_button_click($section->button_label); ?>"><?php echo ($section->button_label); ?></a>
           <?php endif; ?>
         </div>
       </div>
@@ -123,7 +127,8 @@ get_header(); ?>
                   <?php if (is_array($action['buttons'])) : ?>
                     <?php foreach ($action['buttons'] as $button) : ?>
                       <?php if ($button['button_label']) : ?>
-                        <a class="btn btn-black my-2 mx-2" href="<?php echo ($button['button_link']); ?>" target="_blank"><?php echo ($button['button_label']); ?></a>
+                        <a class="btn btn-black my-2 mx-2" href="<?php echo ($button['button_link']); ?>" target="_blank" 
+onclick="<?php register_button_click($button['button_label']); ?>"><?php echo ($button['button_label']); ?></a>
                       <?php endif; ?>
                     <?php endforeach; ?>
                   <?php endif; ?>

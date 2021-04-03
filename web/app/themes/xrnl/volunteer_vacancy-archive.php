@@ -48,7 +48,8 @@ get_header(); ?>
       </option>
     <?php } ?>
   </select>
-  <button type="submit" class="btn btn-black mt-2 mt-md-0 ml-md-2" onclick="<?php register_button_click('apply filters'); ?>">
+  <button type="submit" class="btn btn-black mt-2 mt-md-0 ml-md-2" 
+onclick="<?php register_button_click('apply filters'); ?>">
     <?php _e('Apply') ?>
   </button>
 </form>
