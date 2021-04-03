@@ -1,39 +1,36 @@
 <?php
-
 /**
  * Template name: Doe mee
  */
 
+
 get_header(); ?>
 
-<?php function getSection($section_id)
-{
+<?php function getSection($section_id) {
   return (object) get_field($section_id);
 } ?>
 
-<?php function insertURL($page_id)
-{
+<?php function insertURL($page_id) {
   echo get_permalink(apply_filters('wpml_object_id', $page_id, 'page', true));
 } ?>
 
-
 <div class="join">
   <div class="bg-blue text-center text-white join-cover-image py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45)), url('<?php the_field('join_cover_image_url'); ?>') no-repeat;">
-    <h1 class="display-2 text-uppercase font-xr"><?php the_title(); ?></h1>
-    <div class="container">
-      <div class="col-lg-8 mx-auto">
-        <?php the_content(); ?>
+      <h1 class="display-2 text-uppercase font-xr"><?php the_title(); ?></h1>
+      <div class="container">
+        <div class="col-lg-8 mx-auto">
+          <?php the_content(); ?>
+        </div>
       </div>
-    </div>
   </div>
 
   <?php $section = getSection('signup_section'); ?>
   <?php if ($section->enabled) : ?>
-    <section id="<?php echo formatElementID(__('Sign up', 'theme-xrnl')); ?>" class="join-section container-fluid bg-pink">
+    <section id="<?php echo formatElementID(__('Sign up','theme-xrnl')); ?>" class="join-section container-fluid bg-pink">
       <div class="row">
         <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-6 mx-auto">
-          <h2><?php echo ($section->heading); ?></h2>
-          <?php echo ($section->content); ?>
+          <h2><?php echo($section->heading); ?></h2>
+          <?php echo($section->content); ?>
         </div>
       </div>
     </section>
