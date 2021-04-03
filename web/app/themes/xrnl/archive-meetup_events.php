@@ -70,7 +70,7 @@ get_header(); ?>
 						<?php echo($featured_event['description']); ?>
 					</p>
 					<div class="row px-3 mt-5">
-						<a href="<?php echo($featured_event['button_link']); ?>" class="btn btn-lg bg-xr-light-green"><?php echo($featured_event['button_label']); ?></a>
+            <a href="<?php echo($featured_event['button_link']); ?>" class="btn btn-lg bg-xr-light-green" onclick="<?php register_button_click('go to featured event'); ?>"><?php echo($featured_event['button_label']); ?></a>
 					</div>
 				</div>
 				<div class="col-12 col-lg-7">
@@ -116,7 +116,7 @@ get_header(); ?>
 					</div>
 				<?php } ?>
 				<div class="col-auto my-auto">
-					<button type="submit" class="btn btn-black ml-sm-2">
+        <button type="submit" class="btn btn-black ml-sm-2" onclick="<?php register_button_click('apply filters'); ?>">
 						<?php _e('Apply') ?>
 					</button>
 				</div>

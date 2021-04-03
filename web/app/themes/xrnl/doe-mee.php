@@ -49,7 +49,7 @@ get_header(); ?>
           <div class="join-action-btns">
             <?php if (is_array($section->broadcasts)) : ?>
               <?php foreach ($section->broadcasts as $broadcast) : ?>
-                <a class="btn btn-pink my-2" href="<?php echo ($broadcast['link']); ?>"><?php echo ($broadcast['label']); ?></a>
+                <a class="btn btn-pink my-2" href="<?php echo ($broadcast['link']); ?>" onclick="<?php register_button_click($broadcast['label'] . ' (broadcast)'); ?>"><?php echo ($broadcast['label']); ?></a>
               <?php endforeach; ?>
             <?php endif; ?>
           </div>
