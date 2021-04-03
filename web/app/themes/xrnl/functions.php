@@ -1002,6 +1002,7 @@ function register_button_click($button_identifier, $page_identifier = NULL)
     $url_path = parse_url($escaped_url)['path'];
     $page_identifier = $url_path;
   }
+  $button_identifier = strtolower($button_identifier);
   $onclick = "_paq.push(['trackEvent', 'Button', 'Clicked', '" . $page_identifier . " - ". $button_identifier . "']);";
   echo $onclick;
 }
