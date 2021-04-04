@@ -12,6 +12,8 @@ get_header(); ?>
 
 <div class="community-group">
 
+  <h1 class="display-4 text-center mt-5 mb-3"><?php the_title(); ?></h1>
+
   <div class="hero-container">
     <img class="group-cover-image mx-auto" src="<?php the_field('group_cover_image_url'); ?>" alt="<?php the_title(); ?>">
     <div class="hero-caption">
@@ -22,14 +24,13 @@ get_header(); ?>
   <div class="container pt-5 text-center">
     <div class="row">
       <div class="col-12 col-lg-8 mx-auto">
-          <h1 class="display-4"><?php the_title(); ?></h1>
-          <div class="text-justify"><?php the_content(); ?></div>
+        <div class="text-justify"><?php the_content(); ?></div>
       </div>
       <div class="col-12 col-lg-8 mx-auto">
         <?php $buttons = get_field('group_link_buttons'); ?>
         <?php if (!empty($buttons)) : ?>
           <?php foreach ($buttons as $button) : ?>
-            <div class=" mt-3">
+            <div class="mt-3">
               <a href="<?php echo $button['target_url'] ?>" class="btn btn-<?php echo $button['colour']; ?>"><?php echo $button['label']; ?></a>
             </div>
           <?php endforeach; ?>
