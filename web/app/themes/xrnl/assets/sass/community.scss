@@ -42,6 +42,13 @@
     }
   }
 
+  .main-content {
+    text-align: left;
+    @include media-breakpoint-up(md) {
+      text-align: justify;
+    };
+  }
+
   .picture-gallery {
     .carousel-control-prev-icon,
     .carousel-control-next-icon {

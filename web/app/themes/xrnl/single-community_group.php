@@ -24,7 +24,9 @@ get_header(); ?>
   <div class="container pt-5 text-center">
     <div class="row">
       <div class="col-12 col-lg-8 mx-auto">
-        <div class="text-justify"><?php the_content(); ?></div>
+        <div class="main-content">
+          <?php the_content(); ?>
+        </div>
       </div>
       <div class="col-12 col-lg-8 mx-auto">
         <?php $buttons = get_field('group_link_buttons'); ?>
