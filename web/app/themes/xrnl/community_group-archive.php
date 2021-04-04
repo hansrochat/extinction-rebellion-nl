@@ -31,7 +31,7 @@ get_header(); ?>
 
             <?php $img_url = get_field('group_cover_image_url') ?: $default_img_url;  // Use default pic if cover image is missing ?>
             <a href="<?php the_permalink(); ?>">
-              <img src="<?php echo($img_url); ?>" class="card-img-top" alt="XRNL Community group">
+              <img src="<?php echo($img_url); ?>" class="card-img-top" alt="<?php the_title(); ?>">
             </a>
 
                <a href="<?php the_permalink(); ?>"><h5 class="card-header text-center font-xr text-uppercase bg-yellow border-0"><?php the_title(); ?></h5></a>
