@@ -11,6 +11,7 @@ get_header(); ?>
 ?>
 
 <div class="community-group">
+  <a href="<?php echo $communityPageURL ?>" class="btn btn-blue my-4"><i class="fas fa-arrow-left"></i> <?php _e('View all community groups', 'theme-xrnl'); ?></a>
 
   <h1 class="display-4 text-center mt-5 mb-3"><?php the_title(); ?></h1>
 
@@ -121,7 +122,6 @@ get_header(); ?>
     </div>
   </div>
 
-  <a href="<?php echo $communityPageURL ?>" class="btn btn-blue my-4"><i class="fas fa-arrow-left"></i> <?php _e('View all community groups', 'theme-xrnl'); ?></a>
 </div>
 
 <script type="text/javascript">
