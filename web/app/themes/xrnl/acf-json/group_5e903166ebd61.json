@@ -308,7 +308,7 @@
                             "label": "Pictures",
                             "name": "pictures",
                             "type": "repeater",
-                            "instructions": "Select images from the media library in order to add up to 35 pictures. The maximum size for one picture is 1.5MB.\r\nCaptions are optional.",
+                            "instructions": "To prevent the page from becoming too slow, the maximum number of pictures is 35. To share more (or higher-resolution) pictures, one option is to put them in a shared folder on nextcloud, and link to that with a button. \r\nCaptions are optional.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -392,5 +392,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1616664604
+    "modified": 1617610553
 }
