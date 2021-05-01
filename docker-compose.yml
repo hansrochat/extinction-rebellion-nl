@@ -38,6 +38,13 @@ services:
       - .:/var/www/html
     command: install
 
+  composer-tool:
+    image: composer
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    command: tail -f /dev/null
+
 volumes:
   db_data: {}
   metabase_data: {}
