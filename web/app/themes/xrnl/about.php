@@ -24,7 +24,7 @@ get_header(); ?>
       <div class="row">
         <div class="col-12 col-lg-6 mx-auto mt-3">
           <a class="btn btn-yellow btn-lg" data-toggle="collapse" href="#demands" role="button" aria-expanded="false" aria-controls="demands" 
-onclick="<?php register_button_click('our demands') ?>">
+onclick="<?= register_button_click('our demands') ?>">
             <?php _e('OUR DEMANDS', 'theme-xrnl'); ?>
             <i class="fas fa-chevron-down"></i>
           </a>
@@ -65,7 +65,7 @@ onclick="<?php register_button_click('our demands') ?>">
         <div class="row py-2">
           <div id="<?php echo formatElementID(get_sub_field('topic_tilte')); ?>" class="col-12 col-lg-6 mx-auto">
             <a class="btn btn-yellow btn-lg btn-block text-left" data-toggle="collapse" href="#topic-<?php echo get_row_index(); ?>" role="button" aria-expanded="false" aria-controls="topic-<?php echo get_row_index(); ?>" 
-onclick="<?php register_button_click(get_sub_field('topic_tilte')) ?>">
+onclick="<?= register_button_click(get_sub_field('topic_tilte')) ?>">
               <?php the_sub_field('topic_tilte') ?>
               <i class="fas fa-chevron-down float-right pt-1"></i>
             </a>

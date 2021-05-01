@@ -1004,5 +1004,5 @@ function register_button_click($button_identifier, $page_identifier = NULL)
   }
   $button_identifier = strtolower($button_identifier);
   $onclick = "_paq.push(['trackEvent', 'Button', 'Clicked', '" . $page_identifier . " - ". $button_identifier . "']);";
-  echo $onclick;
+  return $onclick;
 }

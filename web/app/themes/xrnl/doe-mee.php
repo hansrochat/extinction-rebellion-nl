@@ -47,7 +47,7 @@ get_header(); ?>
             <?php if (is_array($section->broadcasts)) : ?>
               <?php foreach ($section->broadcasts as $broadcast) : ?>
                 <a class="btn btn-pink my-2" href="<?php echo($broadcast['link']); ?>"
-onclick="<?php register_button_click($broadcast['label'] . ' (broadcast)'); ?>"><?php echo($broadcast['label']); ?></a>
+onclick="<?= register_button_click($broadcast['label'] . ' (broadcast)'); ?>"><?php echo($broadcast['label']); ?></a>
               <?php endforeach; ?>
             <?php endif; ?>
           </div>
@@ -67,7 +67,7 @@ onclick="<?php register_button_click($broadcast['label'] . ' (broadcast)'); ?>">
             <?php if(is_array($section->groups)) : ?>
               <?php foreach ($section->groups as $group) : ?>
                 <a class="btn btn-yellow my-2" href="<?php echo($group['button_link']); ?>"
-onclick="<?php register_button_click($group['button_label']); ?>"><?php echo($group['button_label']); ?></a>
+onclick="<?= register_button_click($group['button_label']); ?>"><?php echo($group['button_label']); ?></a>
               <?php endforeach; ?>
             <?php endif; ?>
           </div>
@@ -85,7 +85,7 @@ onclick="<?php register_button_click($group['button_label']); ?>"><?php echo($gr
           <p><?php echo($section->description); ?></p>
           <?php if(!empty($section->button_label)) : ?>
             <a class="btn btn-black" href="<?php insertURL(7221) ?>"
-onclick="<?php register_button_click($section->button_label); ?>"><?php echo($section->button_label); ?></a>
+onclick="<?= register_button_click($section->button_label); ?>"><?php echo($section->button_label); ?></a>
           <?php endif; ?>
         </div>
       </div>
@@ -101,7 +101,7 @@ onclick="<?php register_button_click($section->button_label); ?>"><?php echo($se
           <p><?php echo($section->description); ?></p>
           <?php if(!empty($section->button_label)) : ?>
             <a class="btn btn-blue" href="<?php insertURL(548) ?>"
-onclick="<?php register_button_click($section->button_label); ?>"><?php echo($section->button_label); ?></a>
+onclick="<?= register_button_click($section->button_label); ?>"><?php echo($section->button_label); ?></a>
           <?php endif; ?>
         </div>
       </div>
@@ -125,7 +125,7 @@ onclick="<?php register_button_click($section->button_label); ?>"><?php echo($se
                     <?php foreach ($action['buttons'] as $button) : ?>
                       <?php if ($button['button_label']): ?>
                         <a class="btn btn-black my-2 mx-2" href="<?php echo($button['button_link']); ?>" target="_blank"
-onclick="<?php register_button_click($button['button_label']); ?>"><?php echo($button['button_label']); ?></a>
+onclick="<?= register_button_click($button['button_label']); ?>"><?php echo($button['button_label']); ?></a>
                       <?php endif; ?>
                     <?php endforeach; ?>
                   <?php endif; ?>

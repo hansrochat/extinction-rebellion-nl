@@ -203,6 +203,11 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			// Allow filtering of the $atts array before using it.
 			$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
 
+      // register onclick atttribute to get analytics for button clicks
+      if ($args->clicks_page_identifier) {
+        $atts['onclick'] = register_button_click($atts['title'], $args->clicks_page_identifier);
+      }
+      
 			// Build a string of html containing all the atts for the item.
 			$attributes = '';
 			foreach ( $atts as $attr => $value ) {

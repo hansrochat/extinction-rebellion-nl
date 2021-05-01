@@ -71,7 +71,7 @@ get_header(); ?>
 					</p>
 					<div class="row px-3 mt-5">
             <a href="<?php echo($featured_event['button_link']); ?>" class="btn btn-lg bg-xr-light-green" 
-onclick="<?php register_button_click('go to featured event'); ?>"><?php echo($featured_event['button_label']); ?></a>
+onclick="<?= register_button_click('go to featured event'); ?>"><?php echo($featured_event['button_label']); ?></a>
 					</div>
 				</div>
 				<div class="col-12 col-lg-7">
@@ -118,7 +118,7 @@ onclick="<?php register_button_click('go to featured event'); ?>"><?php echo($fe
 				<?php } ?>
 				<div class="col-auto my-auto">
         <button type="submit" class="btn btn-black ml-sm-2" 
-onclick="<?php register_button_click('apply filters'); ?>">
+onclick="<?= register_button_click('apply filters'); ?>">
 						<?php _e('Apply') ?>
 					</button>
 				</div>
