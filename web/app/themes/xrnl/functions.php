@@ -171,7 +171,7 @@ add_action('init', function(){
     $args = array(
         'label'                 => __( 'Community Group', 'text_domain' ),
         'labels'                => $labels,
-        'supports'              => array( 'title', 'editor' ),
+        'supports'              => array('title', 'editor', 'author', 'revisions'),
         'hierarchical'          => false,
         'public'                => true,
         'show_ui'               => true,

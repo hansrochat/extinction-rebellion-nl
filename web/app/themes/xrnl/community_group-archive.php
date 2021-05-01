@@ -7,7 +7,7 @@ get_header(); ?>
 
 <?php
   $groups = new WP_Query([
-    'order' => 'DESC',
+    'order' => 'ASC',
     'orderby' => 'ID',
     'post_type' => 'community_group',
     'posts_per_page' => -1
@@ -16,32 +16,30 @@ get_header(); ?>
 ?>
 
 <div id="community" class="container py-5">
-    <h1 class="mt-5"><?php the_title(); ?></h1>
-    <p><?php the_content(); ?></p>
+    <div class="row text-center">
+      <div class="col col-sm-11 col-md-10 col-lg-8 mx-auto">
+        <h1 class="display-3"><?php the_title(); ?></h1>
+        <p><?php the_content(); ?></p>
+      </div>
+    </div>
 
-    <div class="row">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
       <?php while($groups->have_posts()):$groups->the_post(); ?>
-        <?php $show_link_to_group_page = !empty(get_the_content()); // Show link if group has content text ?>
+      <div class="col mb-4 mt-4">
 
-        <div class="col-8 col-sm-6 col-md-4 col-xl-4 mt-4 group-column">
-          <div id="group-card-<?php echo($groups->current_post); ?>" class="card group-card h-100 border-0">
+          <div id="group-card-<?php echo($groups->current_post); ?>" class="card group-card border-0">
 
             <?php $img_url = get_field('group_cover_image_url') ?: $default_img_url;  // Use default pic if cover image is missing ?>
-            <img src="<?php echo($img_url); ?>" class="card-img-top" alt="XRNL Community group">
+            <a href="<?php the_permalink(); ?>">
+              <img src="<?php echo($img_url); ?>" class="card-img-top" alt="<?php the_title(); ?>">
+            </a>
 
-             <?php if($show_link_to_group_page): ?>
-               <a href="<?php the_permalink(); ?>"><h5 class="card-header font-xr text-uppercase bg-yellow border-0"><?php the_title(); ?></h5></a>
-             <?php else :?>
-              <h5 class="card-header font-xr text-uppercase bg-yellow border-0"><?php the_title(); ?></h5>
-             <?php endif; ?>
-
-              <div class="card-body bg-light text-center">
-               <?php if($show_link_to_group_page): ?>
-                 <a href="<?php the_permalink(); ?> "class="btn btn-black"><?php _e('Learn more', 'theme-xrnl'); ?></a>
+               <a href="<?php the_permalink(); ?>"><h5 class="card-header text-center font-xr text-uppercase bg-yellow border-0"><?php the_title(); ?></h5></a>
+               <div class="card-footer bg-xr-yellow border-0 text-center">
+               <?php if(get_field('group_twitter_url')): ?>
+                 <a href="<?php the_field('group_twitter_url'); ?>"  target="_blank" rel="noreferrer noopener" class="btn twitter" aria-label="twitter"><i class="fab fa-2x fa-twitter"></i></a>
                <?php endif; ?>
-              </div>
 
-              <div class="card-footer bg-light border-0 text-center">
                <?php if(get_field('group_facebook_url')): ?>
                  <a href="<?php the_field('group_facebook_url'); ?>"  target="_blank" rel="noreferrer noopener" class="btn facebook" aria-label="facebook"><i class="fab fa-2x fa-facebook-f"></i></a>
                <?php endif; ?>
@@ -60,8 +58,7 @@ get_header(); ?>
               </div>
 
           </div>
-        </div>
-
+      </div>
       <?php endwhile; wp_reset_query(); ?>
     </div>
 
