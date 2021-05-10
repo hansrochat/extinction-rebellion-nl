@@ -337,30 +337,6 @@ function event_params() {
     );
 }
 
-// Get Distinct Vacancy working and local groups
-function vacancy_groups( $vacancies ) {
-    $working_groups = array();
-    $local_groups = array();
-
-    while ( $vacancies->have_posts() ) {
-        $vacancies->the_post();
-        $role = json_decode(get_the_content());
-        $working_groups[] = $role->workingGroup;
-        $local_groups[] = $role->localGroup;
-    }
-
-    function unique_sorted( $array ) {
-        $array = array_unique($array);
-        sort($array);
-        return $array;
-    }
-
-    return array(
-        'local_groups' => unique_sorted($local_groups),
-        'working_groups' => unique_sorted($working_groups)
-    );
-}
-
 function xrnl_query_vars( $qvars ) {
     $qvars[] = 'organizer';
     $qvars[] = 'category';
