@@ -28,18 +28,8 @@ get_header(); ?>
 <form class="d-flex role-filter" method="get">
   <label for="working_group"><?php _e('Working group') ?></label>
   <select name="working_group" class="custom-select" id="working_group">
-    <option value=""><?php _e('All') ?></option>
-    <option disabled>──────</option>
-    <?php foreach($vacancy_groups['working_groups'] as $working_group) { ?>
-      <option value="<?php echo $working_group ?>" <?php echo $param_working_group == $working_group ? 'selected="selected"' : '' ?>>
-        <?php echo $working_group ?>
-      </option>
-    <?php } ?>
+    <option value=""><?php _e('Choose one...') ?></option>
   </select>
-
-  <button type="submit" class="btn btn-black mt-2 mt-md-0 ml-md-2">
-    <?php _e('Apply') ?>
-  </button>
 </form>
 
 <?php
@@ -60,8 +50,8 @@ get_header(); ?>
   ?>
 
 
-  <div class="role-card d-flex flex-column col-12 col-sm-6 col-lg-4 col-xl-3 p-1">
-    <div class="role-header"><h5 class="m-0 font-xr"><?php echo $role->workingGroup ?>, <?php echo $role->localGroup ?></h5>
+  <div class="role-card d-flex flex-column col-12 col-sm-6 col-lg-4 col-xl-3 p-1" data-wg="<?php echo $role->workingGroup; ?>">
+    <div class="role-header"><h5 class="m-0 font-xr"><?php echo $role->workingGroup ?></h5>
     </div>
     <div class="role-body d-flex flex-column justify-content-between flex-grow-1">
   	<div>
@@ -79,7 +69,7 @@ get_header(); ?>
   	  </span>
 
   	</span>
-  	<a href="<?php the_permalink(); ?>" class="btn btn-black"><?php _e('Learn more', 'theme-xrnl'); ?></a>
+  	<a href="<?php the_permalink(); ?>"class="btn btn-black"><?php _e('Learn more', 'theme-xrnl'); ?></a>
   	</div>
     </div>
   </div>
@@ -91,6 +81,29 @@ get_header(); ?>
   ?>
 
 </div>
+
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+    $('.role-card').removeClass('d-flex').addClass('d-none');
+
+    var workingGroups = [];
+    $('.role-card').each(function() {
+      var wg = $(this).data('wg');
+      if ($.inArray(wg, workingGroups) < 0) {
+        workingGroups.push(wg);
+      }
+    });
+
+    workingGroups.forEach(function(group) {
+      $('select').append($("<option>").attr('value', group).text(group));
+    });
+
+    $('select').change(function() {
+      $('.role-card').removeClass('d-flex').addClass('d-none');
+      $('[data-wg="'+$(this).val()+'"]').removeClass('d-none').addClass('d-flex');
+    });
+  });
+</script>
 
 
 <?php get_footer();
