@@ -8,7 +8,9 @@ $vacancies = new WP_Query([
   'posts_per_page' => -1
 ]);
 
-get_header(); ?>
+get_header();
+$fields = get_fields();
+?>
 
 <?php the_post(); ?>
 
@@ -26,17 +28,17 @@ get_header(); ?>
       <div class="row pt-5 text-light">
         <div class="row px-3 px-md-5 mb-5">
           <div class="col-12 col-lg-5">
-            <h3>Local groups</h3>
-            One way to get involved is by joining a local group. Many groups already have posted roles on their webpages, check them out or get touch directly with your nearest group!
+            <h3><?php echo $fields['local_group_roles']['heading']; ?></h3>
+            <?php echo $fields['local_group_roles']['text']; ?>
           </div>
           <div class="col-12 col-lg-5 mx-auto px-md-5 px-lg-0 mt-4 mt-lg-0 d-flex flex-column justify-content-center">
-            <a href="/lokale-groepen" class="btn btn-blue btn-lg">Find your local group</a>
+            <a href="/lokale-groepen" class="btn btn-blue btn-lg"><?php echo $fields['local_group_roles']['button_label']; ?></a>
           </div>
         </div>
         <div class="row px-3 px-md-5">
           <div class="col-12 col-lg-5">
-            <h3>National circles</h3>
-            Another way to get involved is by helping out in one of our national circles. Choose a working group to see what roles are available!
+            <h3><?php echo $fields['national_roles']['heading']; ?></h3>
+            <?php echo $fields['national_roles']['text']; ?>
           </div>
           <div class="col-12 col-lg-5 mx-auto px-md-5 px-lg-0 mt-4 mt-lg-0 d-flex flex-column justify-content-center">
             <form class="d-flex" method="get">
@@ -88,12 +90,12 @@ get_header(); ?>
       <div class="row text-light">
         <div class="row px-3 px-md-5 mb-5">
           <div class="col-12 col-lg-9">
-            <h3>Questions?</h3>
-            XR NL heeft veel mogelijkheden die niet in deze pagina staan. Voor meer informatie of andere vragen kan je contact opnemen met welcome@extinctionrebellion.nl, of een Mattermost berichtje sturen naar @vacancies_support_xrnl.
+            <h3><?php echo $fields['questions']['heading']; ?></h3>
+            <?php echo $fields['questions']['text']; ?>
           </div>
           <div class="col-12 col-lg-9 mt-5">
-            <h3>Publish a new role</h3>
-            Als je een nieuwe rol wilt publiceren, gebruik dan dit formulier.
+            <h3><?php echo $fields['new_role']['heading']; ?></h3>
+            <?php echo $fields['new_role']['text']; ?>
           </div>
         </div>
       </div>
