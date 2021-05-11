@@ -3,83 +3,102 @@
 Template name: Volunteer positions
 */
 
+$vacancies = new WP_Query([
+  'post_type' => 'volunteer_vacancy',
+  'posts_per_page' => -1
+]);
+
 get_header(); ?>
 
 <?php the_post(); ?>
-<div class="row p-5 m-2 background-icon-container">
-  <img src="<?php the_field('background_icon'); ?>" class="background-icon">
-  <h1><?php the_title(); ?></h1>
-<div class="col-12 col-xl-8 p-0">
-  <?php the_content(); ?>
-</div>
 
-</div>
-
-<?php
-  $param_working_group = get_query_var('working_group');
-
-  $vacancies = new WP_Query([
-    'post_type' => 'volunteer_vacancy',
-    'posts_per_page' => -1
-  ]);
-
-?>
-
-<form class="d-flex role-filter" method="get">
-  <label for="working_group"><?php _e('Working group') ?></label>
-  <select name="working_group" class="custom-select" id="working_group">
-    <option value=""><?php _e('Choose one...') ?></option>
-  </select>
-</form>
-
-<?php
-
-?>
-
-<div class="d-flex flex-wrap m-1">
-  <?php
-  	$n_vacancies_rendered = 0;
-
-  	while($vacancies->have_posts()){
-  	$vacancies->the_post();
-  	$role = json_decode(get_the_content());
-    if (!preg_match('/XR NL/', $role->localGroup)) {
-      continue;
-    }
-
-  ?>
-
-
-  <div class="role-card d-flex flex-column col-12 col-sm-6 col-lg-4 col-xl-3 p-1" data-wg="<?php echo $role->workingGroup; ?>">
-    <div class="role-header"><h5 class="m-0 font-xr"><?php echo $role->workingGroup ?></h5>
-    </div>
-    <div class="role-body d-flex flex-column justify-content-between flex-grow-1">
-  	<div>
-  	<h5 class="role-title">
-  	  <?php the_title(); ?>
-  	</h5>
-  	</div>
-  	<div class="d-flex justify-content-between align-items-end">
-  	<span class="d-flex flex-column justify-content-center">
-  	  <span class="flex-grow-0" style="line-height: 1rem; font-size: 1.25rem;">
-  	  <?php echo $role->timeCommitment->min ?>&ndash;<?php echo $role->timeCommitment->max ?>
-  	  </span>
-  	  <span class="font-size: 0.625rem">
-  	  <?php _e('hours / week', 'theme-xrnl'); ?>
-  	  </span>
-
-  	</span>
-  	<a href="<?php the_permalink(); ?>"class="btn btn-black"><?php _e('Learn more', 'theme-xrnl'); ?></a>
-  	</div>
+<div class="container-md px-0">
+  <div class="row mt-5 background-icon-container px-2 px-md-0">
+    <img src="<?php the_field('background_icon'); ?>" class="background-icon">
+    <div class="col-12 col-xl-8">
+    <h1><?php the_title(); ?></h1>
+      <?php the_content(); ?>
     </div>
   </div>
 
-  <?php
+  <div class="row px-2 px-md-0">
+    <div class="col-12 mx-auto mb-5 bg-xr-navy">
+      <div class="row pt-5 text-light">
+        <div class="row px-3 px-md-5 mb-5">
+          <div class="col-12 col-lg-5">
+            <h3>Local groups</h3>
+            One way to get involved is by joining a local group. Many groups already have posted roles on their webpages, check them out or get touch directly with your nearest group!
+          </div>
+          <div class="col-12 col-lg-5 mx-auto px-md-5 px-lg-0 mt-4 mt-lg-0 d-flex flex-column justify-content-center">
+            <a href="/lokale-groepen" class="btn btn-blue btn-lg">Find your local group</a>
+          </div>
+        </div>
+        <div class="row px-3 px-md-5">
+          <div class="col-12 col-lg-5">
+            <h3>National circles</h3>
+            Another way to get involved is by helping out in one of our national circles. Choose a working group to see what roles are available!
+          </div>
+          <div class="col-12 col-lg-5 mx-auto px-md-5 px-lg-0 mt-4 mt-lg-0 d-flex flex-column justify-content-center">
+            <form class="d-flex" method="get">
+              <label for="working_group" class="mr-3 my-auto font-xr text-light text-nowrap"><?php _e('Working group') ?></label>
+              <select name="working_group" class="custom-select font-xr" id="working_group">
+                <option value=""><?php _e('Choose one...') ?></option>
+              </select>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-wrap py-5 px-3 px-md-5 ">
+        <?php
+        	while($vacancies->have_posts()){
+          	$vacancies->the_post();
+          	$role = json_decode(get_the_content());
+            if (!preg_match('/XR NL/', $role->localGroup)) {
+              continue;
+            }
+        ?>
+        <div class="role-card d-flex flex-column col-12 col-sm-6 col-lg-4 col-xl-4 p-1" data-wg="<?php echo $role->workingGroup; ?>">
+          <div class="role-header">
+            <h5 class="m-0 font-xr"><?php echo $role->workingGroup ?></h5>
+          </div>
+          <div class="role-body d-flex flex-column justify-content-between flex-grow-1">
+          	<div>
+            	<h5 class="role-title">
+            	  <?php the_title(); ?>
+            	</h5>
+          	</div>
+          	<div class="d-flex justify-content-between align-items-end">
+            	<span class="d-flex flex-column justify-content-center">
+            	  <span class="flex-grow-0" style="line-height: 1rem; font-size: 1.25rem;">
+            	  <?php echo $role->timeCommitment->min ?>&ndash;<?php echo $role->timeCommitment->max ?>
+            	  </span>
+            	  <span style="font-size: 0.625rem">
+            	  <?php _e('hours / week', 'theme-xrnl'); ?>
+            	  </span>
+            	</span>
+            	<a href="<?php the_permalink(); ?>"class="btn btn-black"><?php _e('Learn more', 'theme-xrnl'); ?></a>
+          	</div>
+          </div>
+        </div>
+        <?php
+          } wp_reset_query();
+        ?>
+      </div>
 
-  } wp_reset_query();
-
-  ?>
-
+      <div class="row text-light">
+        <div class="row px-3 px-md-5 mb-5">
+          <div class="col-12 col-lg-9">
+            <h3>Questions?</h3>
+            XR NL heeft veel mogelijkheden die niet in deze pagina staan. Voor meer informatie of andere vragen kan je contact opnemen met welcome@extinctionrebellion.nl, of een Mattermost berichtje sturen naar @vacancies_support_xrnl.
+          </div>
+          <div class="col-12 col-lg-9 mt-5">
+            <h3>Publish a new role</h3>
+            Als je een nieuwe rol wilt publiceren, gebruik dan dit formulier.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script type="text/javascript">
