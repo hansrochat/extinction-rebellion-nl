@@ -18,9 +18,6 @@ get_header(); ?>
 </header>
 <?php $role = json_decode(get_the_content()); ?>
     <h4 class="xr-font text-white"><?php echo $role->workingGroup ?>, <?php echo $role->localGroup ?></h4>
-    <h6>
-        <?php _e('Published on', 'theme-xrnl'); ?>
-        <?php the_date(); ?></h6>
     <h5 class="role-section-header">
         <?php _e('Responsibilities', 'theme-xrnl'); ?>
     </h5>
