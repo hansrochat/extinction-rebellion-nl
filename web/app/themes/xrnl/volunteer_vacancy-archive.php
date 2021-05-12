@@ -13,9 +13,8 @@ $fields = get_fields();
 ?>
 
 <?php the_post(); ?>
-
 <div class="container-md px-0">
-  <div class="row mt-5 background-icon-container px-2 px-md-0">
+  <div class="row mt-5 background-icon-container px-2 px-md-0 pb-5">
     <img src="<?php the_field('background_icon'); ?>" class="background-icon">
     <div class="col-12 col-xl-8">
     <h1><?php the_title(); ?></h1>
@@ -24,7 +23,7 @@ $fields = get_fields();
   </div>
 
   <div class="row px-2 px-md-0">
-    <div class="col-12 mx-auto mb-5 bg-xr-navy">
+    <div class="col-12 mx-auto mb-5 bg-xr-navy bg-navy">
       <div class="row pt-5 text-light">
         <div class="row px-3 px-md-5 mb-5">
           <div class="col-12 col-lg-5">
@@ -32,7 +31,7 @@ $fields = get_fields();
             <?php echo $fields['local_group_roles']['text']; ?>
           </div>
           <div class="col-12 col-lg-5 mx-auto px-md-5 px-lg-0 mt-4 mt-lg-0 d-flex flex-column justify-content-center">
-            <a href="/lokale-groepen" class="btn btn-blue btn-lg"><?php echo $fields['local_group_roles']['button_label']; ?></a>
+            <a href="/lokale-groepen" class="btn btn-yellow btn-lg"><?php echo $fields['local_group_roles']['button_label']; ?></a>
           </div>
         </div>
         <div class="row px-3 px-md-5">
@@ -59,7 +58,7 @@ $fields = get_fields();
               continue;
             }
         ?>
-        <div class="role-card d-flex flex-column col-12 col-sm-6 col-lg-4 col-xl-4 p-1" data-wg="<?php echo $role->workingGroup; ?>">
+        <div class="role-card d-flex flex-column col-12 col-xs-12 col-sm-6 col-lg-4 col-xl-4 p-1" data-wg="<?php echo $role->workingGroup; ?>">
           <div class="role-header">
             <h5 class="m-0 font-xr"><?php echo $role->workingGroup ?></h5>
           </div>
@@ -87,7 +86,9 @@ $fields = get_fields();
         ?>
       </div>
 
-      <div class="row text-light">
+      <div class="row text-light background-icon-container">
+        <img src="<?php echo get_theme_file_uri('dist/images/XR-symbol.svg'); ?>" class="background-icon d-none d-lg-block">
+
         <div class="row px-3 px-md-5 mb-5">
           <div class="col-12 col-lg-9">
             <h3><?php echo $fields['questions']['heading']; ?></h3>
