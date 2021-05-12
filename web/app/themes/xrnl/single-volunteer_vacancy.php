@@ -41,9 +41,9 @@ get_header(); ?>
     </div>
     </div>
     <div class="p-5 m-2 bg-navy text-white">
-    <h4 class="role-section-header" style="margin: 0"><?php _e('Apply', 'theme-xrnl'); ?></h3>
+    <h4 class="role-section-header" style="margin: 0"><?php _e('Interested?', 'theme-xrnl'); ?></h3>
     <p>
-    <?php _e('Contact the role aide to apply or to learn more about the role.', 'theme-xrnl'); ?>
+    <?php _e('Get in touch with the role aide!', 'theme-xrnl'); ?>
     </p>
     <div class="mt-2">
         <div>
