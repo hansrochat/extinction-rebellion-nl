@@ -31,7 +31,7 @@ $fields = get_fields();
             <?php echo $fields['local_group_roles']['text']; ?>
           </div>
           <div class="col-12 col-lg-5 mx-auto px-md-5 px-lg-0 mt-4 mt-lg-0 d-flex flex-column justify-content-center">
-            <a href="/lokale-groepen" class="btn btn-yellow btn-lg"><?php echo $fields['local_group_roles']['button_label']; ?></a>
+            <a href="<?php echo get_permalink(apply_filters('wpml_object_id', 12040, 'page', true)); ?>" class="btn btn-yellow btn-lg"><?php echo $fields['local_group_roles']['button_label']; ?></a>
           </div>
         </div>
         <div class="row px-3 px-md-5">
