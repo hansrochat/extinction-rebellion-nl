@@ -964,3 +964,11 @@ if( function_exists('acf_add_options_page') ) {
   ));
 
 }
+
+function xrnl_pv_shortcode()
+{
+  ob_start();
+  get_template_part('template-parts/principles-and-values');
+  return ob_get_clean(); 
+}
+add_shortcode('xrnl-principles-and-values', 'xrnl_pv_shortcode');
