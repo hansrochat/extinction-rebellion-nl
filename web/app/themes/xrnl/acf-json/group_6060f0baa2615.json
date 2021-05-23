@@ -3,6 +3,25 @@
     "title": "Structure",
     "fields": [
         {
+            "key": "field_6096d9a7ac3e0",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_606f5bf13a144",
             "label": "Introduction",
             "name": "introduction",
@@ -44,7 +63,7 @@
             "sub_fields": [
                 {
                     "key": "field_606217bb98a04",
-                    "label": "title",
+                    "label": "Title",
                     "name": "title",
                     "type": "textarea",
                     "instructions": "",
@@ -56,11 +75,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
+                    "placeholder": "Title of the working group: Outreach & Training, Tech...",
                     "maxlength": "",
                     "rows": "",
-                    "new_lines": "",
-                    "wpml_cf_preferences": 0
+                    "new_lines": ""
                 },
                 {
                     "key": "field_606217c798a05",
@@ -75,19 +93,18 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "tabs": "all",
+                    "default_value": "Enter some information about the working group...",
+                    "tabs": "text",
+                    "media_upload": 0,
                     "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0,
-                    "wpml_cf_preferences": 0
+                    "delay": 0
                 },
                 {
                     "key": "field_606217d698a06",
-                    "label": "Link",
-                    "name": "link",
-                    "type": "url",
-                    "instructions": "",
+                    "label": "Links",
+                    "name": "links",
+                    "type": "repeater",
+                    "instructions": "Here you can add any number of buttons to show up on the website for each working group",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -95,9 +112,48 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "placeholder": "",
-                    "wpml_cf_preferences": 0
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_6096b94147de6",
+                            "label": "Label",
+                            "name": "label",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_6096b96247de7",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        }
+                    ]
                 }
             ]
         }
@@ -105,9 +161,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "page_template",
                 "operator": "==",
-                "value": "12895"
+                "value": "structure_circles.php"
             }
         ]
     ],
@@ -119,5 +175,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1617910984
+    "modified": 1620503343
 }
