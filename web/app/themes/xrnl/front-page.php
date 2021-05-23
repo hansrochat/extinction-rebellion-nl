@@ -122,7 +122,7 @@ get_header(); ?>
     </div>
   </div>
 
-  <div class="embed-responsive embed-responsive-21by9">
+  <div class="embed-responsive embed-responsive-16by9">
     <?php the_field('video') ?>
   </div>
 </div>

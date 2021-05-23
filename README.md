@@ -6,7 +6,7 @@ href="https://extinctionrebellion.nl/" target="_blank"><img
 src="https://img.shields.io/badge/rebel-for%20life-success" alt="XR NL
 website"></a></p> <p align="center">Website of Extinction Rebellion Netherlands:
 <a href="https://extinctionrebellion.nl/"
-target="_blank">https://extinctionrebellion.nl</a></p> 
+target="_blank">https://extinctionrebellion.nl</a></p>
 
 ## Purpose
 
@@ -28,7 +28,7 @@ the [contributing guidelines](/CONTRIBUTING.md) you can learn how you can
 contribute to the project.
 
 If you want to learn more about the project or have any questions, do not
-hesitate to [contact us](/SUPPORT.md). 
+hesitate to [contact us](/SUPPORT.md).
 
 ## Requirements
 
@@ -38,6 +38,7 @@ hesitate to [contact us](/SUPPORT.md).
 - [Node.js](https://nodejs.org/en/)
 
 ## Install
+[Contact](/SUPPORT.md) one of the website admins to obtain the license keys for some commercial plugins we use on the website. The keys then need to be added to the `.env` file.
 
 ```sh
 # clone the repository
@@ -45,10 +46,10 @@ git clone https://github.com/xrnl/extinction-rebellion-nl/
 cd extinction-rebellion-nl
 # create environment variables with required configurations
 cp .env.example .env
-# add wordpress plugins
-curl -SL0 https://cloud.extinctionrebellion.nl/index.php/s/QCENwJwpbCoqoNB/download -o plugins.tar.gz && tar -xvf plugins.tar.gz -C web/app/plugins/ && rm plugins.tar.gz
-cd web/app/themes/xrnl
+# now open the .env file in a text editor and paste in the license keys
+
 # install npm packages
+cd web/app/themes/xrnl
 npm install
 # compile scss files
 npm run development
@@ -70,7 +71,7 @@ First, you must activate Docker. Then:
 docker-compose up -d
 # optional: enable hot reloading to always show latest code changes
 cd web/app/themes/xrnl
-npm run watch 
+npm run watch
 ```
 
 The website should be active at `http://localhost:8000`
@@ -83,17 +84,16 @@ docker-compose down
 ```
 
 This way of shutting down the website is likely to cause less errors than
-directly quitting Docker. 
+directly quitting Docker.
 
 ## Install new plugins
 
 If you want to install a new plugin
 ```sh
-docker-compose exec composer require wpackagist-plugin/{{PLUGIN_NAME}}
+docker-compose exec composer-tool composer require wpackagist-plugin/{{PLUGIN_NAME}}
 ```
 
 If you want to update a plugin
 ```sh
-docker-compose exec composer update wpackagist-plugin/{{PLUGIN_NAME}}
+docker-compose exec composer-tool composer update wpackagist-plugin/{{PLUGIN_NAME}}
 ```
-

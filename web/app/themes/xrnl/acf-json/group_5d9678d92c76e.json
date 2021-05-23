@@ -166,7 +166,7 @@
             "key": "field_5d967ba6ed13b",
             "label": "video",
             "name": "video",
-            "type": "oembed",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -175,9 +175,12 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 1,
-            "width": "",
-            "height": ""
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "wpml_cf_preferences": 0
         }
     ],
     "location": [
@@ -195,7 +198,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1599764231
+    "modified": 1621288788
 }

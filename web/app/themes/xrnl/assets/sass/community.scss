@@ -16,28 +16,20 @@
       object-fit: cover;
     }
   }
-  @include media-breakpoint-down(xs) {
-    .group-column {
-      margin-left: auto;
-      margin-right: auto;
-    }
+  .card-footer {
+    padding: 0 .5rem;
   }
 }
 
 .community-group {
   .hero-container {
-    position: relative;
+    text-align: center;
   }
   .group-cover-image {
-    min-height: 80vh;
-    background-size: cover !important;
-    background-position: center !important;
+    max-height: 55vh;
   }
   .hero-caption {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    text-align: right;
+    font-size: .9rem;
   }
   .group-slogan {
     margin-top: 3rem;
@@ -49,4 +41,39 @@
       }
     }
   }
+
+  .main-content {
+    text-align: left;
+    @include media-breakpoint-up(md) {
+      text-align: justify;
+    };
+  }
+
+  .picture-gallery {
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: $xr-black;
+      padding: .8rem;
+      &:hover {
+        background-color: $xr-primary;
+      }
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+      align-items: flex-start;
+      opacity: 1;
+    }
+    .carousel-control-prev {
+      justify-content: flex-start;
+    }
+    .carousel-control-next {
+      justify-content: flex-end;
+    }
+    .carousel-caption {
+      position: relative;
+      left: 0;
+      top: 0;
+    }
+  }
+
 }
