@@ -113,7 +113,7 @@ get_header(); ?>
       <div class="row py-5 text-center text-white">
         <div class="col-12 col-lg-8 mx-auto my-5">
           <h2>
-            <?php _e('WHO IS EXTINCTION REBELLION', 'theme-xrnl'); ?>?
+            <?php _e('WHO WE ARE', 'theme-xrnl'); ?>?
           </h2>
           <?php the_field('campaign_who_is_xr'); ?>
         </div>
