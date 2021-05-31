@@ -87,7 +87,7 @@ get_header(); ?>
       <?php if(get_field('campaign_why_protest')): ?>
         <div class="col-12 col-lg-8 mx-auto">
           <h2>
-            <?php _e('WHY ARE WE REBELLING', 'theme-xrnl'); ?>?
+            <?php _e('OUR GOAL', 'theme-xrnl'); ?>?
           </h2>
           <p><?php the_field('campaign_why_protest'); ?></p>
         </div>
