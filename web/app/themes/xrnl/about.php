@@ -5,11 +5,6 @@
 
 get_header(); ?>
 
-<?php
-  function formatElementID($str) {
-    return strtolower(str_replace(array(' ', ' & '), '-', $str));
-  }
-?>
 
 <div class="about">
   <div class="bg-blue px-3 py-lg-5 pb-5 text-center text-white cover-image" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45)), url('<?php the_field('about_cover_image'); ?>') no-repeat;">

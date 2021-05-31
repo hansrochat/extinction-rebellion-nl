@@ -14,9 +14,6 @@ get_header(); ?>
   echo get_permalink(apply_filters('wpml_object_id', $page_id, 'page', true));
 } ?>
 
-<?php function formatElementID($str) {
-    return strtolower(str_replace(' ', '-', $str));
-} ?>
 
 <div class="join">
   <div class="bg-blue text-center text-white join-cover-image py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45)), url('<?php the_field('join_cover_image_url'); ?>') no-repeat;">
