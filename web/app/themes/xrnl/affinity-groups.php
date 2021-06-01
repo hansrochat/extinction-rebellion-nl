@@ -3,15 +3,19 @@
 Template name: Affinity groups
 */
 $ag_data = get_affinity_group_data();
-get_header(); 
+
+get_header(null, array(
+  'bg-color' => "deep-sea-green",
+  'accent-color' => "white"
+));
 ?>
 
 <?php the_post(); ?>
-<div class="row p-5 m-2 background-icon-container">
-  <img src="<?php the_field('background_icon'); ?>" class="background-icon">
+<div class="row p-5 m-2 background-icon-container bg-deep-sea-green">
+  <img src="<?php the_field('background_icon'); ?>" class="background-icon" style="opacity: 0.2;">
   <div class="col-12 col-xl-8 p-0">
-  <h1><?php the_title(); ?></h1>
-    <?php the_content(); ?>
+  <h1 class="text-neon-green"><?php the_title(); ?></h1>
+    <div class="text-white"><?php the_content(); ?></div>
   </div>
 </div>
 
