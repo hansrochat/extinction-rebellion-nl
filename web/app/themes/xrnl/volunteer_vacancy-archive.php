@@ -8,8 +8,8 @@ get_header(); ?>
 <?php the_post(); ?>
 <div class="row p-5 m-2 background-icon-container">
   <img src="<?php the_field('background_icon'); ?>" class="background-icon">
-  <h1><?php the_title(); ?></h1>
 <div class="col-12 col-xl-8 p-0">
+  <h1><?php the_title(); ?></h1>
   <?php the_content(); ?>
 </div>
 
