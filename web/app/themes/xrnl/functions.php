@@ -980,6 +980,7 @@ function xrnl_pv_shortcode()
   return ob_get_clean(); 
 }
 add_shortcode('xrnl-principles-and-values', 'xrnl_pv_shortcode');
+
 /*
  * register button click in Matomo analytics.
  * The analytics code on each button follows this convention:
@@ -1006,3 +1007,17 @@ function register_button_click($button_identifier, $page_identifier = NULL)
   $onclick = "_paq.push(['trackEvent', 'Button', 'Clicked', '" . $page_identifier . " - ". $button_identifier . "']);";
   return $onclick;
 }
+
+// Customise the email sender
+// For invites to website and other emails sent from forms. 
+ 
+function youruniqueidentifier_sender_email( $original_email_address ) {
+return 'tech@extinctionrebellion.nl';
+}
+ 
+function youruniqueidentifier_sender_name( $original_email_from ) {
+return 'XR NL Website';
+}
+ 
+add_filter( 'wp_mail_from', 'youruniqueidentifier_sender_email' );
+add_filter( 'wp_mail_from_name', 'youruniqueidentifier_sender_name' );
