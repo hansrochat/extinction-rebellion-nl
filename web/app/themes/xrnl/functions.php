@@ -1021,3 +1021,28 @@ return 'XR NL Website';
  
 add_filter( 'wp_mail_from', 'youruniqueidentifier_sender_email' );
 add_filter( 'wp_mail_from_name', 'youruniqueidentifier_sender_name' );
+
+
+/*
+ *  Runs the './test.py' script which queries Action Network for all
+ *  AG data. This data is then saved in './ag_data.json' which this
+ *  function reads and returns.
+ *
+ *  Returns:
+ *  - array of associative arrays, where each associative array gives the
+ *    following fields of an ag:
+ *    - "AG_name"
+ *    - "AG_size"
+ *    - "AG_description"
+ *    - "AG_average_age"
+ *    - "AG_language"
+ *    - "AG_risk" ('low', 'medium' or 'high')
+ *    - "local_group"
+ *    - "given_name" (name of rep)
+ *    - "email_address" (email of rep)
+ */
+function get_affinity_group_data(){
+  /* $out = shell_exec("./test.py > /dev/null 2>/dev/null &"); # run python script asynchronously. */
+  /* $ag_data = json_decode(file_get_contents("ag_data.json"), true); */
+  /* return $ag_data; */
+}
