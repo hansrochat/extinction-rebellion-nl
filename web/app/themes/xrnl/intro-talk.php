@@ -39,7 +39,8 @@ get_header(); ?>
     <p class="col-10 col-md-8 col-lg-7 mx-auto text-center"><?php the_field('center_section_top_text') ?></p>
     <div class="col-12 text-center mt-2 mb-5">
       <?php $view_btn = get_field('view_button'); ?>
-      <a href="<?php echo $view_btn['view_button_link']; ?>" class="btn btn-lg btn-yellow"><?php echo $view_btn['view_button_label']; ?></a>
+      <a href="<?php echo $view_btn['view_button_link']; ?>" class="btn btn-lg btn-yellow" 
+onclick="<?= register_button_click($view_btn['view_button_label']); ?>"><?php echo $view_btn['view_button_label']; ?></a>
     </div>
     <p class="col-11 col-md-9 col-lg-8 mx-auto mt-3 text-center"><?php the_field('center_section_bottom_text') ?></p>
   </div>
@@ -55,7 +56,8 @@ get_header(); ?>
       <?php if(is_array($share_buttons)) : ?>
         <?php foreach ($share_buttons as $button) : ?>
           <?php if ($button['button_label']): ?>
-            <a class="btn btn-black my-2 mx-2" href="<?php echo($button['button_link']); ?>" target="_blank"><?php echo($button['button_label']); ?></a>
+            <a class="btn btn-black my-2 mx-2" href="<?php echo($button['button_link']); ?>" target="_blank" 
+onclick="<?= register_button_click($button['button_label']); ?>"><?php echo($button['button_label']); ?></a>
           <?php endif; ?>
         <?php endforeach; ?>
       <?php endif; ?>
