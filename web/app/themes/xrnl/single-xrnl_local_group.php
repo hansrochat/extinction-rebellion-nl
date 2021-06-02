@@ -257,7 +257,7 @@
                 <div class="action-item">
                   <h5 class="action-item-title"><?php echo($action['title']); ?></h5>
                   <div class="action-item-desc"><?php echo($action['description']); ?></div>
-                  <?php if (isset($action['picture_url'])) : ?>
+                  <?php if (!empty($action['picture_url'])) : ?>
                     <img src="<?php echo($action['picture_url']); ?>" alt="Extinction Rebellion <?php the_field('group_name'); ?>">
                   <?php endif; ?>
                 </div>
