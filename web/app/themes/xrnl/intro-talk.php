@@ -12,6 +12,11 @@ get_header(); ?>
 <section class="px-3 px-lg-5 py-5">
   <div class="row">
     <h2 class="col-12 text-center"><?php the_field('center_section_heading'); ?></h2>
+    <?php 
+      /* temporarily disabled because countdown doesn't work for events ocurring every other week */
+      $show_countdown = false; 
+      if($show_countdown) :
+    ?>
     <div class="mt-2 mb-3 col-10 col-md-8 col-lg-7 mx-auto text-center">
       <span class="px-2 py-1">
         <span id="countdown-info" class="font-weight-bold"><?php _e('The talk will start in', 'theme-xrnl') ?></span>
@@ -36,6 +41,7 @@ get_header(); ?>
         ></span>
       </span>
     </div>
+    <?php endif; ?>
     <p class="col-10 col-md-8 col-lg-7 mx-auto text-center"><?php the_field('center_section_top_text') ?></p>
     <div class="col-12 text-center mt-2 mb-5">
       <?php $view_btn = get_field('view_button'); ?>
