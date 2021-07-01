@@ -67,18 +67,21 @@ improving the website.
 
 ### How tasks are prioritised
 
-Tasks are prioritised in terms of how much they contribute to our 3 main website
+Tasks are prioritised in terms of how much they contribute to our main website
 goals:
 
 1. Persuade people about:
    - the gravity and urgency of the climate and ecological crisis.
    - the need of XR and its tactics to get governments to address this crisis.
    - the importance of them joining XR in order to help address this crisis
-2. Make it very easy for new people to get actively involved in XR. ‘Actively
-   involved’ means that they either attend XR events, participate in actions,
-   volunteer within the movement or donate.
+2. Make it very easy for new people to become involved and stay involved in XR.
+   ‘being involved’ means that they regularly either attend XR events,
+   participate in actions, volunteer within the movement or donate.
 3. Keep rebels engaged within the movement through content such as press
    releases, blogs, rebel radio...
+4. Provide training resources to active rebels: clear and accessible information
+   about our digital platforms and how to use them, guides to organise actions,
+   grow their local group, create art, and more. 
 
 ## Change the website content
 
