@@ -29,14 +29,15 @@ let us know that you would like to help out. We will then:
 
 ### Join project meetings
 
-Every other Thursday at 19:00 we hold a brief and efficient online meeting to
-review the progress from the previous 2 weeks, resolve questions about current
-work, discuss ideas and set goals for the next two weeks. We highly recommend
-you attend these meetings so that you can get to know the team, participate in
-discussions and volunteer for tasks that you're interested in. You can join the
-online meeting using [this link](https://meet2.organise.earth/b/tec-wd7-zfg) on
-the next week that lands on an [odd week
-number](https://www.epochconverter.com/weeknumbers).
+Every other Thursday at 8:30 a.m. (in the [CEST](https://24timezones.com/time-zone/cest)/[CET](https://24timezones.com/time-zone/cet)
+timezone, depending on the season) we hold a brief and efficient online meeting
+to review the progress from the previous 2 weeks, resolve questions about
+current work, discuss ideas and set goals for the next two weeks. We highly
+recommend you attend these meetings so that you can get to know the team,
+participate in discussions and volunteer for tasks that you're interested in.
+You can join the online meeting using [this
+link](https://meet2.organise.earth/b/tec-wd7-zfg) on the next week that lands on
+an [even week number](https://www.epochconverter.com/weeknumbers).
 
 ## Identify where to help out
 
