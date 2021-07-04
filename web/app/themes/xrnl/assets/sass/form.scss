@@ -57,12 +57,6 @@
       @extend .form-group;
     }
 
-    // hide form labels with texts
-    label.control-label,
-    label.floatlabel-label {
-      display: none !important;
-    }
-
     // display checkboxes
     label.checkbox {
       display: block;
