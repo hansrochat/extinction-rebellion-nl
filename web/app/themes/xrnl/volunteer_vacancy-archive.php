@@ -8,13 +8,16 @@ $vacancies = new WP_Query([
   'posts_per_page' => -1
 ]);
 
-get_header();
+get_header(null, array(
+  'bg-color' => 'navy',
+  'accent-color' => 'white'
+));
 $fields = get_fields();
 ?>
 
 <?php the_post(); ?>
 <div class="bg-xr-white">
-  <div class="row background-icon-container bg-navy text-light px-1 px-md-5 py-5 mx-2 my-2">
+  <div class="row background-icon-container bg-xr-bright-pink text-light px-1 px-md-5 py-5 mx-2 my-2">
     <img src="<?php the_field('background_icon'); ?>" class="background-icon">
     <div class="col-12 col-md-10 col-lg-9 col-xl-8 p-0">
     <h1 class="display-3"><?php the_title(); ?></h1>
