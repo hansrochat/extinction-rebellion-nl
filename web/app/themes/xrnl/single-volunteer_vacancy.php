@@ -3,7 +3,11 @@
  * The template for displaying posts for volunteer positions
  */
 
-get_header(); ?>
+get_header(null, array(
+    'bg-color' => 'navy',
+    'accent-color' => 'white'
+));
+?>
 
 <?php $volunteerPageURL = get_permalink(apply_filters('wpml_object_id', 51, 'page', true)); ?>
 <article id="post-<?php the_ID(); ?>" ?>
