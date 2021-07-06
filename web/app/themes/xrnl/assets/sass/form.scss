@@ -32,6 +32,14 @@
     margin-bottom: 0 !important;
   }
 
+  label.control-label {
+    font-size: 80%;
+    font-family: $brand-font-secondary;
+    text-transform: none;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0px;
+  }
+
   form {
     @extend .row;
     width: auto !important;
@@ -95,7 +103,7 @@
     #d_sharing li,
     .controls.check_radio_field {
       label {
-        font-size: 90% !important;
+        font-size: 80%;
         input {
           width: 15px;
           height: 15px;
