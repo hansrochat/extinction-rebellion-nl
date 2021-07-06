@@ -1,62 +1,49 @@
 /* Action Network Form */
 
-$default-spacing: 0.75rem;
-$default-font-size: 1rem;
+$spacing-form-fields: 0.75rem;
+$font-size-form-fields: 1rem;
 
-@mixin reset-text() {
-  font-size: inherit !important;
-  line-height: inherit !important;
-}
-
+// main container of the Action Network form
 #can_embed_form {
-  h4,
+  /*
+   * Code section that hides unnecessary elements
+   */
+
+  // hide all form meta-information (everything that isn't a form field or the submit button)
+  #can_embed_form_inner > {
+    h2,
+    h4,
+    #logo_wrap {
+      // Action Network logo
+      display: none;
+    }
+  }
+  // hide unnecessary text: action sponsored by XR NL
   #action_info {
     display: none;
   }
-
-  #logo_wrap {
+  // hide redundant country dropdown as the country will always be NL
+  .country_drop_wrap {
+    display: none !important;
+  }
+  // hide default opt-in checkbox because we use radio buttons with custom text
+  form #d_sharing {
     display: none;
   }
 
-  #can_embed_form_inner > h2 {
-    display: none;
-  }
-
-  #can_thank_you {
-    background-color: transparent !important;
-    text-align: center !important;
-    color: #000 !important;
-  }
-
-  h2 {
-    font-family: $brand-font-secondary;
-    text-transform: none;
-    border: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-  // style for all text labels
-  label.control-label {
-    font-size: $default-font-size;
-    font-family: $brand-font-secondary;
-    text-transform: none;
-    margin-bottom: $default-spacing;
-    padding: 0 $default-spacing;
-    letter-spacing: 0px;
-  }
-
-  // override margin for input elements
-  .floatlabel-wrapper {
-    @extend .form-group;
-    margin-bottom: $default-spacing;
-  }
-
+  /*
+   * Code section that styles form components
+   *
+   * Unfortunately the html that comes out of actionnetwork is not
+   * customizable at all. Hence a lot of css customization here! :(
+   */
   form {
+    /*
+     * Code section for generic styles
+     */
     @extend .row;
     width: auto !important;
 
-    // Unfortunately the html that comes out of actionnetwork is not
-    // customizable at all. Hence a lot of css customization here! :(
     #form_col1,
     #form_col2 {
       @extend .col-12;
@@ -82,33 +69,44 @@ $default-font-size: 1rem;
       margin: 0;
     }
 
-    // display checkboxes
-    label.checkbox {
-      display: block;
-      @extend .my-2;
-    }
-
-    // bootstrap styling for forms
+    /*
+     * Code section for custom styling of form elements
+     */
     input,
     select,
     textarea {
-      @extend .form-control;
-      margin-bottom: $default-spacing;
+      @extend .form-control; // use bootstrap style
+      margin-bottom: $spacing-form-fields;
 
       // validation feedback
       &.error_input {
-        @extend .is-invalid;
+        @extend .is-invalid; // use bootstrap style
         &:focus {
           box-shadow: none;
         }
       }
     }
 
+    // override styles for container of text input elements
+    .floatlabel-wrapper {
+      margin-bottom: $spacing-form-fields;
+    }
+
+    // style for all text labels
+    label.control-label {
+      font-size: $font-size-form-fields;
+      font-family: $brand-font-secondary;
+      text-transform: none;
+      margin-bottom: $spacing-form-fields;
+      padding: 0 $spacing-form-fields;
+      letter-spacing: 0px;
+    }
+
     // checkboxes & radio buttons
     #d_sharing li,
     .controls.check_radio_field {
       label {
-        font-size: $default-font-size;
+        font-size: $font-size-form-fields;
         input {
           width: 15px;
           height: 15px;
@@ -118,19 +116,13 @@ $default-font-size: 1rem;
 
     // Select box
     select {
-      font-size: $default-font-size;
-    }
-    .country_drop_wrap select.can_select {
-      height: 44px !important;
-    }
-    span.can_select {
-      display: none !important;
+      font-size: $font-size-form-fields;
     }
     .select2-container {
-      margin-bottom: $default-spacing;
+      margin-bottom: $spacing-form-fields;
     }
     .select2-chosen {
-      font-size: $default-font-size;
+      font-size: $font-size-form-fields;
     }
 
     // submit button
@@ -140,37 +132,27 @@ $default-font-size: 1rem;
       @extend .btn-black;
       @extend .btn-lg;
     }
-
-    // Misc overrides
-    #d_sharing {
-      display: none;
-    }
   }
 
-  @include reset-text();
-
-  // Styling Thank you section after submission
-  // Keep it simple, let's not distract the user even more,
-  // let them browse the site
-  & > .clearfix {
-    display: none;
-  }
+  /*
+   * Code section for the thank you content that shows when a user submits the form
+   * The content of this text is configured from Action Network
+   */
 
   & > #can_thank_you {
     @extend .mt-4;
     @extend .mb-3;
     background-color: transparent !important;
-    padding: 0 !important;
-    text-align: left !important;
-
+    color: #000 !important;
     h1 {
+      text-align: center !important;
       @extend .h3;
       @extend .font-xr;
       @extend .text-uppercase;
     }
-
-    p {
-      @include reset-text();
+    #action_thank_you_text > p {
+      font-size: 1.4rem;
+      font-family: $brand-font-secondary;
     }
   }
 }
