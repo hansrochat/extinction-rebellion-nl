@@ -1006,3 +1006,16 @@ function xrnl_add_group_role() {
 	);
 }
 add_action('admin_init', 'xrnl_add_group_role');
+
+/**
+ * 2. Add custom capabilities to the `meetup_events` post type.
+ */
+function xrnl_event_custom_caps($args, $post_type){
+  if ($post_type == 'meetup_events'){
+    $args['capability_type'] = array('meetup_event','meetup_events');
+    $args['map_meta_cap'] = true;
+  }
+
+  return $args;
+}
+add_filter('register_post_type_args', 'xrnl_event_custom_caps', 10, 2);
