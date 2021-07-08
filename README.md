@@ -32,9 +32,8 @@ hesitate to [contact us](/SUPPORT.md).
 
 ## Requirements
 
-- [Docker](https://www.docker.com/products/docker-desktop). If you use Linux,
-  you'll also have to separately install
-  [docker-compose](https://linuxhandbook.com/docker-compose-ubuntu/).
+- Install [docker](https://docs.docker.com/get-docker/) and
+  [docker-compose](https://docs.docker.com/compose/install/)
 - [Node.js](https://nodejs.org/en/)
 
 ## Install

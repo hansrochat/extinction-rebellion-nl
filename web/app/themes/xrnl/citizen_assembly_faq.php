@@ -5,11 +5,6 @@
 
 get_header(); ?>
 
-<?php
-  function formatElementID($str) {
-    return strtolower(str_replace(array(' ', ' & '), '-', $str));
-  }
-?>
 
 <main class="citizen-assembly">
   <?php get_template_part( 'template-parts/citizen-assembly-header' ); ?>

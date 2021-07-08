@@ -55,7 +55,8 @@ get_header(); ?>
           <?php endif; ?>
           <?php $previous_letter = $initial_letter; ?>
           <li class="<?php echo strtolower(get_field('region')); ?> lg-name">
-            <a href="<?php the_permalink(); ?>"><?php echo $group_name; ?></a>
+            <a href="<?php the_permalink(); ?>" 
+onclick="<?= register_button_click($group_name); ?>"><?php echo $group_name; ?></a>
           </li>
         <?php endwhile; wp_reset_query(); ?>
         </ul>

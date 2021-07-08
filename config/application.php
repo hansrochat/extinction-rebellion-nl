@@ -91,9 +91,9 @@ define('ALLOW_EVENT_REQUEST_FROM_IP', env('ALLOW_EVENT_REQUEST_FROM_IP') ?: '127
 Config::define('AUTOMATIC_UPDATER_DISABLED', true);
 Config::define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
 // Disable the plugin and theme file editor in the admin
-Config::define('DISALLOW_FILE_EDIT', false);
+Config::define('DISALLOW_FILE_EDIT', true);
 // Disable plugin and theme updates and installation from the admin
-Config::define('DISALLOW_FILE_MODS', false);
+Config::define('DISALLOW_FILE_MODS', true);
 Config::define('WP_MAX_MEMORY_LIMIT', '256M');
 Config::define('WP_MEMORY_LIMIT', '256M');
 Config::define('WPML_ST_SYNC_TRANSLATION_FILES', true);

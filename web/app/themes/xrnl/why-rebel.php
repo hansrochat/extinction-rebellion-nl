@@ -110,10 +110,12 @@ get_header(); ?>
     <div class="row">
       <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
         <div class="ctas">
-          <a class="cta btn btn-lg btn-green" href="<?php echo $section->button_cta['url'] ?>">
+        <a class="cta btn btn-lg btn-green" href="<?php echo $section->button_cta['url'] ?>" 
+onclick="<?= register_button_click($section->button_cta['label']); ?>">
             <?php echo $section->button_cta['label'] ?>
           </a>
-          <a class="cta link" href="<?php echo $section->link_cta['url'] ?>">
+          <a class="cta link" href="<?php echo $section->link_cta['url'] ?>" 
+onclick="<?= register_button_click($section->link_cta['label']); ?>">
             <?php echo $section->link_cta['label'] ?>
           </a>
         </div>
