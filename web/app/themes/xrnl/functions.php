@@ -1019,3 +1019,22 @@ function xrnl_event_custom_caps($args, $post_type){
   return $args;
 }
 add_filter('register_post_type_args', 'xrnl_event_custom_caps', 10, 2);
+
+/**
+ * 3. Grant `meetup_events` custom capabilities to local groups, editors, and admins
+ */
+function xrnl_add_role_caps() {
+	$roles = array('xrnl_group', 'editor', 'administrator');
+	foreach($roles as $the_role) { 
+		$role = get_role($the_role);
+		$role->add_cap('read_meetup_event');
+		$role->add_cap('read_private_meetup_events');
+		$role->add_cap('edit_meetup_event');
+		$role->add_cap('edit_meetup_events');
+		$role->add_cap('edit_published_meetup_events');
+		$role->add_cap('publish_meetup_events');
+		$role->add_cap('delete_private_meetup_events');
+		$role->add_cap('delete_published_meetup_events');
+	}
+}
+add_action('admin_init','xrnl_add_role_caps',999);
