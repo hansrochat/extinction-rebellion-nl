@@ -43,7 +43,7 @@ $fields = get_fields();
         <form class="d-flex" method="get">
           <label for="working_group" class="mr-3 my-auto font-xr text-light text-nowrap"><?php _e('Working group') ?></label>
           <select name="working_group" class="custom-select font-xr" id="working_group">
-            <option value=""><?php _e('Choose one...') ?></option>
+            <option value=""><?php _e('Choose one...', 'theme-xrnl') ?></option>
           </select>
         </form>
       </div>
