@@ -982,3 +982,18 @@ function register_button_click($button_identifier, $page_identifier = NULL)
   $onclick = "_paq.push(['trackEvent', 'Button', 'Clicked', '" . $page_identifier . " - ". $button_identifier . "']);";
   return $onclick;
 }
+
+/**
+ * Disable the `users` endpoint from the REST API
+ * because it exposes usernames
+ */
+function xrnl_disable_rest_endpoints ($endpoints) {
+  if (isset($endpoints['/wp/v2/users'])) {
+      unset($endpoints['/wp/v2/users']);
+  }
+  if (isset($endpoints['/wp/v2/users/(?P<id>[\d]+)'])) {
+      unset($endpoints['/wp/v2/users/(?P<id>[\d]+)']);
+  }
+  return $endpoints;
+}
+add_filter('rest_endpoints', 'xrnl_disable_rest_endpoints');
