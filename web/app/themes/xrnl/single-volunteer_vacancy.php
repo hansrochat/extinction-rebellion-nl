@@ -3,7 +3,11 @@
  * The template for displaying posts for volunteer positions
  */
 
-get_header(); ?>
+get_header(null, array(
+    'bg-color' => 'navy',
+    'accent-color' => 'white'
+));
+?>
 
 <?php $volunteerPageURL = get_permalink(apply_filters('wpml_object_id', 51, 'page', true)); ?>
 <article id="post-<?php the_ID(); ?>" ?>
@@ -18,9 +22,6 @@ get_header(); ?>
 </header>
 <?php $role = json_decode(get_the_content()); ?>
     <h4 class="xr-font text-white"><?php echo $role->workingGroup ?>, <?php echo $role->localGroup ?></h4>
-    <h6>
-        <?php _e('Published on', 'theme-xrnl'); ?>
-        <?php the_date(); ?></h6>
     <h5 class="role-section-header">
         <?php _e('Responsibilities', 'theme-xrnl'); ?>
     </h5>
@@ -44,9 +45,9 @@ get_header(); ?>
     </div>
     </div>
     <div class="p-5 m-2 bg-navy text-white">
-    <h4 class="role-section-header" style="margin: 0"><?php _e('Apply', 'theme-xrnl'); ?></h3>
+    <h4 class="role-section-header" style="margin: 0"><?php _e('Interested?', 'theme-xrnl'); ?></h3>
     <p>
-    <?php _e('Contact the role aide to apply or to learn more about the role.', 'theme-xrnl'); ?>
+    <?php _e('Get in touch with the role aide!', 'theme-xrnl'); ?>
     </p>
     <div class="mt-2">
         <div>
