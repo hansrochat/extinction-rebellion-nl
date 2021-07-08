@@ -982,3 +982,27 @@ function register_button_click($button_identifier, $page_identifier = NULL)
   $onclick = "_paq.push(['trackEvent', 'Button', 'Clicked', '" . $page_identifier . " - ". $button_identifier . "']);";
   return $onclick;
 }
+
+/**
+ * Custom user role for local groups
+ * 
+ * 1. Create a new role `XRNL Group`
+ */
+function xrnl_add_group_role() {
+	add_role(
+		'xrnl_group',
+		__('XRNL Group'),
+		array(
+			'read'                    => true, 
+			'upload_files'            => true,
+			'delete_posts'            => true,
+			'delete_published_posts'  => true,
+			'edit_posts'              => true,
+			'edit_published_posts'    => true,
+			'edit_pages'              => true,
+			'edit_published_pages'    => true,
+			'publish_posts'           => false
+		) 
+	);
+}
+add_action('admin_init', 'xrnl_add_group_role');
