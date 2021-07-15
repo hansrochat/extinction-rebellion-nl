@@ -997,3 +997,62 @@ function xrnl_disable_rest_endpoints ($endpoints) {
   return $endpoints;
 }
 add_filter('rest_endpoints', 'xrnl_disable_rest_endpoints');
+
+
+/**
+ * Custom user role for local groups
+ * 
+ * 1. Create a new role `XRNL Group`
+ */
+function xrnl_add_group_role() {
+	add_role(
+		'xrnl_group',
+		__('XRNL Group'),
+		array(
+			'read'                    => true, 
+			'upload_files'            => true,
+			'delete_posts'            => true,
+			'delete_published_posts'  => true,
+			'edit_posts'              => true,
+			'edit_published_posts'    => true,
+			'edit_pages'              => true,
+			'edit_published_pages'    => true,
+			'publish_posts'           => false
+		) 
+	);
+}
+add_action('admin_init', 'xrnl_add_group_role');
+
+/**
+ * 2. Add custom capabilities to the `meetup_events` post type.
+ */
+function xrnl_event_custom_caps($args, $post_type){
+  if ($post_type == 'meetup_events'){
+    $args['capability_type'] = array('meetup_event','meetup_events');
+    $args['map_meta_cap'] = true;
+  }
+
+  return $args;
+}
+add_filter('register_post_type_args', 'xrnl_event_custom_caps', 10, 2);
+
+/**
+ * 3. Grant `meetup_events` custom capabilities to local groups, editors, and admins
+ */
+function xrnl_add_role_caps() {
+	$roles = array('xrnl_group', 'editor', 'administrator');
+	foreach($roles as $the_role) { 
+		$role = get_role($the_role);
+		$role->add_cap('read_meetup_event');
+		$role->add_cap('read_private_meetup_events');
+		$role->add_cap('edit_meetup_event');
+		$role->add_cap('edit_meetup_events');
+		$role->add_cap('edit_published_meetup_events');
+		$role->add_cap('publish_meetup_events');
+		$role->add_cap('delete_private_meetup_events');
+		$role->add_cap('delete_published_meetup_events');
+	}
+}
+add_action('admin_init','xrnl_add_role_caps',999);
+
+
