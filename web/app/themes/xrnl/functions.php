@@ -984,6 +984,22 @@ function register_button_click($button_identifier, $page_identifier = NULL)
 }
 
 /**
+ * Disable the `users` endpoint from the REST API
+ * because it exposes usernames
+ */
+function xrnl_disable_rest_endpoints ($endpoints) {
+  if (isset($endpoints['/wp/v2/users'])) {
+      unset($endpoints['/wp/v2/users']);
+  }
+  if (isset($endpoints['/wp/v2/users/(?P<id>[\d]+)'])) {
+      unset($endpoints['/wp/v2/users/(?P<id>[\d]+)']);
+  }
+  return $endpoints;
+}
+add_filter('rest_endpoints', 'xrnl_disable_rest_endpoints');
+
+
+/**
  * Custom user role for local groups
  * 
  * 1. Create a new role `XRNL Group`
@@ -1038,3 +1054,5 @@ function xrnl_add_role_caps() {
 	}
 }
 add_action('admin_init','xrnl_add_role_caps',999);
+
+
