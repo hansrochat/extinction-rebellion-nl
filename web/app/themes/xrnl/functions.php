@@ -1046,7 +1046,7 @@ function xrnl_add_role_caps() {
 		$role->add_cap('read_meetup_event');
 		$role->add_cap('read_private_meetup_events');
 		$role->add_cap('edit_meetup_event');
-		$role->add_cap('edit_meetup_events');
+		$role->add_cap('edit_others_meetup_events');
 		$role->add_cap('edit_published_meetup_events');
 		$role->add_cap('publish_meetup_events');
 		$role->add_cap('delete_private_meetup_events');
