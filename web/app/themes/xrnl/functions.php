@@ -61,9 +61,9 @@ add_action('init', function() {
 });
 
 function exclude_category( $query ) {
-	if ( $query->is_home() && $query->is_main_query() ) {
-		$query->set( 'cat', '-29' );
-	}
+  if ( $query->is_home() && $query->is_main_query() ) {
+    $query->set( 'cat', '-29' );
+  }
 }
 add_action( 'pre_get_posts', 'exclude_category' );
 
@@ -252,12 +252,12 @@ add_action('init', function(){
 
 // Register Sidebars
 function blog_sidebar() {
-	register_sidebar( array(
-		'id'            => 'blog_sidebar',
-		'class'         => 'blog_sidebar',
+  register_sidebar( array(
+    'id'            => 'blog_sidebar',
+    'class'         => 'blog_sidebar',
         'name'          => __( 'Blog Sidebar', 'theme-xrnl' ),
         'description'   => __( 'Appears on blog posts in the sidebar.', 'theme-xrnl' ),
-	) );
+  ) );
 }
 add_action( 'widgets_init', 'blog_sidebar' );
 
@@ -1005,21 +1005,21 @@ add_filter('rest_endpoints', 'xrnl_disable_rest_endpoints');
  * 1. Create a new role `XRNL Group`
  */
 function xrnl_add_group_role() {
-	add_role(
-		'xrnl_group',
-		__('XRNL Group'),
-		array(
-			'read'                    => true, 
-			'upload_files'            => true,
-			'delete_posts'            => true,
-			'delete_published_posts'  => true,
-			'edit_posts'              => true,
-			'edit_published_posts'    => true,
-			'edit_pages'              => true,
-			'edit_published_pages'    => true,
-			'publish_posts'           => false
-		) 
-	);
+  add_role(
+    'xrnl_group',
+    __('XRNL Group'),
+    array(
+      'read'                    => true, 
+      'upload_files'            => true,
+      'delete_posts'            => true,
+      'delete_published_posts'  => true,
+      'edit_posts'              => true,
+      'edit_published_posts'    => true,
+      'edit_pages'              => true,
+      'edit_published_pages'    => true,
+      'publish_posts'           => false
+    ) 
+  );
 }
 add_action('admin_init', 'xrnl_add_group_role');
 
@@ -1040,19 +1040,19 @@ add_filter('register_post_type_args', 'xrnl_event_custom_caps', 10, 2);
  * 3. Grant `meetup_events` custom capabilities to local groups, editors, and admins
  */
 function xrnl_add_role_caps() {
-	$roles = array('xrnl_group', 'editor', 'administrator');
-	foreach($roles as $the_role) { 
-		$role = get_role($the_role);
-		$role->add_cap('read_meetup_event');
-		$role->add_cap('read_private_meetup_events');
-		$role->add_cap('edit_meetup_event');
-		$role->add_cap('edit_others_meetup_events');
-		$role->add_cap('edit_published_meetup_events');
-		$role->add_cap('publish_meetup_events');
-		$role->add_cap('delete_private_meetup_events');
-		$role->add_cap('delete_published_meetup_events');
-	}
+  $roles = array('xrnl_group', 'editor', 'administrator');
+  foreach($roles as $the_role) { 
+    $role = get_role($the_role);
+    $role->add_cap('read_meetup_event');
+    $role->add_cap('read_private_meetup_events');
+    $role->add_cap('edit_meetup_event');
+    $role->add_cap('edit_meetup_events');
+    $role->add_cap('edit_others_meetup_events');
+    $role->add_cap('edit_published_meetup_events');
+    $role->add_cap('publish_meetup_events');
+    $role->add_cap('delete_private_meetup_events');
+    $role->add_cap('delete_published_meetup_events');
+    $role->add_cap('delete_others_meetup_events');
+  }
 }
 add_action('admin_init','xrnl_add_role_caps',999);
-
-
