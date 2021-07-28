@@ -1,0 +1,93 @@
+
+#donations {
+
+  section:not(:nth-of-type(1)) {
+    margin-top: 3rem;
+  }
+
+  .ps-more-info {
+    margin-top: .8rem;
+  }
+  .ps-info-toggle {
+    font-family: $brand-font;
+    cursor: pointer;
+    text-decoration: underline;
+
+    &.reveal-ps-info {
+      &::before {
+        content: '\f067';
+        font-family: 'FontAwesome';
+        margin-right: 0.4rem;
+        text-decoration: none;
+        display: inline-block;
+      }
+    }
+    &.hide-ps-info {
+      &::before {
+        content: '\f068';
+        font-family: 'FontAwesome';
+        margin-right: 0.4rem;
+        text-decoration: none;
+        display: inline-block;
+      }
+    }
+    &:hover {
+      &::before {
+        color: lighten($xr-black, 35%);
+      }
+
+    }
+  }
+
+
+}
+
+
+
+
+
+/* payment form
+
+form.donate-form {
+  input[type="text"],
+  input[type="email"],
+  select {
+      @extend .form-control;
+      border: none;
+      border-bottom: 2px solid $xr-black;
+      -webkit-border-radius: 0px;
+      border-radius: 0rem;
+      background: $xr-white;
+      appearance: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+  }
+  label[for="dmm_name"],
+  label[for="dmm_email"],
+  label[for="dmm_phone"],
+  label[for="dmm_message"],
+  label[for="dmm_amount"] {
+      font-family: $brand-font;
+  }
+  input[type="submit"] {
+      // @extend .form-control;
+      @extend .btn, .btn-black, .btn-lg;
+  }
+
+  input[type="checkbox"] {
+      &:checked {
+          &::before{
+              background-color:green;
+          }    
+      }    
+  }
+
+  // input[type="text"],
+  // input[type="email"] {
+  //     @extend .form-control;
+  //     color: #ff0000;
+  // }
+
+}
+
+*/
