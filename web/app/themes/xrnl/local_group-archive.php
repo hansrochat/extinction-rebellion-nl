@@ -37,11 +37,11 @@ $previous_letter = '';
     <div class="index-container">
       <div class="select-region">
         <button type="button" name="all-regions" class="active" id="show-all-btn"><?php _e('All regions', 'theme-xrnl'); ?></button>
-        <button type="button" name="noord-west" class="region-select-btn">Noord-West</button>
-        <button type="button" name="noord-oost" class="region-select-btn">Noord-Oost</button>
-        <button type="button" name="midden" class="region-select-btn">Midden</button>
-        <button type="button" name="zuid-west" class="region-select-btn">Zuid-West</button>
-        <button type="button" name="zuid-oost" class="region-select-btn">Zuid-Oost</button>
+        <button type="button" name="noord-west" class="region-select-btn"><?php _e('North-West', 'theme-xrnl'); ?></button>
+        <button type="button" name="noord-oost" class="region-select-btn"><?php _e('North-East', 'theme-xrnl'); ?></button>
+        <button type="button" name="midden" class="region-select-btn"><?php _e('Center', 'theme-xrnl'); ?></button>
+        <button type="button" name="zuid-west" class="region-select-btn"><?php _e('South-West', 'theme-xrnl'); ?></button>
+        <button type="button" name="zuid-oost" class="region-select-btn"><?php _e('South-East', 'theme-xrnl'); ?></button>
       </div>
 
       <div class="groups-list">
