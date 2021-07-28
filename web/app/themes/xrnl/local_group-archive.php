@@ -5,15 +5,16 @@
 
 get_header(); ?>
 
+
 <?php
-  $groups = new WP_Query([
-    'order' => 'ASC',
-    'meta_key' => 'group_name',
-    'orderby' => 'meta_value',
-    'post_type' => 'xrnl_local_group',
-    'posts_per_page' => -1
-  ]);
-  $previous_letter = '';
+$groups = new WP_Query([
+  'order' => 'ASC',
+  'meta_key' => 'group_name',
+  'orderby' => 'meta_value',
+  'post_type' => 'xrnl_local_group',
+  'posts_per_page' => -1
+]);
+$previous_letter = '';
 ?>
 
 <div class="local-groups-hero" class="container-fluid" style="--bg-image: url('<?php the_field('hero_image'); ?>')">
@@ -45,20 +46,25 @@ get_header(); ?>
 
       <div class="groups-list">
         <ul>
-        <?php while($groups->have_posts()):$groups->the_post(); ?>
-          <?php $group_name = get_field('group_name'); ?>
-          <?php $initial_letter = substr($group_name,0,1); ?>
-          <?php if (strcasecmp($initial_letter, $previous_letter) !== 0) : ?>
-            <div class="initial-letter">
-              <?php echo($initial_letter); ?>
-            </div>
-          <?php endif; ?>
-          <?php $previous_letter = $initial_letter; ?>
-          <li class="<?php echo strtolower(get_field('region')); ?> lg-name">
-            <a href="<?php the_permalink(); ?>" 
-onclick="<?= register_button_click($group_name); ?>"><?php echo $group_name; ?></a>
-          </li>
-        <?php endwhile; wp_reset_query(); ?>
+          <?php while ($groups->have_posts()) : $groups->the_post(); ?>
+            <?php $group_name = get_field('group_name'); ?>
+            <?php $initial_letter = substr($group_name, 0, 1); ?>
+            <?php $appearance = get_field('appearance'); ?>
+            <?php $logo_url = $appearance['logo'] ?: get_template_directory_uri() . '/assets/images/XR-symbol.svg'; ?>
+            <?php if (strcasecmp($initial_letter, $previous_letter) !== 0) : ?>
+              <div class="initial-letter">
+                <?php echo ($initial_letter); ?>
+              </div>
+            <?php endif; ?>
+            <?php $previous_letter = $initial_letter; ?>
+            <li class="<?php echo strtolower(get_field('region')); ?> lg-name">
+              <a href="<?php the_permalink(); ?>" onclick="<?= register_button_click($group_name); ?>">
+                <img class="lg-logo-list" src="<?php echo $logo_url ?>" alt="Extinction Rebellion <?php the_field('group_name'); ?> logo">
+                <?php echo $group_name; ?>
+              </a>
+            </li>
+          <?php endwhile;
+          wp_reset_query(); ?>
         </ul>
       </div>
     </div>
@@ -66,22 +72,18 @@ onclick="<?= register_button_click($group_name); ?>"><?php echo $group_name; ?><
   </div>
 </div>
 
-<?php if (get_field('show_the_map') === 'yes'): ?>
+<?php if (get_field('show_the_map') === 'yes') : ?>
   <div class="mt-5">
-    <iframe
-      title="XR Nederland <?php _e('map', 'theme-xrnl') ?>"
-      allowfullscreen width="100%"
-      height="600px"
-      src="https://rebellion.global/maps/nl-netherlands/branches"
-      >
+    <iframe title="XR Nederland <?php _e('map', 'theme-xrnl') ?>" allowfullscreen width="100%" height="600px" src="https://rebellion.global/maps/nl-netherlands/branches">
     </iframe>
   </div>
 <?php endif; ?>
 
-<p><?php //the_content(); ?></p>
+<p><?php //the_content(); 
+    ?></p>
 
 <script type="text/javascript">
-  jQuery(document).ready(function(){
+  jQuery(document).ready(function() {
 
     jQuery('.select-region > button').show();
 
@@ -89,19 +91,19 @@ onclick="<?= register_button_click($group_name); ?>"><?php echo $group_name; ?><
     jQuery('.region-select-btn').click(function(e) {
 
       // No doubleclicks please
-      if(e.originalEvent.detail > 1){
+      if (e.originalEvent.detail > 1) {
         return;
       }
 
       jQuery('.lg-name').hide();
-      jQuery('.'+this.name).fadeIn(300);
+      jQuery('.' + this.name).fadeIn(300);
 
       // Only show index letters that have groups listed underneath
       jQuery('.initial-letter')
         .hide()
         .filter(function() {
           return jQuery(this).nextUntil('.initial-letter').not(':hidden').length
-          })
+        })
         .fadeIn(300);
 
       makeActive(this);
@@ -124,8 +126,8 @@ onclick="<?= register_button_click($group_name); ?>"><?php echo $group_name; ?><
   });
 
   function makeActive(btn) {
-      jQuery('.select-region > button').removeClass('active');
-      jQuery(btn).addClass('active');
+    jQuery('.select-region > button').removeClass('active');
+    jQuery(btn).addClass('active');
   }
 </script>
 
