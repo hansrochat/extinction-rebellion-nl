@@ -16,7 +16,7 @@ get_header(); ?>
 
     <?php if( have_rows('circles') ): ?>
         <div class="col-lg-12 mb-5 text-justify">
-            <h1 class="font-xr" id="#working-groups"><?php the_field('title') ?></h1>
+            <h1 class="font-xr" id="working-groups"><?php the_field('title') ?></h1>
             <?php the_field('introduction') ?>
             <div class="row">
               <?php while ( have_rows('circles') ){ the_row();
