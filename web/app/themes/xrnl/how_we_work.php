@@ -17,9 +17,9 @@ get_header(); ?>
       </div>
     </div>
 
-        <div class="row">
-    <?php if (have_rows('sections')) : ?>
-      <div class="col-12 mb-5 text-justify">
+    <div class="row">
+      <?php if (have_rows('sections')) : ?>
+        <div class="col-12 mb-5 text-justify">
           <?php while (have_rows('sections')) {
             the_row();
             $sectionId = formatElementID(get_sub_field('title'));
@@ -48,8 +48,8 @@ get_header(); ?>
             </div>
           <?php } ?>
         </div>
-    <?php endif; ?>
-      </div>
+      <?php endif; ?>
+    </div>
   </div>
 </main>
 
