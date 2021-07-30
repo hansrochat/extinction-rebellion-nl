@@ -22,15 +22,16 @@ get_header(); ?>
       <div class="col-12 mb-5 text-justify">
           <?php while (have_rows('sections')) {
             the_row();
-            $groupId = formatElementID(get_sub_field('title'));
+            $sectionId = formatElementID(get_sub_field('title'));
+            $sectionTextId = $sectionId . "-text";
           ?>
             <div class="col-12 py-2">
-              <div id="<?php echo "section-" . formatElementID(get_sub_field('title')); ?>" class="mx-auto">
-                <a class="btn btn-yellow btn-lg btn-block text-left" data-toggle="collapse" href="#<?php echo $groupId; ?>" role="button" aria-expanded="false" aria-controls="<?php echo $groupId; ?>">
+              <div id="<?php echo $sectionId ?>" class="mx-auto">
+                <a class="btn btn-yellow btn-lg btn-block text-left" data-toggle="collapse" href="#<?php echo $sectionTextId; ?>" role="button" aria-expanded="false" aria-controls="<?php echo $sectionTextId; ?>">
                   <?php the_sub_field('title') ?>
                   <i class="fas fa-chevron-down float-right pt-1"></i>
                 </a>
-                <div class="text-left collapse pt-2" id="<?php echo $groupId; ?>">
+                <div class="text-left collapse pt-2" id="<?php echo $sectionTextId; ?>">
                   <div class="pt-3 text-justify">
                     <?php the_sub_field('text'); ?>
                   </div>
