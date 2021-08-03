@@ -942,11 +942,13 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 /*
- * Function replaces ' & ' and spaces to '-' so that
+ * Function replaces some special characters so that
  * string can be used as an ID on a HTML element.
  */
 function formatElementID($str) {
-    return strtolower(str_replace(array(', ', ' & ', ' '), '-', $str));
+    $str = str_replace(array('?', ':', ','), '', $str);
+    $str = str_replace(array(' & ',' '), '-', $str);
+    return strtolower($str);
 }
 
 function xrnl_pv_shortcode()

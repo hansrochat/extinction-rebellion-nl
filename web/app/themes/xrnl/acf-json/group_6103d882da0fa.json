@@ -1,53 +1,13 @@
 {
-    "key": "group_6060f0baa2615",
-    "title": "Structure",
+    "key": "group_6103d882da0fa",
+    "title": "How we work",
     "fields": [
         {
-            "key": "field_6096d9a7ac3e0",
-            "label": "Title",
-            "name": "title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_606f5bf13a144",
-            "label": "Introduction",
-            "name": "introduction",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 2,
-            "default_value": "",
-            "tabs": "text",
-            "media_upload": 0,
-            "toolbar": "full",
-            "delay": 0
-        },
-        {
-            "key": "field_606217a298a03",
-            "label": "Circles",
-            "name": "circles",
+            "key": "field_6103d882e3927",
+            "label": "Foldout sections",
+            "name": "sections",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "List of fold-out menus that users can click to read more information",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -63,11 +23,11 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_606217bb98a04",
+                    "key": "field_6103d882eb70c",
                     "label": "Title",
                     "name": "title",
                     "type": "textarea",
-                    "instructions": "",
+                    "instructions": "Title that appears on the foldout menu that users click",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -77,15 +37,15 @@
                     },
                     "wpml_cf_preferences": 2,
                     "default_value": "",
-                    "placeholder": "Title of the working group: Outreach & Training, Tech...",
+                    "placeholder": "",
                     "maxlength": "",
                     "rows": 1,
                     "new_lines": ""
                 },
                 {
-                    "key": "field_606217c798a05",
-                    "label": "Description",
-                    "name": "description",
+                    "key": "field_6103d882eb777",
+                    "label": "Text",
+                    "name": "text",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -96,18 +56,18 @@
                         "id": ""
                     },
                     "wpml_cf_preferences": 2,
-                    "default_value": "Enter some information about the working group...",
+                    "default_value": "",
                     "tabs": "all",
                     "toolbar": "full",
                     "media_upload": 0,
                     "delay": 0
                 },
                 {
-                    "key": "field_606217d698a06",
+                    "key": "field_6103d882eb7e2",
                     "label": "Links",
                     "name": "links",
                     "type": "repeater",
-                    "instructions": "Here you can add any number of buttons to show up on the website for each working group",
+                    "instructions": "Here you can add any number of buttons that link to other places where users can read more information",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -123,7 +83,7 @@
                     "button_label": "",
                     "sub_fields": [
                         {
-                            "key": "field_6096b94147de6",
+                            "key": "field_6103d88315938",
                             "label": "Label",
                             "name": "label",
                             "type": "text",
@@ -143,7 +103,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_6096b96247de7",
+                            "key": "field_6103d883159a3",
                             "label": "Link",
                             "name": "link",
                             "type": "url",
@@ -169,7 +129,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "structure_circles.php"
+                "value": "how_we_work.php"
             }
         ]
     ],
@@ -181,5 +141,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1627646290
+    "modified": 1627646194
 }
