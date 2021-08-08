@@ -291,3 +291,24 @@ a.btn-black-r-invert:hover {
     border-radius: 0px;
   }
 }
+
+.border-10{
+  border-width: 10px !important;
+}
+
+.full-screen-height{
+  min-height: 100vh;
+}
+
+.svg-size-250 {
+  svg,path {
+    width: auto;
+    height: 250px;
+    @include media-breakpoint-down(md) {
+      height: 175px;
+    }
+    @include media-breakpoint-down(xs) {
+      height: 125px;
+    }
+  }
+}

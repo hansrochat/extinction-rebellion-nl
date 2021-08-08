@@ -22,21 +22,6 @@
   $localPage = apply_filters('wpml_object_id', 12054, 'page', true);
   $localPageURL = get_permalink($localPage);
 
-  function getContext($env)
-  {
-    // In development environment, allow reading from the
-    // local filesystem without requiring a signed SSL certificate.
-    $dev = $env === 'development';
-    $contextOptions = array(
-      "ssl" => array(
-          "verify_peer" => $dev ? false : true,
-          "verify_peer_name" => $dev ? false : true,
-          "allow_self_signed" => $dev ? true : false
-      ),
-    );
-    return stream_context_create($contextOptions);
-  }
-
   function getSection($section_id)
   {
     return (object) get_field($section_id);

@@ -14,6 +14,7 @@ $xr-red: #dc4f00;
 $xr-angry: #c80082;
 $xr-primary: $xr-green;
 $xr-light-gray: lighten($xr-black, 85%);
+$xr-nl-fuchsia: #ff37cb;
 
 $theme-colors: (
   "primary": $xr-primary,
@@ -30,7 +31,8 @@ $theme-colors: (
   "angry": $xr-angry,
   "light-green": $xr-light-green,
   "bright-pink": $xr-bright-pink,
-  "light-gray": $xr-light-gray  
+  "light-gray": $xr-light-gray,
+  "fuchsia": $xr-nl-fuchsia,
 ) !default;
 
 $navbar-light-toggler-border-color: rgba(0, 0, 0, 0);

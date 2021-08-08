@@ -20,6 +20,7 @@ ol {
 
 .font-xr {
   font-family: $brand-font;
+  text-transform: uppercase;
 }
 
 header, footer {
@@ -51,5 +52,34 @@ main {
         color: map-get($theme-colors, "yellow");
       }
     }
+  }
+}
+
+.text-giant {
+  font-size: 10rem;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 8rem;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 6rem;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 4rem;
+  }
+}
+
+.font-xr-if-bold {
+  // make all bold text inside this class use the XR font
+  strong {
+    @extend .font-xr;
+  }
+}
+
+.font-fuchsia-if-bold {
+  // make all bold text in this class have the fuchsia colour
+  // if useful we can easily extend this for all colours
+  strong {
+    @extend .text-fuchsia;
   }
 }
