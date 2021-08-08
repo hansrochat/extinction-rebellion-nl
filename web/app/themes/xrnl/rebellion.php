@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template name: rebellion
+ * Template name: Rebellion
  */
 
 get_header(null, array(
@@ -13,15 +13,15 @@ get_header(null, array(
 
 <div>
   <div class="bg-black text-white p-3 p-sm-5 full-screen-height">
-    <div class="bg-black border border-10 border-fuchsia py-5 px-3 px-md-4">
+    <div class="border border-10 border-fuchsia py-5 px-3 px-md-4">
       <div>
         <h1 class="font-xr">
-          najaars rebellie, 11-18 OKT. Den Haag
+          <?php the_field('subtitle') ?>
         </h1>
       </div>
       <div>
         <h1 class="font-xr text-fuchsia text-giant">
-          de crisis is nu
+          <?php the_title(); ?>
         </h1>
       </div>
       <div class="row pt-3">
@@ -38,10 +38,16 @@ get_header(null, array(
           </div>
         </div>
         <div class="col-12 col-md-8 col-lg-6 pt-3 pt-md-0">
-          <p class="font-xr-if-bold font-fuchsia-if-bold">here will come the text in <span class="font-xr text-fuchsia">wysiwyg</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate <strong>bold</strong> esse cillum dolore eu fugiat nulla pariatur.</p>
-          <div class="pt-3">
-            <a class="btn btn-lg btn-fuchsia text-black" href="/doe-mee" role="button">Join XR</a>
-            <a class="btn btn-lg btn-fuchsia text-black ml-2" href="/donate" role="button">Donate</a>
+          <div class="font-xr-if-bold font-fuchsia-if-bold">
+            <?php the_content(); ?>
+          </div>
+          <div>
+            <?php if (have_rows('buttons')) : ?>
+              <?php while (have_rows('buttons')) {
+                the_row(); ?>
+                <a class="btn btn-lg btn-fuchsia text-black ml-2 mt-3" href="<?php the_sub_field('link'); ?>"><?php the_sub_field('label'); ?></a>
+              <?php } ?>
+            <?php endif; ?>
           </div>
         </div>
       </div>
