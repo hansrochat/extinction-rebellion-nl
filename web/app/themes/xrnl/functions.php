@@ -1058,3 +1058,19 @@ function xrnl_add_role_caps() {
   }
 }
 add_action('admin_init','xrnl_add_role_caps',999);
+
+
+  function getContext($env)
+  {
+    // In development environment, allow reading from the
+  // local filesystem without requiring a signed SSL certificate.
+  $dev = $env === 'development';
+  $contextOptions = array(
+    "ssl" => array(
+        "verify_peer" => $dev ? false : true,
+        "verify_peer_name" => $dev ? false : true,
+        "allow_self_signed" => $dev ? true : false
+    ),
+  );
+  return stream_context_create($contextOptions);
+}
