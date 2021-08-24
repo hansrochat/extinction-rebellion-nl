@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_61103048cc2ad",
-            "label": "subtitle",
+            "label": "cover subtitle",
             "name": "subtitle",
             "type": "text",
             "instructions": "Text that appears above the big title. Useful for location & date",
@@ -24,7 +24,7 @@
         },
         {
             "key": "field_61103098cc2ae",
-            "label": "buttons",
+            "label": "cover buttons",
             "name": "buttons",
             "type": "repeater",
             "instructions": "Buttons that appear below the description",
@@ -35,12 +35,12 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 2,
             "collapsed": "field_61103108cc2af",
             "min": 0,
             "max": 0,
             "layout": "table",
             "button_label": "New button",
-            "wpml_cf_preferences": 2,
             "sub_fields": [
                 {
                     "key": "field_61103108cc2af",
@@ -80,6 +80,184 @@
                     "wpml_cf_preferences": 2
                 }
             ]
+        },
+        {
+            "key": "field_612523418aadd",
+            "label": "signup section",
+            "name": "signup_section",
+            "type": "group",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "wpml_cf_preferences": 0,
+            "sub_fields": [
+                {
+                    "key": "field_6125235e8aade",
+                    "label": "title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "wpml_cf_preferences": 0
+                },
+                {
+                    "key": "field_612523998aadf",
+                    "label": "content",
+                    "name": "content",
+                    "type": "wysiwyg",
+                    "instructions": "Here you can embed the action network signup forms using the [shortcodes]. You can also add additional text or buttons.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0,
+                    "wpml_cf_preferences": ""
+                }
+            ]
+        },
+        {
+            "key": "field_6125241c8aae0",
+            "label": "action information section",
+            "name": "action_information_section",
+            "type": "group",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "wpml_cf_preferences": 0,
+            "sub_fields": [
+                {
+                    "key": "field_6125241c8aae1",
+                    "label": "title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "wpml_cf_preferences": 0
+                },
+                {
+                    "key": "field_6125241c8aae2",
+                    "label": "content",
+                    "name": "content",
+                    "type": "wysiwyg",
+                    "instructions": "Here you can add any text before the foldouts with more information",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 0,
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_6125249e8aae3",
+                    "label": "foldouts",
+                    "name": "foldouts",
+                    "type": "repeater",
+                    "instructions": "List of fold-out menus that users can click to read more information. Useful to share the information about the action in a good overview",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 0,
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_6125250d8aae4",
+                            "label": "title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_612525a88aae5",
+                            "label": "content",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 0,
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "location": [
@@ -99,5 +277,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1628451201
+    "modified": 1629829120
 }

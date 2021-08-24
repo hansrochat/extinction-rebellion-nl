@@ -1,0 +1,10 @@
+#rebellion {
+  #can_embed_form {
+    form {
+      input[type="submit"] {
+        @extend .btn-fuchsia;
+        @extend .text-black;
+      }
+    }
+  }
+}
