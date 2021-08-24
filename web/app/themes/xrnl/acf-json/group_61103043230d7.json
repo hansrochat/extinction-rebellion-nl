@@ -101,7 +101,7 @@
                     "key": "field_6125235e8aade",
                     "label": "title",
                     "name": "title",
-                    "type": "textarea",
+                    "type": "text",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -112,9 +112,9 @@
                     },
                     "default_value": "",
                     "placeholder": "",
+                    "prepend": "",
+                    "append": "",
                     "maxlength": "",
-                    "rows": "",
-                    "new_lines": "",
                     "wpml_cf_preferences": 0
                 },
                 {
@@ -159,7 +159,7 @@
                     "key": "field_6125241c8aae1",
                     "label": "title",
                     "name": "title",
-                    "type": "textarea",
+                    "type": "text",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -170,9 +170,9 @@
                     },
                     "default_value": "",
                     "placeholder": "",
+                    "prepend": "",
+                    "append": "",
                     "maxlength": "",
-                    "rows": "",
-                    "new_lines": "",
                     "wpml_cf_preferences": 0
                 },
                 {
@@ -181,19 +181,19 @@
                     "name": "content",
                     "type": "wysiwyg",
                     "instructions": "Here you can add any text before the foldouts with more information",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
+                    "wpml_cf_preferences": 0,
                     "default_value": "",
                     "tabs": "all",
                     "toolbar": "full",
                     "media_upload": 0,
-                    "delay": 0,
-                    "wpml_cf_preferences": 0
+                    "delay": 0
                 },
                 {
                     "key": "field_6125249e8aae3",
@@ -208,18 +208,18 @@
                         "class": "",
                         "id": ""
                     },
+                    "wpml_cf_preferences": 0,
                     "collapsed": "",
                     "min": 0,
                     "max": 0,
                     "layout": "block",
                     "button_label": "",
-                    "wpml_cf_preferences": 0,
                     "sub_fields": [
                         {
                             "key": "field_6125250d8aae4",
                             "label": "title",
                             "name": "title",
-                            "type": "textarea",
+                            "type": "text",
                             "instructions": "",
                             "required": 1,
                             "conditional_logic": 0,
@@ -228,12 +228,12 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "wpml_cf_preferences": 0,
                             "default_value": "",
                             "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": "",
-                            "wpml_cf_preferences": 0
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         },
                         {
                             "key": "field_612525a88aae5",
@@ -241,19 +241,19 @@
                             "name": "content",
                             "type": "wysiwyg",
                             "instructions": "",
-                            "required": 1,
+                            "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
                                 "id": ""
                             },
+                            "wpml_cf_preferences": 0,
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "full",
                             "media_upload": 1,
-                            "delay": 0,
-                            "wpml_cf_preferences": 0
+                            "delay": 0
                         }
                     ]
                 }
@@ -277,5 +277,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1629825440
+    "modified": 1629829120
 }
