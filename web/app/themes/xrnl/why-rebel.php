@@ -6,11 +6,6 @@
 
 get_header(); ?>
 
-<?php function getSection($section_id, $post_id=NULL) {
-    return (object) get_field($section_id, $post_id);
-  }
-?>
-
 <main class="why-rebel">
 
   <?php $section = getSection('hero_section'); ?>
