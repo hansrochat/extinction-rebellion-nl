@@ -22,10 +22,6 @@
   $localPage = apply_filters('wpml_object_id', 12054, 'page', true);
   $localPageURL = get_permalink($localPage);
 
-  function getSection($section_id)
-  {
-    return (object) get_field($section_id);
-  }
 
   function getLocalRoles()
   {

@@ -6,10 +6,6 @@
 
 get_header(); ?>
 
-<?php function getSection($section_id) {
-  return (object) get_field($section_id);
-} ?>
-
 <?php function insertURL($page_id) {
   echo get_permalink(apply_filters('wpml_object_id', $page_id, 'page', true));
 } ?>
