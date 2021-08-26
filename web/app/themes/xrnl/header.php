@@ -85,7 +85,9 @@
           </li>
           <li class="mx-3 mx-lg-2 show-xl">
             <a href="<?php echo $donatePageURL ?>" class="btn btn-black-r-invert" target="_blank" onclick="<?= register_button_click('donate (desktop)', 'header'); ?>"><?php _e('donate', 'theme-xrnl'); ?></a>
-            <a href="<?php echo $joinPageUrl ?>" class="btn btn-black-r" onclick="<?= register_button_click('join us (desktop)', 'header'); ?>"><?php _e('join us', 'theme-xrnl'); ?></a>
+          </li>
+          <li class="mx-3 mx-lg-2 hide-xl show-xl">
+            <a href="<?php echo $joinPageUrl ?>" class="btn btn-black-r" onclick="<?= register_button_click('join us (desktop)', 'header'); ?>"><?php _e('join us', 'theme-xrnl'); ?></a>            
           </li>
         </ul>
 
