@@ -74,12 +74,6 @@
         ?>
 
         <ul class="list-unstyled d-flex my-3 my-xl-0 align-items-center ml-auto">
-          <li class="mx-3 mx-lg-2">
-              <a href="https://www.facebook.com/ExtinctionRebellionNL/" target="_blank" class="facebook" aria-label="facebook" onclick="<?= register_button_click('Facebook icon', 'header'); ?>"><i class="fab text-black fa-facebook-f"></i></a></li>
-          <li class="mx-3 mx-lg-2">
-              <a href="https://twitter.com/nlrebellion" class="twitter" target="_blank" aria-label="twitter" onclick="<?= register_button_click('Twitter icon', 'header'); ?>"><i class="fab text-black fa-twitter"></i></a></li>
-          <li class="mx-3 mx-lg-2">
-              <a href="https://www.instagram.com/extinctionrebellionnl/?hl=nl" target="_blank" class="insta" aria-label="instagram" onclick="<?= register_button_click('Instagram icon', 'header'); ?>"><i class="fab text-black fa-instagram"></i></a></li>
           <li class="mx-3 mx-lg-2 show-xl">
             <?php wp_nav_menu( [
                 'theme_location' => 'language',
