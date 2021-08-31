@@ -1,10 +1,8 @@
 
 #donations {
-
   section:not(:nth-of-type(1)) {
-    margin-top: 3rem;
+    margin-top: 5rem;
   }
-
   .ps-more-info {
     margin-top: .8rem;
   }
@@ -35,15 +33,60 @@
       &::before {
         color: lighten($xr-black, 35%);
       }
-
     }
   }
-
-
 }
 
-
-
+.expenses-chart {
+  .selected-dp-info {
+    display: flex;
+    align-items: center;
+    min-height: 3rem;
+    margin-bottom: .2rem;
+    @include media-breakpoint-down(md) {
+      min-height: 5rem;
+    }
+    &.active {
+      background-color: lighten($xr-lemon, 8%);
+    }
+    .dp-info-label {
+      @extend .h3;
+    }
+    .dp-info-note {
+      font-style: italic;
+      white-space: nowrap;
+      @include media-breakpoint-down(md) {
+        display: block;
+        min-height: 2rem;
+      }
+    }
+    .dp-info-value {
+      font-size: 2rem;
+    }
+  }
+  .chart-line {
+    cursor: pointer;
+    &:hover {
+      background-color: lighten($xr-lemon, 8%);
+    }
+  }
+  .line-segment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .dp-label {
+    @extend .h3;
+  }
+  .dp-bar {
+    height: .5rem;
+    background-color: $xr-primary;
+    border-radius: 5px;
+  }
+  .dp-value {
+    font-family: $brand-font;
+  }
+}
 
 
 /* payment form
