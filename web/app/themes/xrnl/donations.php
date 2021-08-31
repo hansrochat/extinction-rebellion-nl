@@ -188,7 +188,7 @@ get_header(null, array(
     <div class="container-fluid bg-xr-lemon pt-4">
       <div class="expenses-chart row">
         <div class="content col-12 col-sm-10 col-md-8 col-lg-7 col-xl-7 mx-auto">
-          <h2 class="mb-2 mb-md-1">Waar geven wij jou bijdrage aan uit?</h2>
+          <h2 class="mb-2 mb-md-1">Waar je steun aan bijdraagt:</h2>
           <div class="selected-dp-info row">
             <div class="col-10">
               <span class="dp-info-item dp-info-label"></span>
