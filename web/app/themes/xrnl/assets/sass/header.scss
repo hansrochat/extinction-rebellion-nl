@@ -1,5 +1,5 @@
 .navbar {
-  padding-bottom: 0;
+  padding: .2rem 1rem;
 
   .language-menu {
     .nav-item .nav-link {
@@ -11,39 +11,27 @@
 
   a.navbar-brand {
     padding: 0;
-    margin: 0;
+    margin: 0 2rem 0 0;
   }
 
   a.navbar-brand > img {
-    @include media-breakpoint-down(sm) {
-      height: 55px;
-    }
-
-    &.show-xxs {
-      // Make sure the logo doesn't push the buttons off the screen on some mobile devices:
-      max-width: 30vw;
-
-      // quick hack to force that logo to the left
-      margin: 0 -15px;
-    }
+    max-height: 40px;
   }
 
   .nav-item {
-    margin: 0 0.5rem;
-
     &:hover .nav-link,
     &.active .nav-link {
       color: $white;
-      border-bottom: 5px solid $black;
+      text-decoration: underline;
+      text-decoration-thickness: 4px;
     }
 
     .nav-link {
-      border-bottom: 5px solid rgba(0, 0, 0, 0.0);
       font-family: $brand-font;
       white-space: nowrap;
       font-size: 1.4rem;
       @include media-breakpoint-up(xl) {
-        padding: 1.4rem 0.5rem;
+        padding: .4rem 0.8rem;
       }
     }
 
