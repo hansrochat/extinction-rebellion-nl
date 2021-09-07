@@ -8,41 +8,93 @@ get_header(null, array(
 ));
 
 // $fields = get_fields();
+$show_content = true;
+
 ?>
 
 <div id="donations">
-  <section class="hero text-white py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.95)), url('https://extinctionrebellion.nl/app/uploads/2021/08/XR-09042021-ZeldaBonnet-27@0.5x.png') no-repeat center center / cover;">
+
+  <?php if (true): ?>
+  <!-- <section class="hero text-white py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.95)), url('https://extinctionrebellion.nl/app/uploads/2021/08/XR-09042021-ZeldaBonnet-27@0.5x.png') no-repeat center center / cover;"> -->
+  <section class="hero text-white bg-xr-black py-5">
     <div class="container-fluid">
       <div class="row">
         <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
           <h1 class="display-3 text-uppercase font-xr">Steun Extinction Rebellion Nederland</h1>
-          <p>De klimaatcrisis en de massale uitsterving van soorten vereist radicale actie. Jouw bijdrage is nú nodig, harder dan ooit. Alleen met jouw steun kunnen wij de straat op om systeemverandering en sociale rechtvaardigheid te eisen. Doe jij ook mee?</p>
+          <!-- <p>De klimaatcrisis en de massale uitsterving van soorten vereist radicale actie. Jouw bijdrage is nú nodig, harder dan ooit. Alleen met jouw steun kunnen wij de straat op om systeemverandering en sociale rechtvaardigheid te eisen. Doe jij ook mee?</p> -->
+          <p class="hero-text">Text text. Je kan een periodieke of eenmalige <a href="#donations-form" class="donations-accent yellow">bijdrage geven</a>, een bedrag op onze rekening <a href="#account-transfer" class="donations-accent red">overmaken</a>, of een <a href="#periodiek-schenken" class="donations-accent purple">periodieke schenking</a> regelen.</p>
         </div>
       </div>
     </div>
+    <div class="hero-symbol right hero-symbol-yellow">
+      <?php
+        $symbol_svg = file_get_contents(get_template_directory_uri() . '/assets/images/turtle.svg', false, getContext(WP_ENV));
+        echo $symbol_svg;
+      ?>
+    </div>    
   </section>
+  <?php endif ?>
 
-  <section>
+  <?php if ($show_content): ?>
+  <section id="donations-form" class="xrnl-donations-form main-section yellow">
+    <div class="container-fluid">
+        <div class="row">
+          <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
+            <?php the_content(); ?>
+          </div>
+        </div>
+    </div>
+  </section>
+  <?php endif ?>
+
+  <?php if (true): ?>
+  <section id="donate-via-whydonate" class="main-section yellow">
     <div class="container-fluid">
       <div class="row">
         <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
-          <h2>1. Een structurele of eenmalige bijdrage op Whydonate</h2>
+          <h2>Een structurele of eenmalige bijdrage op Whydonate</h2>
           <p>Je kunt een losse, of maandelijkse gift maken op het crowdfund platform van Whydonate. Houd de pagina ook in de gaten voor specifieke campagnes, zoals tijdens een rebellie, of voor het dekken van juridische kosten na een actie. </p>
           <div class="row pt-3">
             <div class="mx-auto">
-              <a class="btn btn-lg btn-green" href="https://www.whydonate.nl/fundraising/help-extinction-rebellion-nederland">Doneer via crowdfunding</a>
+              <a class="btn btn-lg btn-black" href="https://www.whydonate.nl/fundraising/help-extinction-rebellion-nederland">Doneer via crowdfunding</a>
             </div>
             </div>
         </div>
       </div>
     </div>
   </section>
+  <?php endif ?>
 
-  <section>
+  <section id="account-transfer" class="main-section red">
     <div class="container-fluid">
       <div class="row">
         <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
-          <h2>2. Periodiek Schenken met belastingvoordeel</h2>
+          <h2>Een direct gift op het rekeningnummer van Extinction Rebellion NL</h2>
+          <p>Je kunt natuurlijk ook direct een bedrag overboeken op het rekeningnummer van Extinction Rebellion Nederland. Wij zijn ontzettend dankbaar voor alle bijdragen vanuit onze rebelse achterban. Houd wel in gedachten dat structurele en periodieke donaties voor ons inzichtelijker zijn en daarmee efficiënter te besteden aan onze doelstellingen. Toch liever een eenmalige bijdrage direct op het rekening nummer? Je kunt een bedrag overmaken op</p>
+          <p class="text-center font-weight-bold">NL86SNSB0783148674 <em>t.n.v.</em> Stichting Vrienden van XR</p>
+          <div class="pl-3 mt-4">
+            <div class="ps-more-info">
+                <span id="reveal-ps-why" class="ps-info-toggle reveal-ps-info">Scan QR code</span>
+                <span id="hide-ps-why" class="ps-info-toggle hide-ps-info" style="display: none;">Verberg QR code</span>
+            </div>
+              <div class="ps-info-text" style="display: none;">
+                <div class=row>
+                <div class="col-10 col-md-8 col-lg-5 col-xl-4 mx-auto pt-4">
+                  <img src="https://extinctionrebellion.nl/app/uploads/2021/08/qr-code.png" alt="Stichting Vrienden van XR SEPA link">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="periodiek-schenken" class="main-section purple">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
+          <h2>Periodiek Schenken met belastingvoordeel</h2>
           <p>Denk je er aan om Extinction Rebellion Nederland voor een langere tijd te ondersteunen? Overweeg dan om een periodieke schenking te maken. Met periodiek schenken leg je met belastingvoordeel voor 5 jaar een bedrag naar eigen keuze vast. Hierdoor ontvangen wij achter de eindstreep een hogere donatie, terwijl voor jou het bedrag hetzelfde blijft. Zo kunnen wij dus in jou naam nog vaker de straat op!</p>
           <!-- <p>Je kunt een periodieke schenking eenvoudig regelen via <a href="https://www.periodiekschenken.nl/extinction-rebellion">
             <img src="https://extinctionrebellion.nl/app/uploads/2021/07/periodiekschenken_logo.png" alt="periodiek schenken logo" style="height: 1.2rem; display: inline; margin-left: .2rem;"></a>
@@ -87,31 +139,6 @@ get_header(null, array(
             </div>
           </div>
 
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
-          <h2>3. Een direct gift op het rekeningnummer van Extinction Rebellion NL</h2>
-          <p>Je kunt natuurlijk ook direct een bedrag overboeken op het rekeningnummer van Extinction Rebellion Nederland. Wij zijn ontzettend dankbaar voor alle bijdragen vanuit onze rebelse achterban. Houd wel in gedachten dat structurele en periodieke donaties voor ons inzichtelijker zijn en daarmee efficiënter te besteden aan onze doelstellingen. Toch liever een eenmalige bijdrage direct op het rekening nummer? Je kunt een bedrag overmaken op</p>
-          <p class="text-center font-weight-bold">NL86SNSB0783148674 <em>t.n.v.</em> Stichting Vrienden van XR</p>
-          <div class="pl-3 mt-4">
-            <div class="ps-more-info">
-                <span id="reveal-ps-why" class="ps-info-toggle reveal-ps-info">Scan QR code</span>
-                <span id="hide-ps-why" class="ps-info-toggle hide-ps-info" style="display: none;">Verberg QR code</span>
-            </div>
-              <div class="ps-info-text" style="display: none;">
-                <div class=row>
-                <div class="col-10 col-md-8 col-lg-5 col-xl-4 mx-auto pt-4">
-                  <img src="https://extinctionrebellion.nl/app/uploads/2021/08/qr-code.png" alt="Stichting Vrienden van XR SEPA link">
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -185,7 +212,7 @@ get_header(null, array(
     $max_dp = xrnl_get_max_dp($cdata);
   ?>
   <section>
-    <div class="container-fluid bg-xr-lemon pt-4">
+    <div class="container-fluid bg-xr-yellow pt-4">
       <div class="expenses-chart row">
         <div class="content col-12 col-sm-10 col-md-8 col-lg-7 col-xl-7 mx-auto">
           <h2 class="mb-2 mb-md-1">Waar je steun aan bijdraagt:</h2>
@@ -230,24 +257,78 @@ get_header(null, array(
 </div>
 
 <script type="text/javascript">
-   jQuery(document).ready(function() {
-      // Expand section toggles
-      jQuery('.ps-info-toggle').click(function(e) {
-        jQuery(this).toggle();
-        jQuery(this).siblings('.ps-info-toggle').toggle();
-        jQuery(this).parent().next('.ps-info-text').slideToggle(300);
+   jQuery(document).ready(function($) {
+
+    // Expanding section toggles
+      $('.ps-info-toggle').click(function(e) {
+        $(this).toggle();
+        $(this).siblings('.ps-info-toggle').toggle();
+        $(this).parent().next('.ps-info-text').slideToggle(300);
         e.preventDefault();
       });
-      // Show selected chart info on hover
-      jQuery('.chart-line').hover(function() {
-        jQuery('.dp-info-label').text(jQuery(this).attr('data-label'));
-        jQuery('.dp-info-note').text(jQuery(this).attr('data-note'));
-        jQuery('.dp-info-value').text(jQuery(this).attr('data-value')+'%');
-        jQuery('.selected-dp-info').addClass('active');
+
+    // Show additional expense info on hover
+      $('.chart-line').hover(function() {
+        $('.dp-info-label').text($(this).attr('data-label'));
+        $('.dp-info-note').text($(this).attr('data-note'));
+        $('.dp-info-value').text($(this).attr('data-value')+'%');
+        $('.selected-dp-info').addClass('active');
       }, function() {
-        jQuery('.dp-info-item').text('');
-        jQuery('.selected-dp-info').removeClass('active');
+        $('.dp-info-item').text('');
+        $('.selected-dp-info').removeClass('active');
       });
+
+    // Tweaking the styling of the payment form
+      $('.xrnl-donations-form').find('form').addClass('payment-form');
+      $('.payment-form').children().addClass('form-child');
+      $('[id^="rfmp_open_amount"].form-child').addClass('payment-amount show');
+      $('.payment-amount').find('input').addClass('amount-input show');
+      $('.amount-input').attr('value',5);
+      $('[label^="Betaalmethode"].form-child').addClass('payment-method show');
+      $('ul[id^="form"].form-child').addClass('options-list');
+      $('.options-list').first().addClass('payment-options show');
+      $('[id^="rfmp_checkbox"].form-child').addClass('payment-consent');
+      $('.form-child').has('button').addClass('payment-button show');
+      $('.form-child').has('input[type=text]').addClass('payment-name-input show');
+      $('.form-child').has('input[type=email]').addClass('payment-email-input show');
+
+      // Only show selected form elements & hide everything else
+      $('.form-child').not('.show').addClass('d-none');
+
+      // Remove info in brackets from labels
+      $('.options-list > li > label').each(function() {
+        var html = $(this).html();
+        $(this).html(html.replace(/\(.*\)/g,""));
+      });
+
+      // Accessible smooth scrolling. Credits: Chris Coyier
+      $('a[href*="#"]').click(function(event) {
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+          &&
+          location.hostname == this.hostname
+        ) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 500, function() {
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) {
+                return false;
+              } else {
+                $target.attr('tabindex','-1');
+                $target.focus();
+              };
+            });
+          }
+        }
+      });
+
+
     });
 </script>
 

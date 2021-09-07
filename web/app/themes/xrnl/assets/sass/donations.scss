@@ -1,8 +1,91 @@
 
 #donations {
   section:not(:nth-of-type(1)) {
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
+  .main-section {
+    .content {
+      padding: 2.5rem 1rem 4rem 1rem;
+    }
+    &.yellow {
+      .content {
+        border: .5rem solid $xr-warm-yellow;
+      }
+    }
+    &.red {
+      .content {
+        border: .5rem solid $xr-red;
+      }
+    }
+    &.purple {
+      .content {
+        border: .5rem solid $xr-purple;
+      }
+    }
+  }  
+  .donations-accent {
+    text-decoration: underline;
+    text-decoration-thickness: .3rem;
+    text-decoration-skip-ink: none;
+    text-decoration-skip: none;
+    color: inherit !important;
+    &.yellow {
+      text-decoration-color: $xr-warm-yellow;
+    }
+    &.red {
+      text-decoration-color: $xr-red;
+    }
+    &.purple {
+      text-decoration-color: rgba($xr-purple,.8);
+    }
+  }
+
+  $hero-min-height: 200px;
+
+  // Hero
+  .hero {
+    position: relative;
+    .hero-text {
+      font-size: 1.7rem;
+    }
+    .hero-symbol {
+      display: block;
+      position: absolute;
+      bottom: 1rem;
+      opacity: .3;
+      pointer-events: none;
+
+      svg,path {
+        width: auto;
+        z-index: 1;
+        fill: $xr-pink;
+        height: 20rem;
+        // height: $hero-min-height * .85;
+        // @include media-breakpoint-down(lg) {
+        //   height: $hero-min-height * .8;
+        // }
+        // @include media-breakpoint-down(md) {
+        //   height: $hero-min-height * .75;
+        // }
+        // @include media-breakpoint-down(sm) {
+        //   height: $hero-min-height * .65;
+        // }
+        // @include media-breakpoint-down(xs) {
+        //   display: none;
+        // }
+      }
+
+      &.right {
+        right: 1rem;
+        transform: scaleX(-1);
+      }
+      &.left {
+        left: 1rem;
+      }
+    }
+  }
+
+  // Section toggles
   .ps-more-info {
     margin-top: .8rem;
   }
@@ -35,58 +118,116 @@
       }
     }
   }
-}
 
-.expenses-chart {
-  .selected-dp-info {
-    display: flex;
-    align-items: center;
-    min-height: 3rem;
-    margin-bottom: .2rem;
-    @include media-breakpoint-down(md) {
-      min-height: 5rem;
+  .xrnl-donations-form {
+    .content {
+      border-color: $xr-warm-yellow;
     }
-    &.active {
-      background-color: lighten($xr-lemon, 8%);
-    }
-    .dp-info-label {
-      @extend .h3;
-    }
-    .dp-info-note {
-      font-style: italic;
-      white-space: nowrap;
-      @include media-breakpoint-down(md) {
-        display: block;
-        min-height: 2rem;
+    .payment-form {
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      .form-child {
+        // background-color: lighten($xr-pink, 20%);
+      }
+      ul {
+        padding: 0;
+      }
+      .options-list {
+        @extend .form-check;
+        @extend .form-check-inline;
+        input {
+          @extend .form-check-input;
+        }
+        label {
+          @extend .form-check-label;
+        }
+        li {
+          &:not(:nth-of-type(1)) {
+            margin-left: 1.5rem;
+          }
+        }
+      }
+      .payment-amount {
+        order: -10;
+      }
+      .payment-options {
+        order: -9;
+      }
+      .payment-consent {
+        order: -8;
+      }
+      .payment-method {
+        order: -7;
+      }
+      .payment-name-input {
+        order: -6;
+      }
+      .payment-email-input {
+        order: -5;
+      }
+      .payment-button {
+        order: -4;
       }
     }
-    .dp-info-value {
-      font-size: 2rem;
+  }
+
+  // Expenses chart
+  .expenses-chart {
+    $chart-highlight-color: lighten($xr-warm-yellow, 8%);
+    .selected-dp-info {
+      display: flex;
+      align-items: center;
+      min-height: 3rem;
+      margin-bottom: .2rem;
+      @include media-breakpoint-down(md) {
+        min-height: 5rem;
+      }
+      &.active {
+        background-color: $chart-highlight-color;
+      }
+      .dp-info-label {
+        @extend .h3;
+      }
+      .dp-info-note {
+        font-style: italic;
+        white-space: nowrap;
+        @include media-breakpoint-down(md) {
+          display: block;
+          min-height: 2rem;
+        }
+      }
+      .dp-info-value {
+        font-size: 2rem;
+      }
+    }
+    .chart-line {
+      cursor: pointer;
+      &:hover {
+        background-color: $chart-highlight-color;
+      }
+    }
+    .line-segment {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .dp-label {
+      @extend .h3;
+    }
+    .dp-bar {
+      height: .5rem;
+      background-color: $xr-primary;
+      border-radius: 5px;
+    }
+    .dp-value {
+      font-family: $brand-font;
     }
   }
-  .chart-line {
-    cursor: pointer;
-    &:hover {
-      background-color: lighten($xr-lemon, 8%);
-    }
-  }
-  .line-segment {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .dp-label {
-    @extend .h3;
-  }
-  .dp-bar {
-    height: .5rem;
-    background-color: $xr-primary;
-    border-radius: 5px;
-  }
-  .dp-value {
-    font-family: $brand-font;
-  }
+
 }
+
+
 
 
 /* payment form
