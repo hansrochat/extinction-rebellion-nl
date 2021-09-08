@@ -15,28 +15,32 @@ $show_content = true;
 <div id="donations">
 
   <?php if (true): ?>
-  <!-- <section class="hero text-white py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.95)), url('https://extinctionrebellion.nl/app/uploads/2021/08/XR-09042021-ZeldaBonnet-27@0.5x.png') no-repeat center center / cover;"> -->
   <section class="hero text-white bg-xr-black py-5">
     <div class="container-fluid">
       <div class="row">
         <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
           <h1 class="display-3 text-uppercase font-xr">Steun Extinction Rebellion Nederland</h1>
-          <!-- <p>De klimaatcrisis en de massale uitsterving van soorten vereist radicale actie. Jouw bijdrage is nú nodig, harder dan ooit. Alleen met jouw steun kunnen wij de straat op om systeemverandering en sociale rechtvaardigheid te eisen. Doe jij ook mee?</p> -->
-          <p class="hero-text">Text text. Je kan een periodieke of eenmalige <a href="#donations-form" class="donations-accent yellow">bijdrage geven</a>, een bedrag op onze rekening <a href="#account-transfer" class="donations-accent red">overmaken</a>, of een <a href="#periodiek-schenken" class="donations-accent purple">periodieke schenking</a> regelen.</p>
+          <p class="hero-text">Je kan een eenmalige of periodieke <a href="#donations-form" class="donations-accent color-1">bijdrage geven</a>, een bedrag op onze rekening <a href="#account-transfer" class="donations-accent color-2">overmaken</a>, of een <a href="#periodiek-schenken" class="donations-accent color-3">periodieke schenking</a> regelen.</p>
         </div>
       </div>
     </div>
-    <div class="hero-symbol right hero-symbol-yellow">
+    <div class="hero-symbol right">
       <?php
-        $symbol_svg = file_get_contents(get_template_directory_uri() . '/assets/images/turtle.svg', false, getContext(WP_ENV));
-        echo $symbol_svg;
+        $symbol_svg_right = file_get_contents(get_template_directory_uri() . '/dist/images/turtle.svg', false, xrnl_get_context(WP_ENV));
+        echo $symbol_svg_right;
+      ?>
+    </div>    
+    <div class="hero-symbol left">
+      <?php
+        $symbol_svg_left = file_get_contents(get_template_directory_uri() . '/dist/images/xr-lisca.svg', false, xrnl_get_context(WP_ENV));
+        echo $symbol_svg_left;
       ?>
     </div>    
   </section>
   <?php endif ?>
 
   <?php if ($show_content): ?>
-  <section id="donations-form" class="xrnl-donations-form main-section yellow">
+  <section id="donations-form" class="xrnl-donations-form main-section color-1">
     <div class="container-fluid">
         <div class="row">
           <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
@@ -47,8 +51,8 @@ $show_content = true;
   </section>
   <?php endif ?>
 
-  <?php if (true): ?>
-  <section id="donate-via-whydonate" class="main-section yellow">
+  <?php if (false): ?>
+  <section id="donate-via-whydonate" class="main-section color-1">
     <div class="container-fluid">
       <div class="row">
         <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
@@ -65,7 +69,7 @@ $show_content = true;
   </section>
   <?php endif ?>
 
-  <section id="account-transfer" class="main-section red">
+  <section id="account-transfer" class="main-section color-2">
     <div class="container-fluid">
       <div class="row">
         <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
@@ -90,17 +94,13 @@ $show_content = true;
     </div>
   </section>
 
-  <section id="periodiek-schenken" class="main-section purple">
+  <section id="periodiek-schenken" class="main-section color-3">
     <div class="container-fluid">
       <div class="row">
         <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
           <h2>Periodiek Schenken met belastingvoordeel</h2>
           <p>Denk je er aan om Extinction Rebellion Nederland voor een langere tijd te ondersteunen? Overweeg dan om een periodieke schenking te maken. Met periodiek schenken leg je met belastingvoordeel voor 5 jaar een bedrag naar eigen keuze vast. Hierdoor ontvangen wij achter de eindstreep een hogere donatie, terwijl voor jou het bedrag hetzelfde blijft. Zo kunnen wij dus in jou naam nog vaker de straat op!</p>
-          <!-- <p>Je kunt een periodieke schenking eenvoudig regelen via <a href="https://www.periodiekschenken.nl/extinction-rebellion">
-            <img src="https://extinctionrebellion.nl/app/uploads/2021/07/periodiekschenken_logo.png" alt="periodiek schenken logo" style="height: 1.2rem; display: inline; margin-left: .2rem;"></a>
-          </p> -->
-          <p>Je kunt een periodieke schenking eenvoudig regelen via <a href="https://www.periodiekschenken.nl/extinction-rebellion">periodiekschenken.nl</a>
-          </p>
+          <p>Je kunt een periodieke schenking eenvoudig regelen via <a href="https://www.periodiekschenken.nl/extinction-rebellion">periodiekschenken.nl</a></p>
 
           <div class="pl-3 mt-4">
             <div class="ps-more-info">
@@ -211,8 +211,8 @@ $show_content = true;
     }
     $max_dp = xrnl_get_max_dp($cdata);
   ?>
-  <section>
-    <div class="container-fluid bg-xr-yellow pt-4">
+  <section id="expenses-chart">
+    <div class="container-fluid pt-4">
       <div class="expenses-chart row">
         <div class="content col-12 col-sm-10 col-md-8 col-lg-7 col-xl-7 mx-auto">
           <h2 class="mb-2 mb-md-1">Waar je steun aan bijdraagt:</h2>
@@ -315,14 +315,14 @@ $show_content = true;
             $('html, body').animate({
               scrollTop: target.offset().top
             }, 500, function() {
-              var $target = $(target);
-              $target.focus();
-              if ($target.is(":focus")) {
-                return false;
-              } else {
-                $target.attr('tabindex','-1');
-                $target.focus();
-              };
+              // var $target = $(target);
+              // $target.focus();
+              // if ($target.is(":focus")) {
+              //   return false;
+              // } else {
+              //   $target.attr('tabindex','-1');
+              //   $target.focus();
+              // };
             });
           }
         }

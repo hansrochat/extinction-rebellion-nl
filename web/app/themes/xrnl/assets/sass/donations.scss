@@ -1,25 +1,31 @@
+$donations-accent-col-1: $xr-warm-yellow;
+$donations-accent-col-2: $xr-red;
+$donations-accent-col-3: $xr-purple;
 
 #donations {
   section:not(:nth-of-type(1)) {
-    margin-top: 4rem;
+    margin-top: 2rem;
+    @include media-breakpoint-down(xs) {
+      margin-top: 0;
+    }
   }
   .main-section {
     .content {
       padding: 2.5rem 1rem 4rem 1rem;
     }
-    &.yellow {
+    &.color-1 {
       .content {
-        border: .5rem solid $xr-warm-yellow;
+        border: .5rem solid $donations-accent-col-1;
       }
     }
-    &.red {
+    &.color-2 {
       .content {
-        border: .5rem solid $xr-red;
+        border: .5rem solid $donations-accent-col-2;
       }
     }
-    &.purple {
+    &.color-3 {
       .content {
-        border: .5rem solid $xr-purple;
+        border: .5rem solid $donations-accent-col-3;
       }
     }
   }  
@@ -29,18 +35,16 @@
     text-decoration-skip-ink: none;
     text-decoration-skip: none;
     color: inherit !important;
-    &.yellow {
-      text-decoration-color: $xr-warm-yellow;
+    &.color-1 {
+      text-decoration-color: rgba($donations-accent-col-1,.9);
     }
-    &.red {
-      text-decoration-color: $xr-red;
+    &.color-2 {
+      text-decoration-color: rgba($donations-accent-col-2,.9);
     }
-    &.purple {
-      text-decoration-color: rgba($xr-purple,.8);
+    &.color-3 {
+      text-decoration-color: rgba($donations-accent-col-3,.9);
     }
   }
-
-  $hero-min-height: 200px;
 
   // Hero
   .hero {
@@ -57,30 +61,26 @@
 
       svg,path {
         width: auto;
-        z-index: 1;
-        fill: $xr-pink;
-        height: 20rem;
-        // height: $hero-min-height * .85;
-        // @include media-breakpoint-down(lg) {
-        //   height: $hero-min-height * .8;
-        // }
-        // @include media-breakpoint-down(md) {
-        //   height: $hero-min-height * .75;
-        // }
-        // @include media-breakpoint-down(sm) {
-        //   height: $hero-min-height * .65;
-        // }
-        // @include media-breakpoint-down(xs) {
-        //   display: none;
-        // }
+        fill: $donations-accent-col-1 !important;
       }
 
       &.right {
         right: 1rem;
         transform: scaleX(-1);
+        transform: rotate(3deg);
+        svg,path {
+          height: 20rem;
+        }
       }
       &.left {
         left: 1rem;
+        transform: rotate(3deg);
+        svg,path {
+          height: 8rem;
+        }
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
       }
     }
   }
@@ -121,15 +121,12 @@
 
   .xrnl-donations-form {
     .content {
-      border-color: $xr-warm-yellow;
+      border-color: $donations-accent-col-1;
     }
     .payment-form {
       padding: 0 2rem;
       display: flex;
       flex-direction: column;
-      .form-child {
-        // background-color: lighten($xr-pink, 20%);
-      }
       ul {
         padding: 0;
       }
@@ -168,13 +165,18 @@
       }
       .payment-button {
         order: -4;
+        button {
+          @extend .btn, .btn-black, .btn-block, .btn-lg;
+        }
       }
     }
   }
 
   // Expenses chart
-  .expenses-chart {
-    $chart-highlight-color: lighten($xr-warm-yellow, 8%);
+  #expenses-chart {
+    $chart-background-color: $donations-accent-col-1;
+    $chart-highlight-color: lighten($chart-background-color, 8%);
+    background-color: $chart-background-color;
     .selected-dp-info {
       display: flex;
       align-items: center;
@@ -230,7 +232,7 @@
 
 
 
-/* payment form
+/* dmm payment form
 
 form.donate-form {
   input[type="text"],
