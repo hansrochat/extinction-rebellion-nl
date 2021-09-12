@@ -4,24 +4,24 @@
 $query_city = array();
 // Events Query
 $args = array(
-	'posts_per_page' => 5,
-	'paged' => 1,
-	'post_type' => 'meetup_events',
-	'orderby' => 'meta_value',
-	'meta_key' => 'event_start_date',
-	'order' => 'ASC',
-	'meta_query' => array(
-		array(
-			'key' => 'event_start_date', // Check the start date field
-			'value' => date("Y-m-d"), // Set today's date (note the similar format)
-			'compare' => '>=', // Return the ones greater than today's date
-			'type' => 'DATE' // Let WordPress know we're working with date
+  'posts_per_page' => 5,
+  'paged' => 1,
+  'post_type' => 'meetup_events',
+  'orderby' => 'meta_value',
+  'meta_key' => 'event_start_date',
+  'order' => 'ASC',
+  'meta_query' => array(
+    array(
+      'key' => 'event_start_date', // Check the start date field
+      'value' => date("Y-m-d"), // Set today's date (note the similar format)
+      'compare' => '>=', // Return the ones greater than today's date
+      'type' => 'DATE' // Let WordPress know we're working with date
     ),
     // adds city filter
     $query_city
-	)
+  )
 );
-$events = new WP_Query( $args );
+$events = new WP_Query($args);
 
 get_header(); ?>
 
@@ -55,32 +55,32 @@ get_header(); ?>
   </div>
 
   <div class="text-center">
-		<?php
-			$image = get_field('image');
-			$image_mobile = get_field('image_mobile');
-		 ?>
-	 <img class="image-desktop img-fluid my-2" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
-	 <img class="image-mobile my-2" src="<?php echo esc_url($image_mobile['url']); ?>" alt="<?php echo esc_attr($image_mobile['alt']); ?>">
+    <?php
+    $image = get_field('image');
+    $image_mobile = get_field('image_mobile');
+    ?>
+    <img class="image-desktop img-fluid my-2" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+    <img class="image-mobile my-2" src="<?php echo esc_url($image_mobile['url']); ?>" alt="<?php echo esc_attr($image_mobile['alt']); ?>">
   </div>
 
-  <?php if ( $events->have_posts() ) : ?>
+  <?php if ($events->have_posts()) : ?>
     <div class="py-sm-5 py-4 bg-yellow">
       <div class="container my-5">
         <h1 class="text-center"><?php _e('EVENTS') ?></h1>
-        <?php while ( $events->have_posts() ) : $events->the_post(); ?>
+        <?php while ($events->have_posts()) : $events->the_post(); ?>
           <div class="row border-bottom border-black pt-3 pb-3">
             <?php
-              $event_date = get_post_meta( get_the_ID(), 'event_start_date', true );
-              if( $event_date != '' ){
-                $event_date = strtotime( $event_date );
-              }
-              $event_address = get_post_meta( get_the_ID(), 'venue_city', true );
-              $venue_address = get_post_meta( get_the_ID(), 'venue_address', true );
+            $event_date = get_post_meta(get_the_ID(), 'event_start_date', true);
+            if ($event_date != '') {
+              $event_date = strtotime($event_date);
+            }
+            $event_address = get_post_meta(get_the_ID(), 'venue_city', true);
+            $venue_address = get_post_meta(get_the_ID(), 'venue_address', true);
             ?>
             <div class="col-lg-2 col-sm-12">
               <div class="text-uppercase font-xr small pt-1">
-                <?php echo date_i18n('M', $event_date) ; ?>
-                <?php echo date_i18n('d', $event_date) ; ?>
+                <?php echo date_i18n('M', $event_date); ?>
+                <?php echo date_i18n('d', $event_date); ?>
               </div>
               <small>
                 <strong><em><?php echo $event_address; ?></em></strong>
@@ -89,13 +89,13 @@ get_header(); ?>
               </small>
             </div>
             <div class="col-lg-8 col-sm-12">
-              <a href="<?php echo esc_url( get_permalink() ) ?>" class="text-reset text-uppercase font-xr text-decoration-none small">
+              <a href="<?php echo esc_url(get_permalink()) ?>" class="text-reset text-uppercase font-xr text-decoration-none small">
                 <?php the_title(); ?>
               </a>
               <div class="small pt-2"><em><?php echo excerpt(30); ?></em></div>
             </div>
             <div class="col-lg-2 col-sm-12 text-lg-right">
-              <a class="btn btn-black" href="<?php echo esc_url( get_permalink() ) ?>">
+              <a class="btn btn-black" href="<?php echo esc_url(get_permalink()) ?>">
                 <?php _e('VIEW') ?>
               </a>
             </div>
@@ -104,8 +104,7 @@ get_header(); ?>
         <?php wp_reset_query(); ?>
         <br>
         <div class="text-center">
-          <a class="btn btn-lg btn-black" href="/events" 
-onclick="<?= register_button_click('view all events') ?>">
+          <a class="btn btn-lg btn-black" href="/events" onclick="<?= register_button_click('view all events') ?>">
             <?php _e('VIEW ALL EVENTS') ?>
           </a>
         </div>
