@@ -27,21 +27,28 @@ get_header(); ?>
 
 <div class="home">
 
-  <div class="bg-black text-white" role="button" onclick="location.href='/rebellie';">
-    <div class="border border-10 border-fuchsia p-2">
-      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center flex-wrap">
-        <h1 class="font-xr text-fuchsia m-0">
-          Join the climate rebellion
-        </h1>
-        <h1 class="font-xr m-0">10-18 October, Den Haag</h1>
-        <div>
-          <a class="btn btn-lg btn-fuchsia text-black" href="/rebellie">join</a>
+  <?php $section = getSection('event_highlight_section'); ?>
+  <?php if ($section->enabled) : ?>
+    <div class="bg-black text-white" role="button" onclick="location.href='<?php echo ($section->link); ?>';">
+      <div class="border border-10 border-fuchsia p-2">
+        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center flex-wrap">
+          <h1 class="font-xr text-fuchsia m-0">
+            <?php echo ($section->title); ?>
+          </h1>
+          <h1 class="font-xr m-0">
+            <?php echo ($section->date_location); ?>
+          </h1>
+          <div>
+            <button class="btn btn-lg btn-fuchsia text-black">
+              <?php echo ($section->button_text); ?>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  <?php endif; ?>
 
-  <div class="text-white cover-image" style="background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('<?php the_field('cover_image'); ?>') no-repeat;">
+  <div class="text-white cover-image" style="background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('<?php the_field('cover_image'); ?>') no-repeat; background-position: 50%;">
     <div class="container" style="padding: 5rem 2rem">
       <?php the_content(); ?>
     </div>
