@@ -41,11 +41,9 @@ get_header(); ?>
     </div>
   </div>
 
-  <div class="masthead bg-blue px-3 py-lg-5 pb-5 text-center text-white cover-image" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45)), url('<?php the_field('cover_image'); ?>') no-repeat;">
-    <div class="py-5">
-      <div class="container">
-        <?php the_content(); ?>
-      </div>
+  <div class="text-white cover-image" style="background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('<?php the_field('cover_image'); ?>') no-repeat;">
+    <div class="container" style="padding: 5rem 2rem">
+      <?php the_content(); ?>
     </div>
   </div>
 
