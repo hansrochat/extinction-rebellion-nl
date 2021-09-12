@@ -29,7 +29,7 @@ get_header(); ?>
 
   <?php $section = getSection('event_highlight_section'); ?>
   <?php if ($section->enabled) : ?>
-    <div class="bg-black text-white" role="button" onclick="location.href='<?php echo ($section->link); ?>';">
+    <div class="bg-black text-white" role="button" onclick="<?= register_button_click('highlighted event'); ?> location.href='<?php echo ($section->link); ?>';">
       <div class="border border-10 border-fuchsia p-2">
         <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center flex-wrap">
           <h1 class="font-xr text-fuchsia m-0">
