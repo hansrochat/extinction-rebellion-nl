@@ -26,6 +26,21 @@ $events = new WP_Query($args);
 get_header(); ?>
 
 <div class="home">
+
+  <div class="bg-black text-white" role="button" onclick="location.href='/rebellie';">
+    <div class="border border-10 border-fuchsia p-2">
+      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center flex-wrap">
+        <h1 class="font-xr text-fuchsia m-0">
+          Join the climate rebellion
+        </h1>
+        <h1 class="font-xr m-0">10-18 October, Den Haag</h1>
+        <div>
+          <a class="btn btn-lg btn-fuchsia text-black" href="/rebellie">join</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="masthead bg-blue px-3 py-lg-5 pb-5 text-center text-white cover-image" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45)), url('<?php the_field('cover_image'); ?>') no-repeat;">
     <div class="py-5">
       <div class="container">
