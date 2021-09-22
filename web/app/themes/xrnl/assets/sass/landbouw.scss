@@ -1,0 +1,84 @@
+.landbouw-campaign {
+  // min-height: 100vh;
+  .hero {
+    position: relative;
+    .hero-symbol {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      svg {
+        height: 7rem;
+        width: 7rem;
+      }
+      @include media-breakpoint-down(xs) {
+        display: none;
+      }
+    }
+  }
+
+  .campaign-footer {
+    a {
+      color: $xr-white;
+    }
+
+  }
+
+  .language-switcher {
+    #menu-language {
+      margin-bottom: 0;
+    }
+    color: $xr-white;
+    ul > li {
+      a.nav-link {
+        color: $xr-white;
+        text-decoration: none;
+      }
+      display: inline-block;
+      &.wpml-ls-current-language {
+        > a.nav-link {
+          &:hover {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+      }
+    }
+    a.nav-link {
+      &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 4px;
+      }
+    }
+  }
+}
+
+// Section toggles
+.xrnl-info-toggle {
+  font-family: $brand-font;
+  cursor: pointer;
+  text-decoration: underline;
+
+  &.xrnl-info-reveal {
+    &::before {
+      content: '\f067';
+      font-family: 'FontAwesome';
+      margin-right: 0.4rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
+  &.xrnl-info-hide {
+    &::before {
+      content: '\f068';
+      font-family: 'FontAwesome';
+      margin-right: 0.4rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
+  &:hover {
+    &::before {
+      color: lighten($xr-black, 35%);
+    }
+  }
+}

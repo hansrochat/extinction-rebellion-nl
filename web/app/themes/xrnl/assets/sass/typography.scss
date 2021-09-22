@@ -83,3 +83,9 @@ main {
     @extend .text-fuchsia;
   }
 }
+
+@each $color-key, $color-value in $theme-colors {
+  .text-xr-#{$color-key} {
+    color: $color-value !important;
+  }
+}
