@@ -68,7 +68,7 @@ get_header(null, array(
         <h1 class="display-2 pt-2 pb-3 text-xr-black">Rabobank, <span class="text-xr-<?= $text_accent_color ?>">stop het financieren van de klimaatcrisis</span>.</h1>
         <div class="hero-symbol hero-symbol-<?= $hero_symbol_color ?>">
           <?php
-            $symbol_svg = file_get_contents(get_template_directory_uri() . '/dist/images/XR-Symbol.svg', false, getContext(WP_ENV));
+            $symbol_svg = file_get_contents(get_template_directory_uri() . '/dist/images/XR-symbol.svg', false, getContext(WP_ENV));
             echo $symbol_svg;
           ?>
         </div>
@@ -191,7 +191,6 @@ jQuery(document).ready(function($) {
       });
    });
 </script>
-
 
 <?php get_footer(null, array(
   'hidden'  => true
