@@ -77,21 +77,6 @@ get_header(); ?>
     </div>
   </section>
 
-  <?php $labels = getSection('demands'); ?>
-  <section id="demands" class="container-fluid">
-    <div class="row">
-      <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
-        <div id="demands-btn">
-          <span id="reveal-demands-btn" class="demands-toggle reveal-demands"><?php echo $labels->show_demands_text ?></span>
-          <span id="hide-demands-btn" class="demands-toggle hide-demands" style="display: none;"><?php echo $labels->hide_demands_text ?></span>
-        </div>
-        <div id="demands-list" style="display: none;">
-          <?php get_template_part('template-parts/demands-list'); ?>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="why-rebel" class="text-section container-fluid">
     <div class="row">
       <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
