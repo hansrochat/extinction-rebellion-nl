@@ -15,6 +15,9 @@ $xr-angry: #c80082;
 $xr-primary: $xr-green;
 $xr-light-gray: lighten($xr-black, 85%);
 $xr-nl-fuchsia: #e71a84; // color used for climate rebellion 2021
+// colours used for climate justice (cj) related content
+$cj-dark-gray: #181a1b;
+$cj-light-gray: #c9c4bd;
 
 $theme-colors: (
   "primary": $xr-primary,
@@ -33,6 +36,8 @@ $theme-colors: (
   "bright-pink": $xr-bright-pink,
   "light-gray": $xr-light-gray,
   "fuchsia": $xr-nl-fuchsia,
+  "cj-dark-gray": $cj-dark-gray,
+  "cj-light-gray": $cj-light-gray,
 ) !default;
 
 $navbar-light-toggler-border-color: rgba(0, 0, 0, 0);

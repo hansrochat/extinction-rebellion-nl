@@ -83,3 +83,19 @@ main {
     @extend .text-fuchsia;
   }
 }
+
+
+.section-title {
+  @extend .font-xr;
+  line-height: 1;
+  font-size: 5rem;
+  @include media-breakpoint-down(md) {
+    font-size: 3rem;
+  }
+}
+
+.section-pre-title {
+  @extend .font-xr;
+  font-size: 1.125rem;
+  margin-bottom: .25rem;
+}

@@ -1,43 +1,49 @@
 <?php
+
 /**
  * The template part for displaying the list of demands
  */
 ?>
 
-  <div class="demands-list">
+<div class="page-section bg-cj-dark-gray text-white">
+  <h4 class="section-pre-title">
+    Dit is wat wij eisen van de Nederlandse Overheid
+  </h4>
+  <h1 class="section-title">
+    Onze eisen
+  </h1>
 
-    <?php if (get_field('xrnl_demands_txt_above', 'option')) : ?>
-      <div class="mt-4">
-        <?php the_field('xrnl_demands_txt_above', 'option'); ?>
-      </div>
-    <?php endif; ?>
-
-    <?php if( have_rows('xrnl_demands_list', 'option') ): ?>
-      <ol class="pl-3 counter mt-3">
-        <?php while( have_rows('xrnl_demands_list', 'option') ): the_row(); ?>
-          <?php $demand = get_sub_field('demand'); ?>
-            <li class="pl-4">
-              <span class="text-green font-xr">
-                <?php echo $demand['bold_text']; ?>
-              </span>
-              <span>
-                <?php echo $demand['regular_text']; ?>
-              </span>
-            </li>
-        <?php endwhile; ?>
-      </ol>
-    <?php endif; ?>
-
-    <?php if (get_field('xrnl_demands_txt_below', 'option')) : ?>
-      <div class="mt-4">
-        <?php the_field('xrnl_demands_txt_below', 'option'); ?>
-      </div>
-    <?php endif; ?>
-
-    <?php if (get_field('xrnl_demands_link_target', 'option')) : ?>
-      <div class="pt-3 text-center">
-        <a href="<?php the_field('xrnl_demands_link_target', 'option'); ?>"><?php the_field('xrnl_demands_link_label', 'option'); ?></a>
-      </div>
-    <?php endif; ?>
-
+  <div class="p-3 text-cj-light-gray">
+    <span class="font-xr">
+      0. KLIMAATRECHTVAARDIGHEID VOOR IEDEREEN*:
+    </span>
+    <span>
+      We eisen een rechtvaardige transitie die de behoeften en stemmen van
+      degenen die het meest getroffen worden door de klimaatcrisis centraal stelt
+      en degenen die het meest verantwoordelijk zijn voor ecologische verwoesting
+      ter verantwoording roept.
+    </span>
   </div>
+
+  <div class="d-flex flex-column flex-md-row">
+    <?php if (have_rows('xrnl_demands_list', 'option')) : ?>
+      <?php while (have_rows('xrnl_demands_list', 'option')) : the_row(); ?>
+        <?php $demand = get_sub_field('demand'); ?>
+        <div class="bg-white text-black p-3 my-2 my-md-0 mx-0 mx-md-2">
+          <span class="text-green font-xr">
+            <?php echo $demand['bold_text']; ?>
+          </span>
+          <span>
+            <?php echo $demand['regular_text']; ?>
+          </span>
+        </div>
+      <?php endwhile; ?>
+    <?php endif; ?>
+  </div>
+
+  <?php if (get_field('xrnl_demands_txt_below', 'option')) : ?>
+    <div class="pt-3 px-3 text-cj-light-gray" style="font-size: 1.2rem;">
+      <?php the_field('xrnl_demands_txt_below', 'option'); ?>
+    </div>
+  <?php endif; ?>
+</div>

@@ -312,3 +312,18 @@ a.btn-black-r-invert:hover {
     }
   }
 }
+
+.page-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+
+  @include media-breakpoint-down(md) {
+    padding: 1.5rem;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 1rem;
+  }
+}
+
