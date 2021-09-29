@@ -29,7 +29,7 @@ let us know that you would like to help out. We will then:
 
 ### Join project meetings
 
-Every other Thursday at 8:30 a.m. (in the [CEST](https://24timezones.com/time-zone/cest)/[CET](https://24timezones.com/time-zone/cet)
+Every other Thursday at 19:00 (in the [CEST](https://24timezones.com/time-zone/cest)/[CET](https://24timezones.com/time-zone/cet)
 timezone, depending on the season) we hold a brief and efficient online meeting
 to review the progress from the previous 2 weeks, resolve questions about
 current work, discuss ideas and set goals for the next two weeks. We highly
