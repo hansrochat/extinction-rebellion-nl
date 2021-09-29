@@ -31,7 +31,7 @@
    live website_. The reason you need to use the same credentials as in the live
    website is because when you migrated the data from the live website you also
    migrated all login credentials. 
-8. (optional) [make yourself admin](docs/becoming_admin.md) if you need access
+8. (optional) [make yourself admin](becoming_admin.md) if you need access
    to all functionalities of the website. When you first get an account on the
    live website you will have limited permissions so that you can only change a
    restriced part of the live website. However, this also means that, after
