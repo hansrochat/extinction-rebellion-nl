@@ -36,16 +36,16 @@
         <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
           <h1 class="display-3 text-uppercase font-xr"><?= $fields['hero']['title'] ?></h1>
           <p class="hero-text"><?= $fields['hero']['text'] ?></p>
-          <a class="btn btn-black btn-lg my-2" href="<?= $fields['hero']['button_link'] ?>"><?= $fields['hero']['button_label'] ?></a>
+          <a class="btn btn-black btn-lg my-2" href="<?= $fields['hero']['button_link'] ?>" onclick="<?= register_button_click('doneer-nu', 'hero') ?>"><?= $fields['hero']['button_label'] ?></a>
         </div>
       </div>
       <div class="row">
         <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto mt-5">
           <h3 class="font-xr"><?= $fields['hero']['direct_links_heading'] ?></h3>
           <ol class="direct-links">
-            <li><a href="#direct-link-1"><?= $fields['hero']['direct_link_1_label'] ?></a></li>
-            <li><a href="#direct-link-2"><?= $fields['hero']['direct_link_2_label'] ?></a></li>
-            <li><a href="#direct-link-3"><?= $fields['hero']['direct_link_3_label'] ?></a></li>
+            <li><a href="#direct-link-1" onclick="<?= register_button_click('direct-link-1', 'hero') ?>"><?= $fields['hero']['direct_link_1_label'] ?></a></li>
+            <li><a href="#direct-link-2" onclick="<?= register_button_click('direct-link-2', 'hero') ?>"><?= $fields['hero']['direct_link_2_label'] ?></a></li>
+            <li><a href="#direct-link-3" onclick="<?= register_button_click('direct-link-3', 'hero') ?>"><?= $fields['hero']['direct_link_3_label'] ?></a></li>
           </ol>
         </div>
       </div>
@@ -96,7 +96,7 @@
         <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
           <h2><?= $option_1['title'] ?></h2>
           <p><?= $option_1['text'] ?></p>
-          <a class="btn btn-black btn-lg my-2" href="<?= $option_1['button_link'] ?>"><?= $option_1['button_label'] ?></a>
+          <a class="btn btn-black btn-lg my-2" href="<?= $option_1['button_link'] ?>" onclick="<?= register_button_click('doneer', 'option-1') ?>"><?= $option_1['button_label'] ?></a>
           <?php if (!empty($option_1['subsections'])) : ?>
           <div class="pl-3 mt-4">
             <?php foreach ($option_1['subsections'] as $subsection) : ?>
@@ -122,7 +122,7 @@
         <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
           <h2><?= $option_2['title'] ?></h2>
           <p><?= $option_2['text'] ?></p>
-          <a class="btn btn-black btn-lg my-2" href="<?= $option_2['button_link'] ?>"><?= $option_2['button_label'] ?></a>
+          <a class="btn btn-black btn-lg my-2" href="<?= $option_2['button_link'] ?>" onclick="<?= register_button_click('periodiek-schenken', 'option-2') ?>"><?= $option_2['button_label'] ?></a>
           <?php if (!empty($option_2['subsections'])) : ?>
           <div class="pl-3 mt-4">
             <?php foreach ($option_2['subsections'] as $subsection) : ?>
@@ -148,7 +148,7 @@
         <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
         <h2><?= $option_3['title'] ?></h2>
           <p><?= $option_3['text'] ?></p>
-          <a class="btn btn-black btn-lg my-2" href="<?= $option_3['button_link'] ?>"><?= $option_3['button_label'] ?></a>
+          <a class="btn btn-black btn-lg my-2" href="<?= $option_3['button_link'] ?>" onclick="<?= register_button_click('doneer', 'option-3') ?>"><?= $option_3['button_label'] ?></a>
           <div class="mt-4"><?= $option_3['text_2'] ?></div>
           <?php if (!empty($option_3['subsections'])) : ?>
           <div class="pl-3 mt-4">
@@ -178,7 +178,7 @@
           <h2><?= $fields['stichting']['title'] ?></h2>
           <p><?= $fields['stichting']['text'] ?></p>
           <div class="text-right mb-3">
-            <a href="<?= $fields['stichting']['anbi_link'] ?>">
+            <a href="<?= $fields['stichting']['anbi_link'] ?>" onclick="<?= register_button_click('anbi-link') ?>">
               <img id="anbi-logo" class="d-inline-block" src="<?= $fields['stichting']['anbi_logo'] ?>" alt="ANBI logo">
             </a>
           </div>
