@@ -46,7 +46,7 @@
   </div>
 
   <?php if (get_field('xrnl_demands_txt_below', 'option')) : ?>
-    <div class="pt-3 px-3">
+    <div class="pt-3 px-3 text-cj-light-gray" style="font-size: 1.2rem;">
       <?php the_field('xrnl_demands_txt_below', 'option'); ?>
     </div>
   <?php endif; ?>
