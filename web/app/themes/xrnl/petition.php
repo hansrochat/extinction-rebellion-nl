@@ -128,21 +128,11 @@ get_header(); ?>
                 <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-6 mx-auto px-4">
                     <h2><?php echo($section->heading); ?></h2>
                     <?php echo($section->content); ?>
-              <?php if($section->demands): ?>
-                  <a class="btn btn-black btn-lg mt-3" data-toggle="collapse" href="#demands" role="button" aria-expanded="false" aria-controls="demands">
-                    <?php _e('OUR DEMANDS', 'theme-xrnl'); ?>
-                    <i class="fas fa-chevron-down"></i>
-                  </a>
-                  <div class="text-left collapse" id="demands">
-                    <?php get_template_part('template-parts/demands-list'); ?>
-                  </div>
-                </div>
-              <?php endif; ?>
-
             </div>
         </section>
     <?php endif; ?>
 
+    <?php get_template_part('template-parts/demands-list'); ?>
     <?php $section = getSection('who_is_extinction_rebellion_section');
     ?>
     <?php if ($section->enabled) : ?>
