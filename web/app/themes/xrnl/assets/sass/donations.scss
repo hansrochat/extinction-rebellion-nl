@@ -1,0 +1,149 @@
+#donations {
+
+  // Main section color
+  $main-color: $xr-light-blue;
+
+  // Background symbol color
+  $bg-symbol-col: $xr-dark-blue;
+
+  // Default body text color
+  $text-color: $xr-black;
+
+  section {
+    @extend .m-2;
+    @extend .py-5;
+    color: $text-color;
+    background-color: $main-color;
+    position: relative;
+    a:not(.btn) {
+      color: $text-color;
+      &:hover {
+        text-decoration-color: lighten($xr-primary, 5%);
+      }
+    }
+    h1, h2 {
+      color: $xr-white;
+    }
+  }
+
+  .bg-symbol {
+    position: absolute;
+    bottom: 1rem;
+    opacity: .4;
+    pointer-events: none;
+
+    svg,path {
+      width: auto;
+      height: 8rem;
+      fill: $bg-symbol-col !important;
+    }
+    &.right {
+      right: 1rem;
+      transform: scaleX(-1);
+      transform: rotate(7deg);
+    }
+    &.left {
+      left: 1rem;
+      transform: rotate(3deg);
+    }
+    &.large {
+      svg,path {
+        height: 23rem;
+      }
+    }
+  }
+
+  .hero-text {
+    font-size: 1.5rem;
+  }
+  .direct-links {
+    font-size: 1.4rem;
+  }
+  #anbi-logo {
+    height: 4rem;
+  }
+
+  // Show/hide toggles
+  .more-info-item {
+    margin-top: .8rem;
+  }
+  .more-info-toggle {
+    font-family: $brand-font;
+    cursor: pointer;
+    text-decoration: underline;
+    &::before {
+      content: '\f078';
+      font-family: 'FontAwesome';
+      margin-right: .4rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: color .3s;
+    }
+    &.hide-more-info {
+      &::before {
+        content: '\f077';
+      }
+    }
+    &:hover {
+      &::before {
+        color: darken($xr-primary, 5%);
+      }
+    }
+  }
+
+  // Expenses chart
+  #expenses-chart {
+    .selected-dp-info {
+      display: flex;
+      align-items: center;
+      min-height: 3.2rem;
+      margin-bottom: .4rem;
+      border-bottom: .2rem solid transparent;
+      transition: border-color .2s ease-in;
+
+      @include media-breakpoint-down(md) {
+        min-height: 5rem;
+      }
+      &.active {
+        border-color: $text-color;
+      }
+      .dp-info-label {
+        @extend .h3;
+      }
+      .dp-info-note {
+        font-style: italic;
+        white-space: nowrap;
+        @include media-breakpoint-down(md) {
+          display: block;
+          min-height: 2rem;
+        }
+      }
+      .dp-info-value {
+        font-size: 2rem;
+      }
+    }
+    .chart-line {
+      cursor: pointer;
+      transition: background-color .2s ease-in-out;
+      &:hover {
+        background-color: lighten($main-color, 5%);
+      }
+    }
+    .line-segment {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .dp-label {
+      @extend .h3;
+    }
+    .dp-bar {
+      height: .5rem;
+      background-color: darken($xr-primary, 5%);
+      border-radius: 5px;
+    }
+    .dp-value {
+      font-family: $brand-font;
+    }
+  }
+}
