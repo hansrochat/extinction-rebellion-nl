@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template name: About
  */
@@ -21,25 +22,9 @@ get_header(); ?>
           <?php the_field('why_description'); ?>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12 col-lg-6 mx-auto mt-3">
-          <a class="btn btn-yellow btn-lg" data-toggle="collapse" href="#demands" role="button" aria-expanded="false" aria-controls="demands" 
-onclick="<?= register_button_click('our demands') ?>">
-            <?php _e('OUR DEMANDS', 'theme-xrnl'); ?>
-            <i class="fas fa-chevron-down"></i>
-          </a>
-          <div class="text-left collapse" id="demands">
-            <?php get_template_part('template-parts/demands-list'); ?>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 text-center pt-5">
-          <img src="<?php the_field('logo'); ?>" style="width: 100px;"/>
-        </div>
-      </div>
     </div>
   </div>
+  <?php get_template_part('template-parts/demands-list'); ?>
 
   <div class="text-center mt-sm-5 mt-4">
     <div class="container pt-5">
@@ -61,11 +46,11 @@ onclick="<?= register_button_click('our demands') ?>">
       <h1><?php the_field('organisation_title'); ?></h1>
       <p><?php the_field('organisation_description'); ?></p>
 
-      <?php while ( have_rows('organisation_topics') ){ the_row(); ?>
+      <?php while (have_rows('organisation_topics')) {
+        the_row(); ?>
         <div class="row py-2">
           <div id="<?php echo formatElementID(get_sub_field('topic_tilte')); ?>" class="col-12 col-lg-6 mx-auto">
-            <a class="btn btn-yellow btn-lg btn-block text-left" data-toggle="collapse" href="#topic-<?php echo get_row_index(); ?>" role="button" aria-expanded="false" aria-controls="topic-<?php echo get_row_index(); ?>" 
-onclick="<?= register_button_click(get_sub_field('topic_tilte')) ?>">
+            <a class="btn btn-yellow btn-lg btn-block text-left" data-toggle="collapse" href="#topic-<?php echo get_row_index(); ?>" role="button" aria-expanded="false" aria-controls="topic-<?php echo get_row_index(); ?>" onclick="<?= register_button_click(get_sub_field('topic_tilte')) ?>">
               <?php the_sub_field('topic_tilte') ?>
               <i class="fas fa-chevron-down float-right pt-1"></i>
             </a>

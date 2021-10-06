@@ -53,6 +53,9 @@
 
 .local-groups-index {
 
+  $logo-list-diameter: 36px;
+  $logo-list-bottom-shift: -50px;
+
   .index-container {
     display: flex;
     justify-content: center;
@@ -137,6 +140,15 @@
         a {
           text-decoration: none;
         }
+      }
+      .lg-logo-list {
+        width: $logo-list-diameter;
+        height: $logo-list-diameter;
+        clip-path: circle($logo-list-diameter/2 at center);
+        bottom: $logo-list-bottom-shift;
+        left: 0;
+        right: 0;
+        margin: auto;
       }
     }
 }

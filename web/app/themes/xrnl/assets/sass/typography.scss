@@ -20,6 +20,7 @@ ol {
 
 .font-xr {
   font-family: $brand-font;
+  text-transform: uppercase;
 }
 
 header, footer {
@@ -52,4 +53,49 @@ main {
       }
     }
   }
+}
+
+.text-giant {
+  font-size: 10rem;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 8rem;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 6rem;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 4rem;
+  }
+}
+
+.font-xr-if-bold {
+  // make all bold text inside this class use the XR font
+  strong {
+    @extend .font-xr;
+  }
+}
+
+.font-fuchsia-if-bold {
+  // make all bold text in this class have the fuchsia colour
+  // if useful we can easily extend this for all colours
+  strong {
+    @extend .text-fuchsia;
+  }
+}
+
+
+.section-title {
+  @extend .font-xr;
+  line-height: 1;
+  font-size: 5rem;
+  @include media-breakpoint-down(md) {
+    font-size: 3rem;
+  }
+}
+
+.section-pre-title {
+  @extend .font-xr;
+  font-size: 1.125rem;
+  margin-bottom: .25rem;
 }

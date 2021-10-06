@@ -1,0 +1,26 @@
+#rebellion {
+  #can_embed_form {
+    #action_welcome_message {
+      // if Action Network recognizes the user visiting the page it will not
+      // automatically render the form and will instead show a message on a
+      // white background. Because the rebellion template has white text on
+      // black background, this text is invisible by default. That's why we must
+      // make the text in this box black
+      color: black;
+    }
+    form {
+      input[type="submit"] {
+        @extend .btn-fuchsia;
+        @extend .text-black;
+      }
+    }
+    & > #can_thank_you {
+      color: white !important;
+    }
+  }
+  a {
+    &:not([class]) {
+      @extend .text-fuchsia;
+    }
+  }
+}

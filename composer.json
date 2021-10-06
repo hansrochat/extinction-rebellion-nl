@@ -45,7 +45,7 @@
       "type": "package",
       "package": {
           "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.9.5",
+        "version": "5.10.2",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -61,11 +61,11 @@
       "type": "package",
       "package": {
         "name": "wpml/wpml-multilingual-cms",
-        "version": "4.4.9",
+        "version": "4.4.12",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://wpml.org/?download=6088&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1613127321&version={%VERSION}"
+          "url": "https://wpml.org/?download=6088&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1630407007&version={%VERSION}"
         },
         "require": {
           "composer/installers": "^1.4",
@@ -78,11 +78,11 @@
       "type": "package",
       "package": {
         "name": "wpml/wpml-string-translation",
-        "version": "3.1.7",
+        "version": "3.1.10",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://wpml.org/?download=6092&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1613150029&version={%VERSION}"
+          "url": "https://wpml.org/?download=6092&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1630407007&version={%VERSION}"
         },
         "require": {
           "composer/installers": "^1.4",
@@ -129,7 +129,7 @@
     "vlucas/phpdotenv": "^5.2",
     "oscarotero/env": "^2.1",
     "roots/bedrock-autoloader": "^1.0",
-    "roots/wordpress": "5.6",
+    "roots/wordpress": "5.8.*",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/open-external-links-in-a-new-window": "^1.4.2",
@@ -137,7 +137,7 @@
     "wpackagist-plugin/classic-editor": "^1.6",
     "wpackagist-plugin/events-manager": "^5.9.10",
     "wpackagist-plugin/wp-action-network": "^1.2.1",
-    "wpackagist-plugin/wordpress-seo": "^15.8",
+    "wpackagist-plugin/wordpress-seo": "^17.0",
     "wpackagist-plugin/duplicate-post": "^4.1.1",
     "wpackagist-plugin/import-meetup-events": "^1.4.3",
     "wpackagist-plugin/wp-super-cache": "^1.7",
