@@ -3,121 +3,6 @@
     "title": "Home",
     "fields": [
         {
-            "key": "field_613e806d6898d",
-            "label": "Event highlight section",
-            "name": "event_highlight_section",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "wpml_cf_preferences": 0,
-            "sub_fields": [
-                {
-                    "key": "field_613e812168992",
-                    "label": "enabled",
-                    "name": "enabled",
-                    "type": "true_false",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "message": "",
-                    "default_value": 0,
-                    "ui": 1,
-                    "ui_on_text": "",
-                    "ui_off_text": "",
-                    "wpml_cf_preferences": 0
-                },
-                {
-                    "key": "field_613e80c16898e",
-                    "label": "title",
-                    "name": "title",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 0,
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_613e80df6898f",
-                    "label": "date and location",
-                    "name": "date_location",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 0,
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_613e80f768990",
-                    "label": "link",
-                    "name": "link",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "wpml_cf_preferences": 0
-                },
-                {
-                    "key": "field_613e811868991",
-                    "label": "button text",
-                    "name": "button_text",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 0,
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
-        },
-        {
             "key": "field_5d9679aced134",
             "label": "cover image",
             "name": "cover_image",
@@ -258,26 +143,6 @@
             "mime_types": ""
         },
         {
-            "key": "field_5d967b71ed13a",
-            "label": "donate",
-            "name": "donate",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0,
-            "wpml_cf_preferences": 0
-        },
-        {
             "key": "field_5d967ba6ed13b",
             "label": "video",
             "name": "video",
@@ -315,5 +180,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631486327
+    "modified": 1633604614
 }
