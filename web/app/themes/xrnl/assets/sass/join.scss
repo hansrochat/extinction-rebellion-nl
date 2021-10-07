@@ -50,3 +50,51 @@
     font-size: 3rem;
   }
 }
+
+.join-top {
+  display: flex;
+  align-items: stretch;
+
+  &__image {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    position: relative;
+
+    &__svg {
+      display: none;
+      position: absolute;
+      height: 100%;
+      width: 100px;
+      right: 100%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      &__svg {
+        display: block;
+      }
+    }
+
+    &__triangle {
+      fill: $warning;
+    }
+
+    &__line {
+      fill: white;
+    }
+  }
+
+  > div {
+
+  }
+}

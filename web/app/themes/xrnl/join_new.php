@@ -9,14 +9,25 @@ get_header(); ?>
 
 <div class="join">
     <div class="bg-xr-white">
-        <div class="bg-xr-warning mx-2 my-2 py-5 px-5">
-            <div class="font-weight-bold text-uppercase font-xr">We have a moral duty to rebel. whatever our politics.</div>
-            <h1 class="text-light join-title">Take action now.</h1>
-            <p>Our strategy is one of non-violent, disruptive civil disobedience – a rebellion. We need you – whoever
-                you
-                are, however much time you have to offer. Together we're building a powerful movement that is
-                participatory
-                and inclusive. Togethr we're unstoppable.</p>
+        <div class="bg-xr-warning mx-2 my-2 join-top">
+            <div class="join-top__image">
+                <img src="/app/uploads/2020/09/Bitmap@2x-scaled.jpg" alt="image">
+            </div>
+            <div class="join-top__text">
+                <svg viewBox="0 0 50 100" preserveAspectRatio="none" class="join-top__text__svg">
+                    <polygon fill="" points="0,0 50,0 50,100" class="join-top__text__triangle"></polygon>
+                    <polygon fill="" points="0,0 5,0 50,100 45,100" class="join-top__text__line"></polygon>
+                </svg>
+                <div class="py-5 px-5">
+                    <div class="font-weight-bold text-uppercase font-xr">We have a moral duty to rebel. whatever our politics.</div>
+                    <h1 class="text-light join-title">Take action now.</h1>
+                    <p>Our strategy is one of non-violent, disruptive civil disobedience – a rebellion. We need you – whoever
+                        you
+                        are, however much time you have to offer. Together we're building a powerful movement that is
+                        participatory
+                        and inclusive. Togethr we're unstoppable .,...</p>
+                </div>
+            </div>
         </div>
         <div class="bg-xr-info mx-2 my-2 py-5 px-5">
             <div class="font-weight-bold text-uppercase font-xr">Time to make us unstoppable.</div>
