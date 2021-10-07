@@ -186,6 +186,22 @@ render the data that is entered through Wordpress.
 The easiest way to understand how to use these custom fields is to see existing
 pages that use them.
 
+#### optional step: test your code on the development version of the website
+
+Sometimes our code works differently on our local environment than in the
+production environment. If you're not sure that your changes will work well in
+the production environment, you can test your code on the development version of
+the website: https://development.extinctionrebellion.nl/. You can do this in 2
+steps:
+
+1. force-push the code from your branch to the develop branch: `git push --force
+   origin <your_branch>:develop` **IMPORTANT**: never make any changes on the
+   `develop` branch because they might be overwritten by a force-push from
+   someone else. Only use the `develop` branch for testing and not for any new
+   code.
+2. ask a website administrator to deploy the code from the `develop` branch on
+   the development version of the website
+
 #### 4: Make a pull request
 
 When you've finished making changes, and your code works as expected, you can
@@ -204,6 +220,7 @@ When you submit or update your pull request, you should receive a reply within 2
 days. If the reviewer request changes, you should repeat steps 3 to 6. Note that
 you don't need to make a new pull request. You can push to your branch and the
 pull request will be automatically updated with your latest changes.
+
 
 #### 5: Add new content to the live website.
 
