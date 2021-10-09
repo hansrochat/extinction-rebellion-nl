@@ -36,14 +36,8 @@ get_header(); ?>
             <?php echo ($section->title); ?>
           </h1>
           <h1 class="font-xr m-0">
-            <?php echo ($section->date_location); ?>
+              <i class="fa fa-circle blink"></i><?php echo ($section->date_location); ?>
           </h1>
-          <div>
-            <button class="btn btn-lg btn-fuchsia text-black">
-                <i class="fa fa-circle blink"></i>
-                <?php echo ($section->button_text); ?>
-            </button>
-          </div>
         </div>
       </div>
     </div>

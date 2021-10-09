@@ -2,11 +2,23 @@
 
   > div {
 
-  	transition: all 200ms ease-in; 
+  	transition: all 200ms ease-in;
+
+  	h1 {
+
+  		padding-left: .25rem;
+  		padding-right: .5rem;
+
+  	} 
 
 		.blink {
 
 		  animation: blink 1s cubic-bezier( .5, 0, 1, 1 ) infinite alternate;
+		  color: red;
+		  font-size: 2rem;
+		  line-height: 2.5rem;
+		  margin-right: .5rem;
+		  vertical-align: middle;
 
 		  @keyframes blink {
 
@@ -17,32 +29,10 @@
 
 		}
 
-		button {
+		&:hover,
+		&:active {
 
-		  &:hover {
-
-			background-color: $xr-nl-fuchsia;
-
-		  }
-
-		}
-
-		&:hover {
-
-		  background-color: $xr-nl-fuchsia;
-
-		  h1,
-		  button {
-
-				color: white!important;
-
-				i {
-
-				  color: white;
-
-				}
-
-			}
+		  background-color: lighten( $black, 25% );
 
 	  }
 
