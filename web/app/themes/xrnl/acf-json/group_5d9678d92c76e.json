@@ -258,26 +258,6 @@
             "mime_types": ""
         },
         {
-            "key": "field_5d967b71ed13a",
-            "label": "donate",
-            "name": "donate",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0,
-            "wpml_cf_preferences": 0
-        },
-        {
             "key": "field_5d967ba6ed13b",
             "label": "video",
             "name": "video",

@@ -132,16 +132,6 @@ get_header(); ?>
     </div>
   <?php endif; ?>
 
-  <div class="py-5 my-5">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-lg-8 mx-auto">
-          <?php the_field('donate') ?>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="embed-responsive embed-responsive-16by9">
     <?php the_field('video') ?>
   </div>
