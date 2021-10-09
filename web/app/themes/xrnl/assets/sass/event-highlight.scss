@@ -1,0 +1,41 @@
+.event-highlight {
+
+  > div {
+
+  	transition: all 200ms ease-in;
+
+  	h1 {
+
+  		padding-left: .25rem;
+  		padding-right: .5rem;
+
+  	} 
+
+		.blink {
+
+		  animation: blink 1s cubic-bezier( .5, 0, 1, 1 ) infinite alternate;
+		  color: red;
+		  font-size: 2rem;
+		  line-height: 2.5rem;
+		  margin-right: .5rem;
+		  vertical-align: middle;
+
+		  @keyframes blink {
+
+			from { opacity: 1; }
+			to { opacity: 0; }
+
+		  }
+
+		}
+
+		&:hover,
+		&:active {
+
+		  background-color: lighten( $black, 25% );
+
+	  }
+
+	}
+
+}
