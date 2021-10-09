@@ -29,7 +29,7 @@ get_header(); ?>
 
   <?php $section = getSection('event_highlight_section'); ?>
   <?php if ($section->enabled) : ?>
-    <div class="bg-black text-white" role="button" onclick="<?= register_button_click('highlighted event'); ?> location.href='<?php echo ($section->link); ?>';">
+    <div class="bg-black text-white event-highlight" role="button" onclick="<?= register_button_click('highlighted event'); ?> location.href='<?php echo ($section->link); ?>';">
       <div class="border border-10 border-fuchsia p-2">
         <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center flex-wrap">
           <h1 class="font-xr text-fuchsia m-0">
@@ -40,7 +40,8 @@ get_header(); ?>
           </h1>
           <div>
             <button class="btn btn-lg btn-fuchsia text-black">
-              <?php echo ($section->button_text); ?>
+                <i class="fa fa-circle blink"></i>
+                <?php echo ($section->button_text); ?>
             </button>
           </div>
         </div>
@@ -131,16 +132,6 @@ get_header(); ?>
       </div>
     </div>
   <?php endif; ?>
-
-  <div class="py-5 my-5">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-lg-8 mx-auto">
-          <?php the_field('donate') ?>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="embed-responsive embed-responsive-16by9">
     <?php the_field('video') ?>

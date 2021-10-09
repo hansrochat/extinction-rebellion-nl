@@ -1,6 +1,7 @@
 // Bootstrap
 @import "variables";
-@import "~bootstrap/scss/bootstrap";
+//@import "~bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";
 @import "typography";
 @import "buttons";
 @import "header";
@@ -23,3 +24,4 @@
 @import "citizen-assembly";
 @import "donations";
 @import "rebellion";
+@import "event-highlight.scss";

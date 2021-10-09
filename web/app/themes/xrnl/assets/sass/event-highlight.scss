@@ -1,0 +1,51 @@
+.event-highlight {
+
+  > div {
+
+  	transition: all 200ms ease-in; 
+
+		.blink {
+
+		  animation: blink 1s cubic-bezier( .5, 0, 1, 1 ) infinite alternate;
+
+		  @keyframes blink {
+
+			from { opacity: 1; }
+			to { opacity: 0; }
+
+		  }
+
+		}
+
+		button {
+
+		  &:hover {
+
+			background-color: $xr-nl-fuchsia;
+
+		  }
+
+		}
+
+		&:hover {
+
+		  background-color: $xr-nl-fuchsia;
+
+		  h1,
+		  button {
+
+				color: white!important;
+
+				i {
+
+				  color: white;
+
+				}
+
+			}
+
+	  }
+
+	}
+
+}
