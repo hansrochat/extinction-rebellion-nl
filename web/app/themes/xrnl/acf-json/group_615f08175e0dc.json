@@ -140,12 +140,12 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 0,
             "collapsed": "",
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "layout": "block",
             "button_label": "",
-            "wpml_cf_preferences": 0,
             "sub_fields": [
                 {
                     "key": "field_6160334df6385",
@@ -249,5 +249,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1633696464
+    "modified": 1633868875
 }

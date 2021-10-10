@@ -37,9 +37,9 @@ get_header(null, array(
 			<?php endif; ?>
             <h2 class="text-light section-title"><?php the_field('section_title'); ?></h2>
 
-<!--	        --><?php //if (get_field('section_text')): ?>
-<!--                --><?php //the_field('section_text'); ?>
-<!--	        --><?php //endif; ?>
+	        <?php if (get_field('section_text')): ?>
+                <?php the_field('section_text'); ?>
+	        <?php endif; ?>
 
 	        <?php if (have_rows('cta_blocks')) : ?>
             <div class="join-row">
