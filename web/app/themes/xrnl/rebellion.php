@@ -60,6 +60,21 @@ get_header(null, array(
       </div>
     </div>
   </div>
+  <?php $section = getSection('programme_section'); ?>
+  <?php if ($section->title) : ?>
+    <div class="border border-10 border-fuchsia py-3 py-md-5 px-3 px-md-4 m-3 m-sm-5" id="programme">
+      <div class="row">
+        <div class="col-12 col-md-10 col-xl-8 mx-auto">
+          <h1 class="font-xr text-center pb-3">
+            <?php echo ($section->title); ?>
+          </h1>
+          <div>
+            <?php echo ($section->content); ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  <?php endif; ?>
   <?php $section = getSection('action_information_section'); ?>
   <div class="border border-10 border-fuchsia py-3 py-md-5 px-3 px-md-4 m-3 m-sm-5" id="info">
     <div class="row">
@@ -86,19 +101,4 @@ get_header(null, array(
       </div>
     </div>
   </div>
-  <?php $section = getSection('programme_section'); ?>
-  <?php if ($section->title) : ?>
-    <div class="border border-10 border-fuchsia py-3 py-md-5 px-3 px-md-4 m-3 m-sm-5" id="programme">
-      <div class="row">
-        <div class="col-12 col-md-10 col-xl-8 mx-auto">
-          <h1 class="font-xr text-center pb-3">
-            <?php echo ($section->title); ?>
-          </h1>
-          <div>
-            <?php echo ($section->content); ?>
-          </div>
-        </div>
-      </div>
-    </div>
-  <?php endif; ?>
 </div>

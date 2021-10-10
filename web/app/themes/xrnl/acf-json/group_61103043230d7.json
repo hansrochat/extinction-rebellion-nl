@@ -140,6 +140,61 @@
             ]
         },
         {
+            "key": "field_615dd3771d805",
+            "label": "programme section",
+            "name": "programme_section",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_615dd3771d806",
+                    "label": "title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_615dd3771d807",
+                    "label": "content",
+                    "name": "content",
+                    "type": "wysiwyg",
+                    "instructions": "Here you can add any information about the programme of the rebellion. You can use bullet points, add images...",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0
+                }
+            ]
+        },
+        {
             "key": "field_6125241c8aae0",
             "label": "action information section",
             "name": "action_information_section",
@@ -258,61 +313,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "key": "field_615dd3771d805",
-            "label": "programme section",
-            "name": "programme_section",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_615dd3771d806",
-                    "label": "title",
-                    "name": "title",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_615dd3771d807",
-                    "label": "content",
-                    "name": "content",
-                    "type": "wysiwyg",
-                    "instructions": "Here you can add any information about the programme of the rebellion. You can use bullet points, add images...",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 0,
-                    "delay": 0
-                }
-            ]
         }
     ],
     "location": [
@@ -332,5 +332,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1633539059
+    "modified": 1633910145
 }
