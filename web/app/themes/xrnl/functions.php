@@ -51,6 +51,12 @@ function xrnl_lg_scripts()
 }
 add_action('wp_enqueue_scripts', 'xrnl_lg_scripts');
 
+/**
+ * Register smooth scrolling js
+ * This can then be loaded in templates with wp_enqueue_script() as needed
+ */
+wp_register_script('smooth-scrolling', get_theme_file_uri('assets/js/smooth-scrolling.js'), array('jquery'));
+
 
 add_action('init', function () {
   register_nav_menu('primary', 'Main menu');
