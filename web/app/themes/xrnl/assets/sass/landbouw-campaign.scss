@@ -1,0 +1,223 @@
+.landbouw-campaign {
+
+  $landbouw-primary: $xr-light-green;
+  $landbouw-secondary: $xr-pink;
+  $landbouw-gifgroen: rgb(180,255,0);
+  $landbouw-light-gray: rgb(240, 240, 240);
+
+  a:not(.btn) {
+    &:hover {
+      color: $landbouw-primary !important;
+    }
+  }
+
+  .text-landbouw-gifgroen {
+    color: $landbouw-gifgroen;
+  }
+
+  .btn-white {
+    @extend .btn;
+    background-color: $xr-white;
+    color: $xr-black;
+    &:hover {
+      background-color: $xr-black;
+      color: $xr-white;
+    }
+  }
+
+  .hero {
+    h1,h2 {
+      padding: 0;
+      margin: 0;
+    }
+    .hero-symbol {
+      padding: 0;
+      top: 0;
+      right: 0;
+      svg {
+        height: 20rem;
+        width: auto;
+      }
+      @include media-breakpoint-down(md) {
+        svg {
+          height: 16rem;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        svg {
+          height: 12rem;
+        }
+      }
+    }
+  }
+
+  #step-1 {
+    padding-bottom: 10rem;
+  }
+
+  .form-container {
+    background-color: $landbouw-light-gray;
+  }
+
+  .progress {
+    background-color: $xr-white;
+    height: 10px;
+    border-radius: 5px;
+    .progress-bar {
+      background: $landbouw-primary;
+    }
+  }
+
+  #can_embed_form {
+    input[type=submit] {
+      background-color: $xr-black;
+      color: $xr-white;
+      &:hover {
+        background-color: $landbouw-primary;
+        color: $xr-black;
+      }
+    }
+    .html-input-wrapper {
+      &>label {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .demands {
+    @extend .pl-3;
+    counter-reset: landbouw-counter;
+    
+    .more-info-item {
+      counter-increment: landbouw-counter;
+    }
+    strong {
+      @extend .font-xr;
+      color: $landbouw-secondary;
+    }
+  }
+
+  .more-info-item {
+    @extend .py-4;
+    margin-top: .8rem;
+    &:not(:nth-last-of-type(1)) {
+      border-bottom: 1px solid lighten($xr-black, 70%);
+    }
+    &.active {
+      .more-info-toggle {
+        &::after {
+          content: '\f139';
+        }
+      }
+    }
+  }
+
+  .more-info-toggle {
+    padding-left: 4rem;
+    @include media-breakpoint-down(md) {
+      padding-left: 3rem;
+    }
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    &::before {
+      content: counter(landbouw-counter) ".";
+      padding-right: 1rem;
+      color: $landbouw-secondary;
+      font-size: 2.5rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      line-height: 2.5rem;
+    }
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: '\f13a';
+      font-family: 'FontAwesome';
+      transition: color .2s;
+    }
+    &:hover {
+      &::after {
+        color: darken($landbouw-secondary, 5%);
+      }
+    }
+  }
+
+  .logos {
+    .logo-item {
+      width: 10rem;
+    }
+    img, .placeholder {
+      height: 3rem;
+    }
+  }
+
+  #step-2 {
+    > div:not(:nth-of-type(1)) {
+      padding: 4rem 0;
+    }
+    .background-pic {
+      min-height: 25rem;
+    }
+    .thanks {
+      i {
+        font-size: 2.2rem;
+      }
+    }
+    .donate {
+      .donate-buttons {
+        width: 255px !important;
+      }
+      .btn-amount {
+        width: 80px;
+      }
+    }
+    .about {
+      padding-bottom: 15rem !important;
+    }
+  }
+}
+
+.landbouw-campaign-footer {
+  a {
+    color: $xr-white;
+    &:hover {
+      color: darken($xr-white, 5%);
+    }
+  }
+  .language-switcher {
+    #menu-language {
+      margin-bottom: 0;
+    }
+    color: $xr-white;
+    ul > li {
+      a.nav-link {
+        color: $xr-white;
+        text-decoration: none;
+      }
+      display: inline-block;
+      &.wpml-ls-current-language {
+        > a.nav-link {
+          &:hover {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+      }
+    }
+    a.nav-link {
+      &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 4px;
+      }
+    }
+  }
+  .landbouw-logo {
+    padding: 2rem 2rem .75rem 2rem;
+    img {
+      height: 3.8rem;
+    }
+  }
+}
