@@ -1,3 +1,13 @@
+<?php
+  // Optional arguments for get_header()
+  $args = wp_parse_args($args, array(
+    'bg-color'      => 'green', // background color, defaults to green
+    'accent-color'  => 'white', // highlight color, defaults to white
+    'navbar-logo'   => 'xrnl-hoogwater-symbol.svg', // takes any svg file from /dist/images
+    'hidden'        => false // hides the header navigation if true
+  ));
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -36,15 +46,8 @@
   <?php wp_head(); ?>
 </head>
 
-<?php
-$args = wp_parse_args($args, array(
-  'bg-color'      => 'green', // optional bg-color, defaults to green
-  'accent-color'  => 'white', // optional highlight color, defaults to white
-  'navbar-logo'   => 'xrnl-hoogwater-symbol.svg' // takes optional svg file from /dist/images
-));
-?>
-
 <body>
+  <?php if (!$args['hidden']): ?>
   <header class="bg-xr-<?php echo $args['bg-color'] ?>">
     <nav class="navbar navbar-light navbar-expand-xl nav-accent-xr-<?php echo $args['accent-color']; ?>" role="navigation">
 
@@ -111,4 +114,5 @@ $args = wp_parse_args($args, array(
       </div>
     </nav>
   </header>
+  <?php endif; ?>
   <main>
