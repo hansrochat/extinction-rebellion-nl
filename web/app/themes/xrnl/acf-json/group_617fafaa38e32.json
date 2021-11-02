@@ -488,7 +488,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "wpml_cf_preferences": 0,
+                    "wpml_cf_preferences": 1,
                     "collapsed": "field_617fc1bf3dcae",
                     "min": 0,
                     "max": 0,
@@ -508,7 +508,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "wpml_cf_preferences": 0,
+                            "wpml_cf_preferences": 1,
                             "default_value": "",
                             "placeholder": "",
                             "prepend": "",
@@ -528,6 +528,7 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "wpml_cf_preferences": 1,
                             "return_format": "url",
                             "preview_size": "thumbnail",
                             "library": "all",
@@ -537,8 +538,7 @@
                             "max_width": "",
                             "max_height": "",
                             "max_size": "",
-                            "mime_types": "",
-                            "wpml_cf_preferences": 0
+                            "mime_types": ""
                         }
                     ]
                 }
@@ -1211,5 +1211,5 @@
     ],
     "active": true,
     "description": "XR Landbouw | Raborebellie",
-    "modified": 1635795342
+    "modified": 1635866201
 }
