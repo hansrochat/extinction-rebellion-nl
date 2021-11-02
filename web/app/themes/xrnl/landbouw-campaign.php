@@ -59,16 +59,24 @@
   </noscript>
 
   <div class="container-fluid bg-xr-<?= $hero['background_color'] ?> hero" style="display: none;">
-    <div class="row flex-sm-row-reverse">
-      <div class="col col-12 col-sm-4 hero-symbol text-right">
+  
+    <div class="hero-symbol-container">
+      <div class="hero-symbol text-right">
           <?php if (filter_var($hero['image_url'], FILTER_VALIDATE_URL)) {
               echo file_get_contents($hero['image_url'], false, getContext(WP_ENV));
             }
           ?>
       </div>
-      <div class="col col-12 col-sm-8 py-2 py-sm-5 pl-4 pl-sm-5">
-        <h1 class="display-2 title text-<?= $hero['title_color'] ?>"><?= $hero['title'] ?></h1>
-        <h2 class="display-4 subtitle text-<?= $hero['subtitle_color'] ?>"><?= $hero['subtitle'] ?></h2>
+    </div>
+
+    <div class="container-xl">
+      <div class="row flex-sm-row-reverse">
+        <div class="col col-12 col-sm-4 y-spacer">
+        </div>
+        <div class="col col-12 col-sm-8 py-2 py-sm-5">
+          <h1 class="display-3 title text-<?= $hero['title_color'] ?>"><?= $hero['title'] ?></h1>
+          <h2 class="display-4 subtitle text-<?= $hero['subtitle_color'] ?>"><?= $hero['subtitle'] ?></h2>
+        </div>
       </div>
     </div>
   </div>
@@ -168,7 +176,7 @@
       </div>
       <?php if ($step2['divest']['show_section']) : ?>
       <div class="divest row">
-        <div class="col col-12 col-md-8 px-2 px-md-5">
+        <div class="col col-12 col-md-8 px-2 px-md-5 text-center text-md-left">
           <h2 class="font-xr"><?= $step2['divest']['heading'] ?></h2>
           <div>
             <?= $step2['divest']['text'] ?>
@@ -186,7 +194,7 @@
       </div>
       <?php endif ?>
       <div class="donate row bg-xr-blue">
-        <div class="col col-12 col-md-8 px-2 px-md-5">
+        <div class="col col-12 col-md-8 px-2 px-md-5 text-center text-md-left">
           <h2 class="font-xr"><?= $step2['donate']['heading'] ?></h2>
           <div>
             <?= $step2['donate']['text'] ?>
@@ -194,14 +202,14 @@
         </div>
         <div class="col col-12 col-md-4 text-center px-2 px-md-0">
           <div class="donate-buttons mx-auto">
-            <div class="py-5 d-flex justify-content-between">
+            <div class="py-3 d-flex justify-content-between">
               <?php if (is_array($step2['donate']['amounts'])) : ?>
                 <?php foreach ($step2['donate']['amounts'] as $amount) : ?>
                   <a href="<?= $amount['btn_url'] ?>" class="btn btn-white btn-amount"><?= $amount['btn_label'] ?></a>
                 <?php endforeach ?>
               <?php endif ?>
             </div>
-            <div class="pb-5">
+            <div class="pb-3">
               <?php if (is_array($step2['donate']['ctas'])) : ?>
                 <?php foreach ($step2['donate']['ctas'] as $cta) : ?>
                   <a href="<?= $cta['btn_url'] ?>" class="btn btn-block btn-black"><?= $cta['btn_label'] ?></a>
@@ -211,7 +219,7 @@
           </div>
         </div>
       </div>
-      <div class="about row text-xr-white" style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.45)), url(<?= $step2['about']['picture_url'] ?>) no-repeat center center / cover;">
+      <div class="about row text-white" style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.45)), url(<?= $step2['about']['picture_url'] ?>) no-repeat center center / cover;">
         <div class="col col-12 col-md-8 px-2 px-md-5">
           <h2 class="font-xr"><?= $step2['about']['heading'] ?></h2>
           <div>
@@ -257,6 +265,7 @@
     // Without javascript enabled this page only shows the noscript message
      $('.hero').show();
      $('#step-1').show();
+     $('#step-2').show();
 
      // When the form is submitted
     $(document).on('can_embed_submitted', function() {

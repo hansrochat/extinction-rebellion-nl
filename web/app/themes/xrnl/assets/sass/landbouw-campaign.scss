@@ -4,6 +4,7 @@
   $landbouw-secondary: $xr-pink;
   $landbouw-gifgroen: rgb(180,255,0);
   $landbouw-light-gray: rgb(240, 240, 240);
+  $hero-height: 20rem;
 
   a:not(.btn) {
     &:hover {
@@ -26,28 +27,45 @@
   }
 
   .hero {
-    h1,h2 {
-      padding: 0;
-      margin: 0;
+    min-height: .6 * $hero-height;
+    position: relative;
+    .hero-symbol-container {
+      position: absolute;
+      top: 0;
+      right: 0;
     }
     .hero-symbol {
       padding: 0;
       top: 0;
       right: 0;
       svg {
-        height: 20rem;
+        height: .9 * $hero-height;;
         width: auto;
       }
       @include media-breakpoint-down(md) {
         svg {
-          height: 16rem;
+          height: .7 * $hero-height;
         }
       }
       @include media-breakpoint-down(sm) {
         svg {
-          height: 12rem;
+          height: .45 * $hero-height;
         }
       }
+    }
+    .y-spacer {
+      height: .9 * $hero-height;
+      @include media-breakpoint-down(md) {
+        height: .7 * $hero-height;
+      }
+      @include media-breakpoint-down(sm) {
+        height: .4 * $hero-height;
+      }
+    }
+
+    h1,h2 {
+      padding: 0;
+      margin: 0;
     }
   }
 
