@@ -420,6 +420,122 @@
             ]
         },
         {
+            "key": "field_61824a6b008be",
+            "label": "Sign section",
+            "name": "sign_section",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "wpml_cf_preferences": 0,
+            "sub_fields": [
+                {
+                    "key": "field_61824a92008bf",
+                    "label": "Custom counter",
+                    "name": "custom_counter",
+                    "type": "group",
+                    "instructions": "Show the signature count with custom text.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 0,
+                    "layout": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_61824ab4008c0",
+                            "label": "Show",
+                            "name": "show",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Yes",
+                            "ui_off_text": "No",
+                            "wpml_cf_preferences": 0
+                        },
+                        {
+                            "key": "field_61825237eb352",
+                            "label": "Text before count",
+                            "name": "text_before",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_61824b07008c1",
+                            "label": "Text after count",
+                            "name": "text_after",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_6182530d53039",
+                    "label": "Form heading",
+                    "name": "form_heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
             "key": "field_617fc13a3dcaa",
             "label": "Supporting organisations",
             "name": "support_orgs",
@@ -1211,5 +1327,5 @@
     ],
     "active": true,
     "description": "XR Landbouw | Raborebellie",
-    "modified": 1635866201
+    "modified": 1635930901
 }

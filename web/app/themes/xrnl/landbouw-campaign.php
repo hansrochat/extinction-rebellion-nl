@@ -17,6 +17,7 @@
   extract($fields['action_network']);
   $hero = $fields['hero'];
   $main_section = $fields['main_section'];
+  $sign_section = $fields['sign_section'];
   $support_orgs = $fields['support_orgs'];
   $step2 = $fields['step2'];
 
@@ -90,14 +91,20 @@
           </p>
         </div>
         <div id="signature-counter" class="pt-3 pt-md-5">
+          <?php if ($sign_section['custom_counter']['show']) : ?>
+          <h4 class="font-xr">
+            <span class="text-80"><?= $sign_section['custom_counter']['text_before'] ?></span> <span id="total-submissions"><?= $total_submissions ?></span> <span class="text-80"><?= $sign_section['custom_counter']['text_after'] ?></span>
+          </h4>
+          <?php else : ?>
           <h4 class="font-xr">
             <span id="total-submissions"><?= $total_submissions ?></span> <?php _e('of', 'theme-xrnl'); ?> <span id="max-submissions"><?= $max_submissions ?></span> <?php _e('signatures', 'theme-xrnl'); ?>
           </h4>
+          <?php endif ?>
           <div class="progress mb-5">
             <div class="progress-bar" role="progressbar" style="width: <?= $percent ?>%;" aria-valuenow="<?= $percent ?>" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
         </div>
-        <h2 id="sign-petition"><?php _e('SIGN THE PETITION', 'theme-xrnl'); ?></h2>
+        <h2 id="sign-petition"><?= $sign_section['form_heading'] ?></h2>
         <div id="an-form">
           <?= do_shortcode($actionnetwork_shortcode) ?>
         </div>

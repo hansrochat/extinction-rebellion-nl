@@ -16,6 +16,10 @@
     color: $landbouw-gifgroen;
   }
 
+  .text-80 {
+    font-size: 80%;
+  }
+
   .btn-white {
     @extend .btn;
     background-color: $xr-white;
