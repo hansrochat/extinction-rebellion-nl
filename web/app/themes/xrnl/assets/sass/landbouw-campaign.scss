@@ -104,6 +104,11 @@
         font-size: 1rem;
       }
     }
+    .check_radio_field {
+      &>label {
+        display: inline-block;
+      }
+    }
   }
 
   .demands {
