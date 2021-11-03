@@ -227,7 +227,7 @@
         </div>
       </div>
       <div class="about row text-white" style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.45)), url(<?= $step2['about']['picture_url'] ?>) no-repeat center center / cover;">
-        <div class="col col-12 col-md-8 px-2 px-md-5">
+        <div class="col col-12 col-md-8 px-2 px-md-5 text-center text-md-left">
           <h2 class="font-xr"><?= $step2['about']['heading'] ?></h2>
           <div>
             <?= $step2['about']['text'] ?>
@@ -272,7 +272,6 @@
     // Without javascript enabled this page only shows the noscript message
      $('.hero').show();
      $('#step-1').show();
-     $('#step-2').show();
 
      // When the form is submitted
     $(document).on('can_embed_submitted', function() {
