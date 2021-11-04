@@ -80,12 +80,12 @@
                 "class": "",
                 "id": ""
             },
+            "wpml_cf_preferences": 0,
             "default_value": "",
             "placeholder": "",
             "maxlength": "",
             "rows": 3,
-            "new_lines": "",
-            "wpml_cf_preferences": 0
+            "new_lines": "wpautop"
         },
         {
             "key": "field_5fc7dba02e30c",
@@ -105,7 +105,7 @@
             "placeholder": "",
             "maxlength": "",
             "rows": 3,
-            "new_lines": ""
+            "new_lines": "wpautop"
         },
         {
             "key": "field_5fc9fc36fbb7d",
@@ -391,8 +391,10 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": true,
     "description": "",
-    "modified": 1607546093
+    "modified": 1636021232
 }

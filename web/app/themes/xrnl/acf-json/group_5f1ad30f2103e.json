@@ -103,8 +103,8 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
             "wpml_cf_preferences": 0,
+            "layout": "row",
             "sub_fields": [
                 {
                     "key": "field_5f29c7702b02f",
@@ -265,8 +265,8 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
             "wpml_cf_preferences": 0,
+            "layout": "block",
             "sub_fields": [
                 {
                     "key": "field_5f2332e0cc34a",
@@ -1193,8 +1193,10 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": true,
     "description": "",
-    "modified": 1613923757
+    "modified": 1636021405
 }

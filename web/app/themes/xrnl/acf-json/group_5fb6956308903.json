@@ -118,7 +118,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "default"
+                "value": "local_group-archive.php"
             }
         ]
     ],
@@ -130,5 +130,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1606137588
+    "modified": 1636019742
 }
