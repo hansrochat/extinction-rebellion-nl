@@ -203,6 +203,16 @@
     }
     .about {
       padding-bottom: 15rem !important;
+      background-image: linear-gradient(120deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.15)), var(--bg-image);
+      background-repeat: no-repeat;
+      background-size: cover, cover;
+      background-position: center, 100%;
+      @include media-breakpoint-up(sm) {
+        background-position: center, 70%;
+      }
+      @include media-breakpoint-up(xl) {
+        padding-bottom: 20rem !important;
+      }
     }
   }
 }
