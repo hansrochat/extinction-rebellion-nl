@@ -13,10 +13,15 @@ $xr-warm-yellow: #ffc11e;
 $xr-red: #dc4f00;
 $xr-angry: #c80082;
 $xr-primary: $xr-green;
+
+$xr-hard-pink: #ff4677;
+
 $xr-light-gray: lighten($xr-black, 85%);
-$xr-nl-fuchsia: #e71a84; // color used for climate rebellion 2021
+$xr-dark-gray: #161e2e;
+$xr-nl-fuchsia: #f1d7e5; // color used for climate rebellion 2021
 // colours used for climate justice (cj) related content
 $cj-dark-gray: #181a1b;
+
 $cj-light-gray: #c9c4bd;
 
 $theme-colors: (
@@ -57,3 +62,6 @@ $link-color: #000 !default;
 $link-hover-color: map-get($theme-colors, "green") !default;
 $brand-font: "FucXed", Montserrat, sans-serif !default;
 $brand-font-secondary: "Crimson Text", serif;
+
+$font-xr-size-lg: 2rem;
+$font-xr-size-md: 1.25rem;

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec6d25b776143f41b949491810df3aa0",
+    "content-hash": "82f51e0e071cf4bd712a00b449ddda34",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -1306,6 +1306,24 @@
             "homepage": "https://wordpress.org/plugins/simple-history/"
         },
         {
+            "name": "wpackagist-plugin/woocommerce",
+            "version": "5.9.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/woocommerce/",
+                "reference": "tags/5.9.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/woocommerce.5.9.0.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woocommerce/"
+        },
+        {
             "name": "wpackagist-plugin/wordpress-seo",
             "version": "17.1",
             "source": {
@@ -1391,6 +1409,19 @@
             "dist": {
                 "type": "zip",
                 "url": "https://wpml.org/?download=6092&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1630407007&version={%VERSION}"
+            },
+            "require": {
+                "composer/installers": "^1.4",
+                "ffraenz/private-composer-installer": "^5.0"
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "wpml/wpml-woo-commerce-multilingual",
+            "version": "2.10.8",
+            "dist": {
+                "type": "zip",
+                "url": "https://wpml.org/?download=6094&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1636485170&version={%VERSION}"
             },
             "require": {
                 "composer/installers": "^1.4",

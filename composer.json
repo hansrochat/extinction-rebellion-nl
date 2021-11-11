@@ -121,6 +121,22 @@
           "ffraenz/private-composer-installer": "^5.0"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wpml/wpml-woo-commerce-multilingual",
+        "version": "2.10.8",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://wpml.org/?download=6094&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1636485170&version={%VERSION}"
+        },
+        "require": {
+          "composer/installers": "^1.4",
+          "ffraenz/private-composer-installer": "^5.0"
+        }
+      }
     }
   ],
   "require": {
@@ -145,11 +161,13 @@
     "wpackagist-plugin/simple-history": "^2.39.0",
     "wpackagist-plugin/robin-image-optimizer": "^1.5.0",
     "wpackagist-plugin/safe-svg": "^1.9.9",
+    "wpackagist-plugin/woocommerce": "^5.9",
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
     "wpml/wpml-multilingual-cms": "*",
     "wpml/wpml-string-translation": "*",
     "wpml/wpml-acf-multilingual": "*",
     "wpml/wpml-yoast-seo-multilingual": "*",
+    "wpml/wpml-woo-commerce-multilingual": "*",
     "ggamel/wp-sync-db": "dev-master",
     "wp-sync-db/wp-sync-db-media-files": "^1.1"
   },

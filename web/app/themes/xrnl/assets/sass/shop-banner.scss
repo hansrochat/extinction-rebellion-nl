@@ -1,0 +1,42 @@
+.shop-banner{
+    .month{
+        position: relative;
+        img {
+            -moz-transition: -moz-transform .5s ease-in-out;
+            -webkit-transition: -webkit-transform .5s ease-in-out;
+            transition: transform .5s ease-in-out;
+        }
+        .price-tag{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            -moz-transition: -moz-transform .5s ease-in-out;
+            -webkit-transition: -webkit-transform .5s ease-in-out;
+            transition: transform .5s ease-in-out;
+
+
+        }
+        &:hover{
+
+            img {
+                -webkit-transform:rotate(-2.5deg);
+                -moz-transform:rotate(-2.5deg);
+                rotation:-2.5deg;
+            }
+
+            .price-tag{
+                -webkit-transform:rotate(26.5deg);
+                -moz-transform:rotate(26.5deg);
+                rotation:26.5deg;
+            }
+        
+        }
+    }
+    .in-mand{
+        font-size: 3rem;
+        font-family: "FucXed", Montserrat, sans-serif;
+        padding: .5rem;
+        border: 3px solid black;
+        text-decoration: none !important;
+    }
+}

@@ -1,0 +1,38 @@
+
+.starburst {
+	display:flex;
+    justify-content: center;
+    align-items: center;
+	width:6rem;
+	height:6rem;
+	background: $xr-hard-pink;
+	position:relative;
+	// top:2rem;
+	// left:2rem;
+	text-align:center;
+	text-decoration:none;
+	color:$xr-black;
+	font-size: 3rem;
+    font-family: "FucXed", Montserrat, sans-serif;
+    -webkit-transform:rotate(16.5deg);
+	-moz-transform:rotate(16.5deg);
+	rotation: 16.5deg;
+}
+
+.starburst span {
+	display:flex;
+    justify-content: center;
+    align-items: center;
+	width:6rem;
+	height:6rem;
+	background: $xr-hard-pink;
+
+    -webkit-transform:rotate(-56.5deg);
+	-moz-transform:rotate(-56.5deg);
+	rotation:-56.5deg;
+
+	-moz-transition: -moz-transform 1s ease-in-out;
+	-webkit-transition: -webkit-transform 1s ease-in-out;
+	transition: transform 1s ease-in-out;
+}
+
