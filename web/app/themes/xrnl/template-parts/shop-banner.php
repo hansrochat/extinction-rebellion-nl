@@ -5,7 +5,7 @@
 ?>
 <div class="row mb-4 shop-banner">
     <div class="col-md-12">
-        <div class="month p-5 " style="background: rgb(251,241,242);">
+        <div class="month">
             <?php
                 $post_id = get_the_ID();
                 $url = get_the_post_thumbnail_url( $post_id, 'thumbnail' );

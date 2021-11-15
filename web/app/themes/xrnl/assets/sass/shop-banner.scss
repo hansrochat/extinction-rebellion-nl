@@ -1,32 +1,29 @@
 .shop-banner{
     .month{
         position: relative;
+        padding: 1.5rem;
+        background: rgb(251,241,242) !important;
+        @media (min-width: $breakpoint-sm) {
+            padding: 3rem;
+        }
         img {
-            -moz-transition: -moz-transform .5s ease-in-out;
-            -webkit-transition: -webkit-transform .5s ease-in-out;
             transition: transform .5s ease-in-out;
         }
         .price-tag{
             position: absolute;
-            left: 0;
+            left: 30px;
             bottom: 0;
-            -moz-transition: -moz-transform .5s ease-in-out;
-            -webkit-transition: -webkit-transform .5s ease-in-out;
             transition: transform .5s ease-in-out;
-
-
+            @media (min-width: $breakpoint-sm) {
+                left: 0;
+            }
         }
         &:hover{
-
             img {
-                -webkit-transform:rotate(-2.5deg);
-                -moz-transform:rotate(-2.5deg);
+
                 rotation:-2.5deg;
             }
-
             .price-tag{
-                -webkit-transform:rotate(26.5deg);
-                -moz-transform:rotate(26.5deg);
                 rotation:26.5deg;
             }
         
@@ -38,5 +35,11 @@
         padding: .5rem;
         border: 3px solid black;
         text-decoration: none !important;
+        width: 100%;
+        text-align: center;
+        @media (min-width: $breakpoint-sm) {
+            left: 0;
+            width: auto;
+        }
     }
 }
