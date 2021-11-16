@@ -45,7 +45,7 @@
       "type": "package",
       "package": {
           "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.10.2",
+        "version": "5.11",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -61,11 +61,11 @@
       "type": "package",
       "package": {
         "name": "wpml/wpml-multilingual-cms",
-        "version": "4.4.12",
+        "version": "4.5.1",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://wpml.org/?download=6088&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1630407007&version={%VERSION}"
+          "url": "https://wpml.org/?download=6088&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1636720760&version={%VERSION}"
         },
         "require": {
           "composer/installers": "^1.4",
@@ -78,11 +78,11 @@
       "type": "package",
       "package": {
         "name": "wpml/wpml-string-translation",
-        "version": "3.1.10",
+        "version": "3.2.0",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://wpml.org/?download=6092&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1630407007&version={%VERSION}"
+          "url": "https://wpml.org/?download=6092&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1636720760&version={%VERSION}"
         },
         "require": {
           "composer/installers": "^1.4",
@@ -94,11 +94,11 @@
       "type": "package",
       "package": {
         "name": "wpml/wpml-acf-multilingual",
-        "version": "1.7.5",
+        "version": "1.9.4",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://wpml.org/?download=1097589&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1613150029&version={%VERSION}"
+          "url": "https://wpml.org/?download=1097589&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1636720760&version={%VERSION}"
         },
         "require": {
           "composer/installers": "^1.4",
@@ -110,11 +110,11 @@
       "type": "package",
       "package": {
         "name": "wpml/wpml-yoast-seo-multilingual",
-        "version": "1.2.4",
+        "version": "2.0.1",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://wpml.org/?download=3566177&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1613150029&version={%VERSION}"
+          "url": "https://wpml.org/?download=3566177&user_id={%PLUGIN_WPML_ID}&subscription_key={%PLUGIN_WPML_KEY}&t=1637088836&version={%VERSION}"
         },
         "require": {
           "composer/installers": "^1.4",
