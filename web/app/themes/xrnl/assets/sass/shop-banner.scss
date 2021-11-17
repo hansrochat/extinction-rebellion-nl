@@ -20,15 +20,15 @@
         }
         &:hover{
             img {
-
-                rotation:-2.5deg;
+                transform: rotate(-2.5deg);
             }
             .price-tag{
-                rotation:26.5deg;
+                transform: rotate(26.5deg);
             }
         
         }
     }
+
     .in-mand{
         font-size: 3rem;
         font-family: "FucXed", Montserrat, sans-serif;

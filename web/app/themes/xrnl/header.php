@@ -1,11 +1,20 @@
 <?php
-  // Optional arguments for get_header()
-  $args = wp_parse_args($args, array(
-    'bg-color'      => 'green', // background color, defaults to green
-    'accent-color'  => 'white', // highlight color, defaults to white
-    'navbar-logo'   => 'xrnl-hoogwater-symbol.svg', // takes any svg file from /dist/images
-    'hidden'        => false // hides the header navigation if true
-  ));
+  // If the page is the Woocommerce shop page, show the alternative stacked logo
+  if( is_shop() ) {
+    $args = wp_parse_args($args, array(
+      'bg-color'      => 'blue', // background color, defaults to green
+      'accent-color'  => 'white', // highlight color, defaults to white
+      'navbar-logo'   => 'xrnl-stacked-logo.svg', // takes any svg file from /dist/images
+      'hidden'        => false // hides the header navigation if true
+    ));
+  } else {
+    $args = wp_parse_args($args, array(
+      'bg-color'      => 'green', // background color, defaults to green
+      'accent-color'  => 'white', // highlight color, defaults to white
+      'navbar-logo'   => 'xrnl-hoogwater-symbol.svg', // takes any svg file from /dist/images
+      'hidden'        => false // hides the header navigation if true
+    ));
+  };
 ?>
 
 <!DOCTYPE html>

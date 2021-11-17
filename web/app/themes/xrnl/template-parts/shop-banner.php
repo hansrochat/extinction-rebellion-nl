@@ -33,9 +33,9 @@
                 </span>
             </div>
         </div>
-
+        <?php $product_obj = get_page_by_path( 'hete-klimaat-kalender', OBJECT, 'product' ); ?>
         <div  class="d-flex justify-content-end align-items-end mt-2">
-            <a href="http://localhost:8000/product/hete-klimaat-kalender/" class="in-mand">
+            <a href="/?add-to-cart=<?php echo($product_obj->ID); ?>" class="in-mand">
                 IN <strong>MAND</strong>
             </a>
         </div>
