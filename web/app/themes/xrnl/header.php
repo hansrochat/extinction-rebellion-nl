@@ -14,8 +14,10 @@
     'hidden'        => false // hides the header navigation if true
   ));
 
-  // If the page is the Woocommerce shop page, show the alternative stacked logo
-  if ( function_exists( 'is_woocommerce_activated' ) ) {
+  // If the page is the Woocommerce shop page, show the alternative stacked logo. 
+  // This is because we can't use the extinction symbol for commercial purposes. 
+  // Without this `function_exists` the website has a fatal error if the woo commerce plugin is deactivated
+  if ( function_exists( 'is_shop' ) ) {
     if( is_shop() ) {
       $args = $shopArgs;
     } else {
