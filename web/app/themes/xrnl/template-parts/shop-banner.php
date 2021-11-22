@@ -37,7 +37,7 @@
         </div>
         <div  class="d-flex justify-content-end align-items-end mt-2">
             <a href="/?add-to-cart=<?php echo($product_obj->ID); ?>" class="in-mand">
-                <?php _e('In mand', 'theme-xrnl'); ?>
+                <?php _e('Add to cart', 'theme-xrnl'); ?>
             </a>
         </div>
     </div>
