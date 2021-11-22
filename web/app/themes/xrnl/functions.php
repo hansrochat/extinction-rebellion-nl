@@ -966,6 +966,7 @@ function formatElementID($str)
   return strtolower($str);
 }
 
+
 function xrnl_pv_shortcode()
 {
   ob_start();
@@ -973,6 +974,27 @@ function xrnl_pv_shortcode()
   return ob_get_clean();
 }
 add_shortcode('xrnl-principles-and-values', 'xrnl_pv_shortcode');
+
+/* 
+
+CODE FOR THE WOO COMMERCE PLUGIN
+
+*/
+function shop_banner()
+{
+  ob_start();
+  get_template_part('template-parts/shop-banner');
+  return ob_get_clean();
+}
+add_shortcode('shop-banner', 'shop_banner');
+
+add_filter( 'woocommerce_product_tabs', 'bbloomer_remove_product_tabs', 9999 );
+  
+function bbloomer_remove_product_tabs( $tabs ) {
+    unset( $tabs['additional_information'] ); 
+    return $tabs;
+}
+
 /*
  * register button click in Matomo analytics.
  * The analytics code on each button follows this convention:

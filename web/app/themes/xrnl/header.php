@@ -1,11 +1,32 @@
 <?php
-  // Optional arguments for get_header()
-  $args = wp_parse_args($args, array(
+
+  $regularArgs = wp_parse_args($args, array(
     'bg-color'      => 'green', // background color, defaults to green
     'accent-color'  => 'white', // highlight color, defaults to white
     'navbar-logo'   => 'xrnl-hoogwater-symbol.svg', // takes any svg file from /dist/images
     'hidden'        => false // hides the header navigation if true
   ));
+
+  $shopArgs = wp_parse_args($args, array(
+    'bg-color'      => 'blue', // background color, defaults to green
+    'accent-color'  => 'white', // highlight color, defaults to white
+    'navbar-logo'   => 'xrnl-stacked-logo.svg', // takes any svg file from /dist/images
+    'hidden'        => false // hides the header navigation if true
+  ));
+
+  // If the page is the Woocommerce shop page, show the alternative stacked logo. 
+  // This is because we can't use the extinction symbol for commercial purposes. 
+  // Without this `function_exists` the website has a fatal error if the woo commerce plugin is deactivated
+  if ( function_exists( 'is_shop' ) ) {
+    if( is_shop() ) {
+      $args = $shopArgs;
+    } else {
+      $args = $regularArgs;
+    }
+  } else {
+    $args = $regularArgs;
+  }
+
 ?>
 
 <!DOCTYPE html>

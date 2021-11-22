@@ -1,0 +1,45 @@
+.shop-banner{
+    .month{
+        position: relative;
+        padding: 1.5rem;
+        background: rgb(251,241,242) !important;
+        @include media-breakpoint-up(sm) { 
+            padding: 3rem;
+        }
+        img {
+            transition: transform .5s ease-in-out;
+        }
+        .price-tag{
+            position: absolute;
+            left: 30px;
+            bottom: 0;
+            transition: transform .5s ease-in-out;
+            @include media-breakpoint-up(sm) { 
+                left: 0;
+            }
+        }
+        &:hover{
+            img {
+                transform: rotate(-2.5deg);
+            }
+            .price-tag{
+                transform: rotate(26.5deg);
+            }
+        
+        }
+    }
+
+    .in-mand{
+        font-size: 3rem;
+        font-family: "FucXed", Montserrat, sans-serif;
+        padding: .5rem 2rem;
+        border: 3px solid black;
+        text-decoration: none !important;
+        width: 100%;
+        text-align: center;
+        @include media-breakpoint-up(sm) { 
+            left: 0;
+            width: auto;
+        }
+    }
+}
