@@ -14,7 +14,7 @@ $xr-red: #dc4f00;
 $xr-angry: #c80082;
 $xr-primary: $xr-green;
 
-$xr-hard-pink: #ff4677;
+$hard-pink: #ff4677;
 
 $xr-light-gray: lighten($xr-black, 85%);
 $xr-dark-gray: #161e2e;
@@ -65,10 +65,3 @@ $brand-font-secondary: "Crimson Text", serif;
 
 $font-xr-size-lg: 2rem;
 $font-xr-size-md: 1.25rem;
-
-/* BREAKPOINTS */
-$breakpoint-sm:	576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
-$breakpoint-xxl: 1400px;

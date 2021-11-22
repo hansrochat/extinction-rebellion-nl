@@ -3,9 +3,9 @@
 	display:flex;
     justify-content: center;
     align-items: center;
-	width:6rem;
-	height:6rem;
-	background: $xr-hard-pink;
+	width:7rem;
+	height:7rem;
+	background: $hard-pink;
 	position:relative;
 	// top:2rem;
 	// left:2rem;
@@ -19,13 +19,13 @@
 	rotation: 16.5deg;
 }
 
-.starburst span {
+.starburst__plane {
 	display:flex;
     justify-content: center;
     align-items: center;
-	width:6rem;
-	height:6rem;
-	background: $xr-hard-pink;
+	width:7rem;
+	height:7rem;
+	background: $hard-pink;
 
     -webkit-transform:rotate(-56.5deg);
 	-moz-transform:rotate(-56.5deg);

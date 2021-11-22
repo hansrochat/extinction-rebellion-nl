@@ -63,7 +63,6 @@ add_action('init', function () {
   register_nav_menu('primary-mobile', 'Main menu mobile');
   register_nav_menu('footer-1', 'Footer menu 1');
   register_nav_menu('footer-2', 'Footer menu 2');
-  register_nav_menu('footer-3', 'Footer menu 3');
   register_nav_menu('language', 'Language selector');
 });
 
