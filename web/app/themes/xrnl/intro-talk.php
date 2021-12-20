@@ -42,13 +42,13 @@ get_header(); ?>
       </span>
     </div>
     <?php endif; ?>
-    <p class="col-10 col-md-8 col-lg-7 mx-auto text-center"><?php the_field('center_section_top_text') ?></p>
+    <div class="col-10 col-md-8 col-lg-7 mx-auto text-center"><?php the_field('center_section_top_text') ?></div>
     <div class="col-12 text-center mt-2 mb-5">
       <?php $view_btn = get_field('view_button'); ?>
       <a href="<?php echo $view_btn['view_button_link']; ?>" class="btn btn-lg btn-yellow" 
 onclick="<?= register_button_click($view_btn['view_button_label']); ?>"><?php echo $view_btn['view_button_label']; ?></a>
     </div>
-    <p class="col-11 col-md-9 col-lg-8 mx-auto mt-3 text-center"><?php the_field('center_section_bottom_text') ?></p>
+    <div class="col-11 col-md-9 col-lg-8 mx-auto mt-3 text-center"><?php the_field('center_section_bottom_text') ?></div>
   </div>
 </section>
 
