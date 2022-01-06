@@ -180,13 +180,13 @@
           <p><?= $fields['stichting']['text'] ?></p>
           <?php if (!empty($fields['stichting']['logos'])) : ?>
             <?php foreach ($fields['stichting']['logos'] as $logo) : ?>
-            <div class="row pt-2">
-              <div class="col col-3 col-xs-2">
+            <div class="row pt-4">
+              <div class="col-4 col-sm-3 col-xl-2">
               <?php if (!empty($logo['image']['url'])) : ?>
                 <img class="stichting-logo d-inline-block" src="<?= $logo['image']['url'] ?>" alt="<?= $logo['image']['alt'] ?>">
               <?php endif ?>
               </div>
-              <div class="col col-9 col-xs-10">
+              <div class="col-8 col-md-9">
                 <p class="m-0"><?= $logo['description'] ?></p>
               </div>
             </div>
