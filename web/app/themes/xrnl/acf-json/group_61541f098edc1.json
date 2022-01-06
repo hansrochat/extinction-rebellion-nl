@@ -947,10 +947,10 @@
                     "wpml_cf_preferences": 0
                 },
                 {
-                    "key": "field_615576742ef33",
-                    "label": "ANBI logo",
-                    "name": "anbi_logo",
-                    "type": "image",
+                    "key": "field_61d6969739406",
+                    "label": "Logos",
+                    "name": "logos",
+                    "type": "repeater",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -959,34 +959,59 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "url",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "wpml_cf_preferences": 0
-                },
-                {
-                    "key": "field_615576d02ef34",
-                    "label": "ANBI link",
-                    "name": "anbi_link",
-                    "type": "url",
-                    "instructions": "The link under the ANBI logo",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "wpml_cf_preferences": 0
+                    "wpml_cf_preferences": 0,
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "row",
+                    "button_label": "Add logo",
+                    "sub_fields": [
+                        {
+                            "key": "field_61d6972639407",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 0,
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_61d6976939408",
+                            "label": "Description",
+                            "name": "description",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
                 }
             ]
         }
@@ -1005,8 +1030,11 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": true,
     "description": "",
-    "modified": 1632991018
+    "show_in_rest": 0,
+    "modified": 1641464971
 }

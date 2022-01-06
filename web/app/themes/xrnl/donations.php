@@ -170,19 +170,28 @@
   </section>
 
   <section id="stichting">
-    <div class="bg-symbol left d-none d-md-block">
+    <div class="bg-symbol left d-none d-lg-block">
       <?= file_get_contents(get_template_directory_uri() . '/dist/images/xr-lisca.svg', false, getContext(WP_ENV)); ?>
     </div>
     <div class="container-fluid">
       <div class="row">
-        <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto">
+        <div class="content col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7 mx-auto pb-5">
           <h2><?= $fields['stichting']['title'] ?></h2>
           <p><?= $fields['stichting']['text'] ?></p>
-          <div class="text-right mb-3">
-            <a href="<?= $fields['stichting']['anbi_link'] ?>" onclick="<?= register_button_click('anbi-link') ?>">
-              <img id="anbi-logo" class="d-inline-block" src="<?= $fields['stichting']['anbi_logo'] ?>" alt="ANBI logo">
-            </a>
-          </div>
+          <?php if (!empty($fields['stichting']['logos'])) : ?>
+            <?php foreach ($fields['stichting']['logos'] as $logo) : ?>
+            <div class="row pt-2">
+              <div class="col col-3 col-xs-2">
+              <?php if (!empty($logo['image']['url'])) : ?>
+                <img class="stichting-logo d-inline-block" src="<?= $logo['image']['url'] ?>" alt="<?= $logo['image']['alt'] ?>">
+              <?php endif ?>
+              </div>
+              <div class="col col-9 col-xs-10">
+                <p class="m-0"><?= $logo['description'] ?></p>
+              </div>
+            </div>
+            <?php endforeach ?>
+          <?php endif ?>
         </div>
       </div>
     </div>
